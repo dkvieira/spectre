@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - 032fadb9ddd2ec83e570196d97055f3db6b8710b - PointwiseFunctions/AnalyticSolutions/EinsteinSolutions/Minkowski.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">SpECTRE Unit Test Code Coverage Report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">PointwiseFunctions/AnalyticSolutions/EinsteinSolutions</a> - Minkowski.cpp<span style="font-size: 80%;"> (source / <a href="Minkowski.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Commit:</td>
+             <td class="headerValue"><a target="_blank" href="https://github.com/sxs-collaboration/spectre/commit/032fadb9ddd2ec83e570196d97055f3db6b8710b">032fadb9ddd2ec83e570196d97055f3db6b8710b</a></td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2018-03-08 04:41:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntry">74</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : // Distributed under the MIT License.</a>
+<span class="lineNum">       2 </span>            : // See LICENSE.txt for details.
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            : #include &quot;PointwiseFunctions/AnalyticSolutions/EinsteinSolutions/Minkowski.hpp&quot;
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            : #include &quot;Utilities/GenerateInstantiations.hpp&quot;
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span>            : namespace EinsteinSolutions {
+<span class="lineNum">       9 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      10 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      11 </span><span class="lineCov">          6 : Scalar&lt;T&gt; Minkowski&lt;Dim&gt;::lapse(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      12 </span>            :                                 const double /*t*/) const noexcept {
+<span class="lineNum">      13 </span><span class="lineCov">          6 :   return Scalar&lt;T&gt;(make_with_value&lt;T&gt;(x, 1.));</span>
+<span class="lineNum">      14 </span>            : }
+<span class="lineNum">      15 </span>            : 
+<span class="lineNum">      16 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      17 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      18 </span><span class="lineCov">          6 : Scalar&lt;T&gt; Minkowski&lt;Dim&gt;::dt_lapse(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      19 </span>            :                                    const double /*t*/) const noexcept {
+<span class="lineNum">      20 </span><span class="lineCov">          6 :   return Scalar&lt;T&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      21 </span>            : }
+<span class="lineNum">      22 </span>            : 
+<span class="lineNum">      23 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      24 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      25 </span><span class="lineCov">          6 : tnsr::i&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::deriv_lapse(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      26 </span>            :                                             const double /*t*/) const noexcept {
+<span class="lineNum">      27 </span><span class="lineCov">          6 :   return tnsr::i&lt;T, Dim&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      28 </span>            : }
+<span class="lineNum">      29 </span>            : 
+<span class="lineNum">      30 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      31 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      32 </span><span class="lineCov">          6 : Scalar&lt;T&gt; Minkowski&lt;Dim&gt;::sqrt_determinant_of_spatial_metric(</span>
+<span class="lineNum">      33 </span>            :     const tnsr::I&lt;T, Dim&gt; &amp;x, const double /*t*/) const noexcept {
+<span class="lineNum">      34 </span><span class="lineCov">          6 :   return Scalar&lt;T&gt;(make_with_value&lt;T&gt;(x, 1.));</span>
+<span class="lineNum">      35 </span>            : }
+<span class="lineNum">      36 </span>            : 
+<span class="lineNum">      37 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      38 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      39 </span><span class="lineCov">          6 : Scalar&lt;T&gt; Minkowski&lt;Dim&gt;::dt_sqrt_determinant_of_spatial_metric(</span>
+<span class="lineNum">      40 </span>            :     const tnsr::I&lt;T, Dim&gt; &amp;x, const double /*t*/) const noexcept {
+<span class="lineNum">      41 </span><span class="lineCov">          6 :   return Scalar&lt;T&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      42 </span>            : }
+<span class="lineNum">      43 </span>            : 
+<span class="lineNum">      44 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      45 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      46 </span><span class="lineCov">          6 : tnsr::I&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::shift(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      47 </span>            :                                       const double /*t*/) const noexcept {
+<span class="lineNum">      48 </span><span class="lineCov">          6 :   return tnsr::I&lt;T, Dim&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      49 </span>            : }
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      52 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      53 </span><span class="lineCov">          6 : tnsr::iJ&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::deriv_shift(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      54 </span>            :                                              const double /*t*/) const
+<span class="lineNum">      55 </span>            : noexcept {
+<span class="lineNum">      56 </span><span class="lineCov">          6 :   return tnsr::iJ&lt;T, Dim&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      57 </span>            : }
+<span class="lineNum">      58 </span>            : 
+<span class="lineNum">      59 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      60 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      61 </span><span class="lineCov">          6 : tnsr::ii&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::spatial_metric(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      62 </span>            :                                                 const double /*t*/) const
+<span class="lineNum">      63 </span>            : noexcept {
+<span class="lineNum">      64 </span><span class="lineCov">          6 :   tnsr::ii&lt;T, Dim&gt; lower_metric(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      65 </span><span class="lineCov">         18 :   for (size_t i = 0; i &lt; Dim; ++i) {</span>
+<span class="lineNum">      66 </span><span class="lineCov">         12 :     lower_metric.get(i, i) = 1.;</span>
+<span class="lineNum">      67 </span>            :   }
+<span class="lineNum">      68 </span><span class="lineCov">          6 :   return lower_metric;</span>
+<span class="lineNum">      69 </span>            : }
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      72 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      73 </span><span class="lineCov">          6 : tnsr::ii&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::dt_spatial_metric(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      74 </span>            :                                                    const double /*t*/) const
+<span class="lineNum">      75 </span>            : noexcept {
+<span class="lineNum">      76 </span><span class="lineCov">          6 :   return tnsr::ii&lt;T, Dim&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      77 </span>            : }
+<span class="lineNum">      78 </span>            : 
+<span class="lineNum">      79 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      80 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      81 </span><span class="lineCov">          9 : tnsr::ijj&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::deriv_spatial_metric(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">      82 </span>            :                                                        const double /*t*/) const
+<span class="lineNum">      83 </span>            : noexcept {
+<span class="lineNum">      84 </span><span class="lineCov">          9 :   return tnsr::ijj&lt;T, Dim&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      85 </span>            : }
+<span class="lineNum">      86 </span>            : 
+<span class="lineNum">      87 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">      88 </span>            : template&lt;typename T&gt;
+<span class="lineNum">      89 </span><span class="lineCov">          9 : tnsr::II&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::inverse_spatial_metric(</span>
+<span class="lineNum">      90 </span>            :     const tnsr::I&lt;T, Dim&gt; &amp;x, const double /*t*/
+<span class="lineNum">      91 </span>            : ) const noexcept {
+<span class="lineNum">      92 </span><span class="lineCov">          9 :   tnsr::II&lt;T, Dim&gt; upper_metric(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">      93 </span><span class="lineCov">         30 :   for (size_t i = 0; i &lt; Dim; ++i) {</span>
+<span class="lineNum">      94 </span><span class="lineCov">         21 :     upper_metric.get(i, i) = 1.;</span>
+<span class="lineNum">      95 </span>            :   }
+<span class="lineNum">      96 </span><span class="lineCov">          9 :   return upper_metric;</span>
+<span class="lineNum">      97 </span>            : }
+<span class="lineNum">      98 </span>            : 
+<span class="lineNum">      99 </span>            : template&lt;size_t Dim&gt;
+<span class="lineNum">     100 </span>            : template&lt;typename T&gt;
+<span class="lineNum">     101 </span><span class="lineCov">          7 : tnsr::ii&lt;T, Dim&gt; Minkowski&lt;Dim&gt;::extrinsic_curvature(const tnsr::I&lt;T, Dim&gt; &amp;x,</span>
+<span class="lineNum">     102 </span>            :                                                      const double /*t*/) const
+<span class="lineNum">     103 </span>            : noexcept {
+<span class="lineNum">     104 </span><span class="lineCov">          7 :   return tnsr::ii&lt;T, Dim&gt;(make_with_value&lt;T&gt;(x, 0.));</span>
+<span class="lineNum">     105 </span>            : }
+<span class="lineNum">     106 </span>            : } // namespace EinsteinSolutions
+<span class="lineNum">     107 </span>            : 
+<span class="lineNum">     108 </span>            : /// \cond
+<span class="lineNum">     109 </span>            : #define DIM(data) BOOST_PP_TUPLE_ELEM(0, data)
+<span class="lineNum">     110 </span>            : #define DTYPE(data) BOOST_PP_TUPLE_ELEM(1, data)
+<span class="lineNum">     111 </span>            : 
+<span class="lineNum">     112 </span>            : #define INSTANTIATE(_, data)                                                   \
+<span class="lineNum">     113 </span>            :   template Scalar&lt;DTYPE(data)&gt; EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::lapse( \
+<span class="lineNum">     114 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     115 </span>            :   template Scalar&lt;DTYPE(data)&gt;                                                 \
+<span class="lineNum">     116 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::dt_lapse(                           \
+<span class="lineNum">     117 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     118 </span>            :   template tnsr::i&lt;DTYPE(data), DIM(data)&gt;                                     \
+<span class="lineNum">     119 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::deriv_lapse(                        \
+<span class="lineNum">     120 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     121 </span>            :   template Scalar&lt;DTYPE(data)&gt;                                                 \
+<span class="lineNum">     122 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::sqrt_determinant_of_spatial_metric( \
+<span class="lineNum">     123 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     124 </span>            :   template Scalar&lt;DTYPE(data)&gt; EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::       \
+<span class="lineNum">     125 </span>            :       dt_sqrt_determinant_of_spatial_metric(                                   \
+<span class="lineNum">     126 </span>            :           const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/)              \
+<span class="lineNum">     127 </span>            :           const noexcept;                                                      \
+<span class="lineNum">     128 </span>            :   template tnsr::I&lt;DTYPE(data), DIM(data)&gt;                                     \
+<span class="lineNum">     129 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::shift(                              \
+<span class="lineNum">     130 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     131 </span>            :   template tnsr::iJ&lt;DTYPE(data), DIM(data)&gt;                                    \
+<span class="lineNum">     132 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::deriv_shift(                        \
+<span class="lineNum">     133 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     134 </span>            :   template tnsr::ii&lt;DTYPE(data), DIM(data)&gt;                                    \
+<span class="lineNum">     135 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::spatial_metric(                     \
+<span class="lineNum">     136 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     137 </span>            :   template tnsr::ii&lt;DTYPE(data), DIM(data)&gt;                                    \
+<span class="lineNum">     138 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::dt_spatial_metric(                  \
+<span class="lineNum">     139 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     140 </span>            :   template tnsr::ijj&lt;DTYPE(data), DIM(data)&gt;                                   \
+<span class="lineNum">     141 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::deriv_spatial_metric(               \
+<span class="lineNum">     142 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;  \
+<span class="lineNum">     143 </span>            :   template tnsr::II&lt;DTYPE(data), DIM(data)&gt;                                    \
+<span class="lineNum">     144 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::inverse_spatial_metric(             \
+<span class="lineNum">     145 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/                   \
+<span class="lineNum">     146 </span>            :       ) const noexcept;                                                        \
+<span class="lineNum">     147 </span>            :   template tnsr::ii&lt;DTYPE(data), DIM(data)&gt;                                    \
+<span class="lineNum">     148 </span>            :   EinsteinSolutions::Minkowski&lt;DIM(data)&gt;::extrinsic_curvature(                \
+<a name="149"><span class="lineNum">     149 </span>            :       const tnsr::I&lt;DTYPE(data), DIM(data)&gt;&amp; x, double /*t*/) const noexcept;</a>
+<span class="lineNum">     150 </span>            : 
+<span class="lineNum">     151 </span><span class="lineCov">       1551 : GENERATE_INSTANTIATIONS(INSTANTIATE, (1, 2, 3), (double, DataVector))</span>
+<span class="lineNum">     152 </span>            : 
+<span class="lineNum">     153 </span>            : #undef DIM
+<span class="lineNum">     154 </span>            : #undef DTYPE
+<span class="lineNum">     155 </span>            : #undef INSTANTIATE
+<span class="lineNum">     156 </span>            : /// \endcond
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

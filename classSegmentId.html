@@ -1,0 +1,679 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: SegmentId Class Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classSegmentId-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">SegmentId Class Reference<div class="ingroups"><a class="el" href="group__ComputationalDomainGroup.html">Computational Domain</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A <a class="el" href="classSegmentId.html" title="A SegmentId labels a segment of the interval [-1,1]. A SegmentId is used to (partially) identify an E...">SegmentId</a> labels a segment of the interval [-1,1]. A <a class="el" href="classSegmentId.html" title="A SegmentId labels a segment of the interval [-1,1]. A SegmentId is used to (partially) identify an E...">SegmentId</a> is used to (partially) identify an <a class="el" href="classElement.html" title="A spectral element with knowledge of its neighbors. ">Element</a>. The segment is the interval [-1 + 2*(N/D), -1 + 2*(N+1)/D] where N = index_ and D = 2 ^ refinement_level_.  
+ <a href="classSegmentId.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="SegmentId_8hpp_source.html">SegmentId.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2ec957efe964aafc8dec903bb079b285"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a2ec957efe964aafc8dec903bb079b285">SegmentId</a> () noexcept=default</td></tr>
+<tr class="memdesc:a2ec957efe964aafc8dec903bb079b285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor needed for Charm++ serialization.  <a href="#a2ec957efe964aafc8dec903bb079b285">More...</a><br /></td></tr>
+<tr class="separator:a2ec957efe964aafc8dec903bb079b285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c543b055b2b9c34ad64e6eaa404f50"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#ab6c543b055b2b9c34ad64e6eaa404f50">SegmentId</a> (const <a class="el" href="classSegmentId.html">SegmentId</a> &amp;segment_id) noexcept=default</td></tr>
+<tr class="separator:ab6c543b055b2b9c34ad64e6eaa404f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af944b19c92f1541b3f6022c48fee6c43"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#af944b19c92f1541b3f6022c48fee6c43">SegmentId</a> (<a class="el" href="classSegmentId.html">SegmentId</a> &amp;&amp;segment_id) noexcept=default</td></tr>
+<tr class="separator:af944b19c92f1541b3f6022c48fee6c43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b01031d4f5ab65497a9f7b77f7cfc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a57b01031d4f5ab65497a9f7b77f7cfc3">~SegmentId</a> () noexcept=default</td></tr>
+<tr class="separator:a57b01031d4f5ab65497a9f7b77f7cfc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b7cb52e9d8985cba58d4e025925db1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegmentId.html">SegmentId</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#af6b7cb52e9d8985cba58d4e025925db1">operator=</a> (const <a class="el" href="classSegmentId.html">SegmentId</a> &amp;segment_id) noexcept=default</td></tr>
+<tr class="separator:af6b7cb52e9d8985cba58d4e025925db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c984f13760bf55e0fccfc0295d3bcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegmentId.html">SegmentId</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#ab3c984f13760bf55e0fccfc0295d3bcb">operator=</a> (<a class="el" href="classSegmentId.html">SegmentId</a> &amp;&amp;segment_id) noexcept=default</td></tr>
+<tr class="separator:ab3c984f13760bf55e0fccfc0295d3bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e058ac1ed7e20cec2b830de9580a0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a18e058ac1ed7e20cec2b830de9580a0e">SegmentId</a> (size_t <a class="el" href="classSegmentId.html#aa87bf19cba1fc17c00d8a6c742d9d96f">refinement_level</a>, size_t <a class="el" href="classSegmentId.html#a0919749ab0d3a017c6f43adb9189ba97">index</a>)</td></tr>
+<tr class="separator:a18e058ac1ed7e20cec2b830de9580a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa87bf19cba1fc17c00d8a6c742d9d96f"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#aa87bf19cba1fc17c00d8a6c742d9d96f">refinement_level</a> () const noexcept</td></tr>
+<tr class="separator:aa87bf19cba1fc17c00d8a6c742d9d96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0919749ab0d3a017c6f43adb9189ba97"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a0919749ab0d3a017c6f43adb9189ba97">index</a> () const noexcept</td></tr>
+<tr class="separator:a0919749ab0d3a017c6f43adb9189ba97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8889b7f26718f7e09828405cb85306ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegmentId.html">SegmentId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a8889b7f26718f7e09828405cb85306ed">id_of_parent</a> () const noexcept</td></tr>
+<tr class="separator:a8889b7f26718f7e09828405cb85306ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdf8966ea120c15895049b4133572830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegmentId.html">SegmentId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#afdf8966ea120c15895049b4133572830">id_of_child</a> (<a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a> side) const noexcept</td></tr>
+<tr class="separator:afdf8966ea120c15895049b4133572830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4972500fd0b7cb7522f40e745ca3e0b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSegmentId.html">SegmentId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a4972500fd0b7cb7522f40e745ca3e0b4">id_if_flipped</a> () const noexcept</td></tr>
+<tr class="memdesc:a4972500fd0b7cb7522f40e745ca3e0b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id this segment would have if the coordinate axis were flipped.  <a href="#a4972500fd0b7cb7522f40e745ca3e0b4">More...</a><br /></td></tr>
+<tr class="separator:a4972500fd0b7cb7522f40e745ca3e0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4918c0bcbc55052bf05a6cbd7cd424ed"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a4918c0bcbc55052bf05a6cbd7cd424ed">endpoint</a> (<a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a> side) const noexcept</td></tr>
+<tr class="memdesc:a4918c0bcbc55052bf05a6cbd7cd424ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logical coordinate of the endpoint of the segment on the given Side.  <a href="#a4918c0bcbc55052bf05a6cbd7cd424ed">More...</a><br /></td></tr>
+<tr class="separator:a4918c0bcbc55052bf05a6cbd7cd424ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53665d99d580f61cf1dd4f15706552be"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a53665d99d580f61cf1dd4f15706552be">midpoint</a> () const noexcept</td></tr>
+<tr class="memdesc:a53665d99d580f61cf1dd4f15706552be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logical coordinate of the midpoint of the segment.  <a href="#a53665d99d580f61cf1dd4f15706552be">More...</a><br /></td></tr>
+<tr class="separator:a53665d99d580f61cf1dd4f15706552be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9a8bec2c673cdd8f852833f306cdd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#abe9a8bec2c673cdd8f852833f306cdd5">overlaps</a> (const <a class="el" href="classSegmentId.html">SegmentId</a> &amp;other) const noexcept</td></tr>
+<tr class="memdesc:abe9a8bec2c673cdd8f852833f306cdd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the segment overlap with another?  <a href="#abe9a8bec2c673cdd8f852833f306cdd5">More...</a><br /></td></tr>
+<tr class="separator:abe9a8bec2c673cdd8f852833f306cdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97cf2b96c5f2e2d024a568684bdf99c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSegmentId.html#a97cf2b96c5f2e2d024a568684bdf99c2">pup</a> (PUP::er &amp;p)</td></tr>
+<tr class="memdesc:a97cf2b96c5f2e2d024a568684bdf99c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialization for Charm++.  <a href="#a97cf2b96c5f2e2d024a568684bdf99c2">More...</a><br /></td></tr>
+<tr class="separator:a97cf2b96c5f2e2d024a568684bdf99c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="classSegmentId.html" title="A SegmentId labels a segment of the interval [-1,1]. A SegmentId is used to (partially) identify an E...">SegmentId</a> labels a segment of the interval [-1,1]. A <a class="el" href="classSegmentId.html" title="A SegmentId labels a segment of the interval [-1,1]. A SegmentId is used to (partially) identify an E...">SegmentId</a> is used to (partially) identify an <a class="el" href="classElement.html" title="A spectral element with knowledge of its neighbors. ">Element</a>. The segment is the interval [-1 + 2*(N/D), -1 + 2*(N+1)/D] where N = index_ and D = 2 ^ refinement_level_. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2ec957efe964aafc8dec903bb079b285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ec957efe964aafc8dec903bb079b285">&#9670;&nbsp;</a></span>SegmentId() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr SegmentId::SegmentId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor needed for Charm++ serialization. </p>
+
+</div>
+</div>
+<a id="ab6c543b055b2b9c34ad64e6eaa404f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c543b055b2b9c34ad64e6eaa404f50">&#9670;&nbsp;</a></span>SegmentId() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr SegmentId::SegmentId </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSegmentId.html">SegmentId</a> &amp;&#160;</td>
+          <td class="paramname"><em>segment_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af944b19c92f1541b3f6022c48fee6c43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af944b19c92f1541b3f6022c48fee6c43">&#9670;&nbsp;</a></span>SegmentId() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr SegmentId::SegmentId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSegmentId.html">SegmentId</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>segment_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57b01031d4f5ab65497a9f7b77f7cfc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b01031d4f5ab65497a9f7b77f7cfc3">&#9670;&nbsp;</a></span>~SegmentId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SegmentId::~SegmentId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18e058ac1ed7e20cec2b830de9580a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e058ac1ed7e20cec2b830de9580a0e">&#9670;&nbsp;</a></span>SegmentId() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SegmentId::SegmentId </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>refinement_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#gaf170f3984e3d0f809b2558dbd981ca35">ASSERT</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4918c0bcbc55052bf05a6cbd7cd424ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4918c0bcbc55052bf05a6cbd7cd424ed">&#9670;&nbsp;</a></span>endpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SegmentId::endpoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a>&#160;</td>
+          <td class="paramname"><em>side</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The logical coordinate of the endpoint of the segment on the given Side. </p>
+
+<p class="reference">References <a class="el" href="group__ComputationalDomainGroup.html#gga8c0137d7160ad71b6ed265c53c99ed00ab75fcdd2d72d9e000beab48622402d93">Lower</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classSegmentId.html#a0919749ab0d3a017c6f43adb9189ba97">index()</a>.</p>
+
+</div>
+</div>
+<a id="a4972500fd0b7cb7522f40e745ca3e0b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4972500fd0b7cb7522f40e745ca3e0b4">&#9670;&nbsp;</a></span>id_if_flipped()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentId.html">SegmentId</a> SegmentId::id_if_flipped </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The id this segment would have if the coordinate axis were flipped. </p>
+
+<p class="reference">References <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classSegmentId.html#a0919749ab0d3a017c6f43adb9189ba97">index()</a>.</p>
+
+</div>
+</div>
+<a id="afdf8966ea120c15895049b4133572830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdf8966ea120c15895049b4133572830">&#9670;&nbsp;</a></span>id_of_child()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentId.html">SegmentId</a> SegmentId::id_of_child </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a>&#160;</td>
+          <td class="paramname"><em>side</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ComputationalDomainGroup.html#gga8c0137d7160ad71b6ed265c53c99ed00ab75fcdd2d72d9e000beab48622402d93">Lower</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classSegmentId.html#a0919749ab0d3a017c6f43adb9189ba97">index()</a>.</p>
+
+</div>
+</div>
+<a id="a8889b7f26718f7e09828405cb85306ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8889b7f26718f7e09828405cb85306ed">&#9670;&nbsp;</a></span>id_of_parent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentId.html">SegmentId</a> SegmentId::id_of_parent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#gaf170f3984e3d0f809b2558dbd981ca35">ASSERT</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classSegmentId.html#a0919749ab0d3a017c6f43adb9189ba97">index()</a>.</p>
+
+</div>
+</div>
+<a id="a0919749ab0d3a017c6f43adb9189ba97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0919749ab0d3a017c6f43adb9189ba97">&#9670;&nbsp;</a></span>index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t SegmentId::index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="classSegmentId.html#a4918c0bcbc55052bf05a6cbd7cd424ed">endpoint()</a>, <a class="el" href="classSegmentId.html#a4972500fd0b7cb7522f40e745ca3e0b4">id_if_flipped()</a>, <a class="el" href="classSegmentId.html#afdf8966ea120c15895049b4133572830">id_of_child()</a>, and <a class="el" href="classSegmentId.html#a8889b7f26718f7e09828405cb85306ed">id_of_parent()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="SegmentId_8hpp.html#affec84fd02a1e2c1f4f2b8070a7cb05d">operator==()</a>.</p>
+
+</div>
+</div>
+<a id="a53665d99d580f61cf1dd4f15706552be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53665d99d580f61cf1dd4f15706552be">&#9670;&nbsp;</a></span>midpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double SegmentId::midpoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The logical coordinate of the midpoint of the segment. </p>
+
+<p class="reference">References <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/types/numeric_limits/max.html">std::numeric_limits::max()</a>, <a class="el" href="SegmentId_8hpp.html#af6e5af873055d53316a889fbb1c03c57">operator!=()</a>, <a class="el" href="SegmentId_8hpp.html#a855c0acd17ec28452e8454e07e22edaf">operator&lt;&lt;()</a>, <a class="el" href="SegmentId_8hpp.html#affec84fd02a1e2c1f4f2b8070a7cb05d">operator==()</a>, <a class="el" href="classSegmentId.html#abe9a8bec2c673cdd8f852833f306cdd5">overlaps()</a>, <a class="el" href="classSegmentId.html#a97cf2b96c5f2e2d024a568684bdf99c2">pup()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+</div>
+</div>
+<a id="af6b7cb52e9d8985cba58d4e025925db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6b7cb52e9d8985cba58d4e025925db1">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentId.html">SegmentId</a>&amp; SegmentId::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSegmentId.html">SegmentId</a> &amp;&#160;</td>
+          <td class="paramname"><em>segment_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3c984f13760bf55e0fccfc0295d3bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c984f13760bf55e0fccfc0295d3bcb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSegmentId.html">SegmentId</a>&amp; SegmentId::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSegmentId.html">SegmentId</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>segment_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe9a8bec2c673cdd8f852833f306cdd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9a8bec2c673cdd8f852833f306cdd5">&#9670;&nbsp;</a></span>overlaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SegmentId::overlaps </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSegmentId.html">SegmentId</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Does the segment overlap with another? </p>
+
+<p class="reference">References <a class="el" href="SegmentId_8hpp.html#a3d6414e1a037c2f4b256ed628a242b3e">hash_value()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classSegmentId.html#a53665d99d580f61cf1dd4f15706552be">midpoint()</a>.</p>
+
+</div>
+</div>
+<a id="a97cf2b96c5f2e2d024a568684bdf99c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97cf2b96c5f2e2d024a568684bdf99c2">&#9670;&nbsp;</a></span>pup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SegmentId::pup </td>
+          <td>(</td>
+          <td class="paramtype">PUP::er &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Serialization for Charm++. </p>
+
+<p class="reference">Referenced by <a class="el" href="classSegmentId.html#a53665d99d580f61cf1dd4f15706552be">midpoint()</a>.</p>
+
+</div>
+</div>
+<a id="aa87bf19cba1fc17c00d8a6c742d9d96f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa87bf19cba1fc17c00d8a6c742d9d96f">&#9670;&nbsp;</a></span>refinement_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t SegmentId::refinement_level </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="SegmentId_8hpp.html#affec84fd02a1e2c1f4f2b8070a7cb05d">operator==()</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/Domain/<a class="el" href="SegmentId_8hpp_source.html">SegmentId.hpp</a></li>
+<li>src/Domain/<a class="el" href="SegmentId_8cpp.html">SegmentId.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: src/NumericalAlgorithms/LinearOperators/MeanValue.cpp File Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22cd119e9135d55404da822cc2bf42d2.html">src</a></li><li class="navelem"><a class="el" href="dir_a7268f5afc6b190325b6ae3281812809.html">NumericalAlgorithms</a></li><li class="navelem"><a class="el" href="dir_6aebc56c29e3dcc59b286f32de3a6773.html">LinearOperators</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">MeanValue.cpp File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="MeanValue_8hpp_source.html">NumericalAlgorithms/LinearOperators/MeanValue.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DataVector_8hpp_source.html">DataStructures/DataVector.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Index_8hpp_source.html">DataStructures/Index.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SliceIterator_8hpp_source.html">DataStructures/SliceIterator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Assert_8hpp_source.html">ErrorHandling/Assert.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5b0c3c0f777e058d303532e80253e4db"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a5b0c3c0f777e058d303532e80253e4db"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="MeanValue_8cpp.html#a5b0c3c0f777e058d303532e80253e4db">mean_value_on_boundary</a> (const <a class="el" href="classDataVector.html">DataVector</a> &amp;f, const <a class="el" href="classIndex.html">Index</a>&lt; 1 &gt; &amp;extents, size_t d, <a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a> side)</td></tr>
+<tr class="separator:a5b0c3c0f777e058d303532e80253e4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93d409231ff73e47fda9b1c6e49a8fe9"><td class="memTemplParams" colspan="2">template&lt;size_t Dim&gt; </td></tr>
+<tr class="memitem:ga93d409231ff73e47fda9b1c6e49a8fe9"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__NumericalAlgorithmsGroup.html#ga93d409231ff73e47fda9b1c6e49a8fe9">mean_value_on_boundary</a> (const <a class="el" href="classDataVector.html">DataVector</a> &amp;f, const <a class="el" href="classIndex.html">Index</a>&lt; Dim &gt; &amp;extents, size_t d, <a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a> side)</td></tr>
+<tr class="separator:ga93d409231ff73e47fda9b1c6e49a8fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35431991c2fd0ff3ce70203a5077c5f"><td class="memItemLeft" align="right" valign="top">template double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MeanValue_8cpp.html#ab35431991c2fd0ff3ce70203a5077c5f">mean_value_on_boundary</a> (const <a class="el" href="classDataVector.html">DataVector</a> &amp;, const <a class="el" href="classIndex.html">Index</a>&lt; 2 &gt; &amp;, size_t, <a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a>)</td></tr>
+<tr class="separator:ab35431991c2fd0ff3ce70203a5077c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff31b82dfe8a596b7999302af000af26"><td class="memItemLeft" align="right" valign="top">template double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MeanValue_8cpp.html#aff31b82dfe8a596b7999302af000af26">mean_value_on_boundary</a> (const <a class="el" href="classDataVector.html">DataVector</a> &amp;, const <a class="el" href="classIndex.html">Index</a>&lt; 3 &gt; &amp;, size_t, <a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a>)</td></tr>
+<tr class="separator:aff31b82dfe8a596b7999302af000af26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a5b0c3c0f777e058d303532e80253e4db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b0c3c0f777e058d303532e80253e4db">&#9670;&nbsp;</a></span>mean_value_on_boundary() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">double mean_value_on_boundary </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataVector.html">DataVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classIndex.html">Index</a>&lt; 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>extents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a>&#160;</td>
+          <td class="paramname"><em>side</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#gaf170f3984e3d0f809b2558dbd981ca35">ASSERT</a>, and <a class="el" href="group__ComputationalDomainGroup.html#gga8c0137d7160ad71b6ed265c53c99ed00ab75fcdd2d72d9e000beab48622402d93">Lower</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="group__NumericalAlgorithmsGroup.html#ga93d409231ff73e47fda9b1c6e49a8fe9">mean_value_on_boundary()</a>.</p>
+
+</div>
+</div>
+<a id="ab35431991c2fd0ff3ce70203a5077c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35431991c2fd0ff3ce70203a5077c5f">&#9670;&nbsp;</a></span>mean_value_on_boundary() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">template double mean_value_on_boundary </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataVector.html">DataVector</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classIndex.html">Index</a>&lt; 2 &gt; &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff31b82dfe8a596b7999302af000af26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff31b82dfe8a596b7999302af000af26">&#9670;&nbsp;</a></span>mean_value_on_boundary() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">template double mean_value_on_boundary </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataVector.html">DataVector</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classIndex.html">Index</a>&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__ComputationalDomainGroup.html#ga8c0137d7160ad71b6ed265c53c99ed00">Side</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

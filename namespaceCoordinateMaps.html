@@ -1,0 +1,952 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: CoordinateMaps Namespace Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">CoordinateMaps Namespace Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Contains all coordinate maps.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Affine.html">Affine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCoordinateMaps_1_1Affine.html" title="Affine map from . ">Affine</a> map from \(\xi \in [A, B]\rightarrow x \in [a, b]\).  <a href="classCoordinateMaps_1_1Affine.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Three dimensional map from the cube to a bulged cube. The cube is shaped such that the surface is compatible with the inner surface of <a class="el" href="classCoordinateMaps_1_1Wedge3D.html" title="Three dimensional map from the cube to a wedge. ">Wedge3D</a>. The shape of the object can be chosen to be cubical, if the sphericity is set to 0, or to a sphere, if the sphericity is set to 1. The sphericity can be set to any number between 0 and 1 for a bulged cube.  <a href="classCoordinateMaps_1_1BulgedCube.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Non-linear map from \(\xi \in [A, B]\rightarrow x \in [a, b]\).  <a href="classCoordinateMaps_1_1Equiangular.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Identity.html">Identity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classCoordinateMaps_1_1Identity.html" title="Identity map from . ">Identity</a> map from \(\xi \rightarrow x\).  <a href="classCoordinateMaps_1_1Identity.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1ProductOf2Maps.html">ProductOf2Maps</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product of two codimension=0 <a class="el" href="namespaceCoordinateMaps.html" title="Contains all coordinate maps. ">CoordinateMaps</a>.  <a href="classCoordinateMaps_1_1ProductOf2Maps.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1ProductOf3Maps.html">ProductOf3Maps</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Product of three one-dimensional <a class="el" href="namespaceCoordinateMaps.html" title="Contains all coordinate maps. ">CoordinateMaps</a>.  <a href="classCoordinateMaps_1_1ProductOf3Maps.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Rotation_3_012_01_4.html">Rotation&lt; 2 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spatial rotation in two dimensions.  <a href="classCoordinateMaps_1_1Rotation_3_012_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Rotation_3_013_01_4.html">Rotation&lt; 3 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spatial rotation in three dimensions using Euler angles.  <a href="classCoordinateMaps_1_1Rotation_3_013_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two dimensional map from the unit square to a wedge, which is constructed by interpolating between a circular arc of radius <code>radius_of_circle</code> and a flat face which is circumscribed by a circular arc of radius <code>radius_of_other</code>. These arcs extend \(\pi/2\) in angle, and can be oriented along the +/- x or y axis. The choice of using either equiangular or equidistant coordinates along the arcs is specifiable with <code>with_equiangular_map</code>. For a more detailed discussion, see the documentation for <a class="el" href="classCoordinateMaps_1_1Wedge3D.html" title="Three dimensional map from the cube to a wedge. ">Wedge3D</a>.  <a href="classCoordinateMaps_1_1Wedge2D.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Three dimensional map from the cube to a wedge.  <a href="classCoordinateMaps_1_1Wedge3D.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae47f88e8baa928fd42bb2bdd7e01cb04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#ae47f88e8baa928fd42bb2bdd7e01cb04">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:ae47f88e8baa928fd42bb2bdd7e01cb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f3e2c48ce1c1fc0e09ed413179b0ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#ac6f3e2c48ce1c1fc0e09ed413179b0ed">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:ac6f3e2c48ce1c1fc0e09ed413179b0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42a3d4146a47877455a8fa2e906c8af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#ac42a3d4146a47877455a8fa2e906c8af">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:ac42a3d4146a47877455a8fa2e906c8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab431958ef0cd777f35946d087ae33474"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#ab431958ef0cd777f35946d087ae33474">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:ab431958ef0cd777f35946d087ae33474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c070c3ccd9bcb3249c0c89f3f17e5a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a5c070c3ccd9bcb3249c0c89f3f17e5a5">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a5c070c3ccd9bcb3249c0c89f3f17e5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e8fa5150fbe1674710ac81e9ef3842"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a81e8fa5150fbe1674710ac81e9ef3842">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a81e8fa5150fbe1674710ac81e9ef3842"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9275f2358c5d7813201f5677ea5e837b"><td class="memTemplParams" colspan="2">template&lt;size_t Dim&gt; </td></tr>
+<tr class="memitem:a9275f2358c5d7813201f5677ea5e837b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a9275f2358c5d7813201f5677ea5e837b">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;, const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;) noexcept</td></tr>
+<tr class="separator:a9275f2358c5d7813201f5677ea5e837b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef8a7d03b0645f99866ed9d3d2928bb6"><td class="memTemplParams" colspan="2">template&lt;size_t Dim&gt; </td></tr>
+<tr class="memitem:aef8a7d03b0645f99866ed9d3d2928bb6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#aef8a7d03b0645f99866ed9d3d2928bb6">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:aef8a7d03b0645f99866ed9d3d2928bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa6a128c5d464be6ce3451a9dd34571"><td class="memTemplParams" colspan="2">template&lt;typename Map1 , typename Map2 &gt; </td></tr>
+<tr class="memitem:a6fa6a128c5d464be6ce3451a9dd34571"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a6fa6a128c5d464be6ce3451a9dd34571">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1ProductOf2Maps.html">ProductOf2Maps</a>&lt; Map1, Map2 &gt; &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1ProductOf2Maps.html">ProductOf2Maps</a>&lt; Map1, Map2 &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:a6fa6a128c5d464be6ce3451a9dd34571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd426648b2fd15c9e7de37317074122"><td class="memTemplParams" colspan="2">template&lt;typename Map1 , typename Map2 , typename Map3 &gt; </td></tr>
+<tr class="memitem:a0fd426648b2fd15c9e7de37317074122"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a0fd426648b2fd15c9e7de37317074122">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1ProductOf3Maps.html">ProductOf3Maps</a>&lt; Map1, Map2, Map3 &gt; &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1ProductOf3Maps.html">ProductOf3Maps</a>&lt; Map1, Map2, Map3 &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:a0fd426648b2fd15c9e7de37317074122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb0a59f27cbb33e3bb6f33e033f79270"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#afb0a59f27cbb33e3bb6f33e033f79270">operator==</a> (const Rotation&lt; 2 &gt; &amp;lhs, const Rotation&lt; 2 &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:afb0a59f27cbb33e3bb6f33e033f79270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8218a0a64623f890fd9c5b8b410ec37c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a8218a0a64623f890fd9c5b8b410ec37c">operator!=</a> (const Rotation&lt; 2 &gt; &amp;lhs, const Rotation&lt; 2 &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:a8218a0a64623f890fd9c5b8b410ec37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefcddbb3e7305a04874f924cc1127527"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#aefcddbb3e7305a04874f924cc1127527">operator==</a> (const Rotation&lt; 3 &gt; &amp;lhs, const Rotation&lt; 3 &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:aefcddbb3e7305a04874f924cc1127527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b5e7e083f4f857db9572de36bc97c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a69b5e7e083f4f857db9572de36bc97c8">operator!=</a> (const Rotation&lt; 3 &gt; &amp;lhs, const Rotation&lt; 3 &gt; &amp;rhs) noexcept</td></tr>
+<tr class="separator:a69b5e7e083f4f857db9572de36bc97c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a214fab04d689daa5449a1cfbd8239028"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a214fab04d689daa5449a1cfbd8239028">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a214fab04d689daa5449a1cfbd8239028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5c702e1bf568d0d9822c8e09a3b36c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#ae5c702e1bf568d0d9822c8e09a3b36c8">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:ae5c702e1bf568d0d9822c8e09a3b36c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2091d032f2ee95555e7101f96b61f690"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a2091d032f2ee95555e7101f96b61f690">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a2091d032f2ee95555e7101f96b61f690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1021ac96a6d14574c1b0d211a38e3527"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#a1021ac96a6d14574c1b0d211a38e3527">operator!=</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a1021ac96a6d14574c1b0d211a38e3527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aba1b949a3b1c4af5e89b9253cf316832"><td class="memTemplParams" colspan="2">template&lt;typename FirstMap , typename... Maps&gt; </td></tr>
+<tr class="memitem:aba1b949a3b1c4af5e89b9253cf316832"><td class="memTemplItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceCoordinateMaps.html#aba1b949a3b1c4af5e89b9253cf316832">map_dim</a> = FirstMap::dim</td></tr>
+<tr class="separator:aba1b949a3b1c4af5e89b9253cf316832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains all coordinate maps. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="aef8a7d03b0645f99866ed9d3d2928bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8a7d03b0645f99866ed9d3d2928bb6">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[1/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Dim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8218a0a64623f890fd9c5b8b410ec37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8218a0a64623f890fd9c5b8b410ec37c">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const Rotation&lt; 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Rotation&lt; 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6f3e2c48ce1c1fc0e09ed413179b0ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6f3e2c48ce1c1fc0e09ed413179b0ed">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[3/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81e8fa5150fbe1674710ac81e9ef3842"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e8fa5150fbe1674710ac81e9ef3842">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fa6a128c5d464be6ce3451a9dd34571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa6a128c5d464be6ce3451a9dd34571">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[5/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Map1 , typename Map2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1ProductOf2Maps.html">ProductOf2Maps</a>&lt; Map1, Map2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1ProductOf2Maps.html">ProductOf2Maps</a>&lt; Map1, Map2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5c702e1bf568d0d9822c8e09a3b36c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5c702e1bf568d0d9822c8e09a3b36c8">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[6/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gad7b776398a66e9a6bd561c8decf08b47">GENERATE_INSTANTIATIONS</a>.</p>
+
+</div>
+</div>
+<a id="a69b5e7e083f4f857db9572de36bc97c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b5e7e083f4f857db9572de36bc97c8">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[7/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const Rotation&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Rotation&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gad7b776398a66e9a6bd561c8decf08b47">GENERATE_INSTANTIATIONS</a>.</p>
+
+</div>
+</div>
+<a id="ab431958ef0cd777f35946d087ae33474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab431958ef0cd777f35946d087ae33474">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[8/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gad7b776398a66e9a6bd561c8decf08b47">GENERATE_INSTANTIATIONS</a>.</p>
+
+</div>
+</div>
+<a id="a0fd426648b2fd15c9e7de37317074122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd426648b2fd15c9e7de37317074122">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[9/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Map1 , typename Map2 , typename Map3 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1ProductOf3Maps.html">ProductOf3Maps</a>&lt; Map1, Map2, Map3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1ProductOf3Maps.html">ProductOf3Maps</a>&lt; Map1, Map2, Map3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1021ac96a6d14574c1b0d211a38e3527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1021ac96a6d14574c1b0d211a38e3527">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[10/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gad7b776398a66e9a6bd561c8decf08b47">GENERATE_INSTANTIATIONS</a>.</p>
+
+</div>
+</div>
+<a id="a9275f2358c5d7813201f5677ea5e837b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9275f2358c5d7813201f5677ea5e837b">&#9670;&nbsp;</a></span>operator==() <span class="overload">[1/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Dim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Identity.html">CoordinateMaps::Identity</a>&lt; Dim &gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae47f88e8baa928fd42bb2bdd7e01cb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae47f88e8baa928fd42bb2bdd7e01cb04">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Affine.html">CoordinateMaps::Affine</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gad7b776398a66e9a6bd561c8decf08b47">GENERATE_INSTANTIATIONS</a>.</p>
+
+</div>
+</div>
+<a id="afb0a59f27cbb33e3bb6f33e033f79270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb0a59f27cbb33e3bb6f33e033f79270">&#9670;&nbsp;</a></span>operator==() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const Rotation&lt; 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Rotation&lt; 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c070c3ccd9bcb3249c0c89f3f17e5a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c070c3ccd9bcb3249c0c89f3f17e5a5">&#9670;&nbsp;</a></span>operator==() <span class="overload">[4/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">CoordinateMaps::Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gad7b776398a66e9a6bd561c8decf08b47">GENERATE_INSTANTIATIONS</a>.</p>
+
+</div>
+</div>
+<a id="a214fab04d689daa5449a1cfbd8239028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a214fab04d689daa5449a1cfbd8239028">&#9670;&nbsp;</a></span>operator==() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefcddbb3e7305a04874f924cc1127527"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefcddbb3e7305a04874f924cc1127527">&#9670;&nbsp;</a></span>operator==() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const Rotation&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Rotation&lt; 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac42a3d4146a47877455a8fa2e906c8af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42a3d4146a47877455a8fa2e906c8af">&#9670;&nbsp;</a></span>operator==() <span class="overload">[7/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1BulgedCube.html">BulgedCube</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2091d032f2ee95555e7101f96b61f690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2091d032f2ee95555e7101f96b61f690">&#9670;&nbsp;</a></span>operator==() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CoordinateMaps::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aba1b949a3b1c4af5e89b9253cf316832"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba1b949a3b1c4af5e89b9253cf316832">&#9670;&nbsp;</a></span>map_dim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename FirstMap , typename... Maps&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t CoordinateMaps::map_dim = FirstMap::dim</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

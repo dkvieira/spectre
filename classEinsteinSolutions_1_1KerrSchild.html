@@ -1,0 +1,783 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: EinsteinSolutions::KerrSchild Class Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceEinsteinSolutions.html">EinsteinSolutions</a></li><li class="navelem"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="classEinsteinSolutions_1_1KerrSchild-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">EinsteinSolutions::KerrSchild Class Reference<div class="ingroups"><a class="el" href="group__EinsteinSolutionsGroup.html">Einstein Solutions</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Kerr black hole in Kerr-Schild coordinates.  
+ <a href="classEinsteinSolutions_1_1KerrSchild.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="KerrSchild_8hpp_source.html">KerrSchild.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Center.html">Center</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Mass.html">Mass</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html">Spin</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a1b025e045bd99b10105831ed1f366149"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a1b025e045bd99b10105831ed1f366149">options</a> = tmpl::list&lt; <a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Mass.html">Mass</a>, <a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html">Spin</a>, <a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Center.html">Center</a> &gt;</td></tr>
+<tr class="separator:a1b025e045bd99b10105831ed1f366149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa078d3a037fccf9075eeba80a17d386"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
+<tr class="memitem:aaa078d3a037fccf9075eeba80a17d386"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#aaa078d3a037fccf9075eeba80a17d386">deriv_lapse</a> = <a class="el" href="structTags_1_1deriv.html">Tags::deriv</a>&lt; <a class="el" href="structgr_1_1Tags_1_1Lapse.html">gr::Tags::Lapse</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, tmpl::size_t&lt; 3 &gt;, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt;</td></tr>
+<tr class="separator:aaa078d3a037fccf9075eeba80a17d386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e07890da5a59231e6a43170d43966e"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
+<tr class="memitem:a89e07890da5a59231e6a43170d43966e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a89e07890da5a59231e6a43170d43966e">deriv_shift</a> = <a class="el" href="structTags_1_1deriv.html">Tags::deriv</a>&lt; <a class="el" href="structgr_1_1Tags_1_1Shift.html">gr::Tags::Shift</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, tmpl::size_t&lt; 3 &gt;, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt;</td></tr>
+<tr class="separator:a89e07890da5a59231e6a43170d43966e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd907a610653213942c43a03ec4aaa6c"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
+<tr class="memitem:abd907a610653213942c43a03ec4aaa6c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#abd907a610653213942c43a03ec4aaa6c">deriv_spatial_metric</a> = <a class="el" href="structTags_1_1deriv.html">Tags::deriv</a>&lt; <a class="el" href="structgr_1_1Tags_1_1SpatialMetric.html">gr::Tags::SpatialMetric</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, tmpl::size_t&lt; 3 &gt;, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt;</td></tr>
+<tr class="separator:abd907a610653213942c43a03ec4aaa6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3853e587b12f80cc9429f010216af2eb"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
+<tr class="memitem:a3853e587b12f80cc9429f010216af2eb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a3853e587b12f80cc9429f010216af2eb">tags</a> = tmpl::list&lt; <a class="el" href="structgr_1_1Tags_1_1Lapse.html">gr::Tags::Lapse</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, <a class="el" href="structgr_1_1Tags_1_1DtLapse.html">gr::Tags::DtLapse</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#aaa078d3a037fccf9075eeba80a17d386">deriv_lapse</a>&lt; DataType &gt;, <a class="el" href="structgr_1_1Tags_1_1Shift.html">gr::Tags::Shift</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, <a class="el" href="structgr_1_1Tags_1_1DtShift.html">gr::Tags::DtShift</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a89e07890da5a59231e6a43170d43966e">deriv_shift</a>&lt; DataType &gt;, <a class="el" href="structgr_1_1Tags_1_1SpatialMetric.html">gr::Tags::SpatialMetric</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, <a class="el" href="structgr_1_1Tags_1_1DtSpatialMetric.html">gr::Tags::DtSpatialMetric</a>&lt; 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType &gt;, <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#abd907a610653213942c43a03ec4aaa6c">deriv_spatial_metric</a>&lt; DataType &gt; &gt;</td></tr>
+<tr class="separator:a3853e587b12f80cc9429f010216af2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a792aca342271212670deb79e25283b81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a792aca342271212670deb79e25283b81">KerrSchild</a> (double <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a5277c58e100612ac47792790309a310d">mass</a>, <a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html#aa96e8b35e71723c51eb29aead84361ab">Spin::type</a> <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#ad090f6a19066a1fa9084722f1379b5ba">spin</a>, <a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Center.html#a2f4d9e15bdec389129156dc329cd6098">Center::type</a> <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#aa89c7b4b586993886c7c03b11b573b5e">center</a>, const <a class="el" href="structOptionContext.html">OptionContext</a> &amp;context={})</td></tr>
+<tr class="separator:a792aca342271212670deb79e25283b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf837c5c68627ead7cdee365b5e078df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#aaf837c5c68627ead7cdee365b5e078df">KerrSchild</a> (CkMigrateMessage *) noexcept</td></tr>
+<tr class="separator:aaf837c5c68627ead7cdee365b5e078df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de769b88e3efe8e4df669c39e4a9d1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a8de769b88e3efe8e4df669c39e4a9d1b">KerrSchild</a> ()=default</td></tr>
+<tr class="separator:a8de769b88e3efe8e4df669c39e4a9d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7912ec3bc858a226484463a0effcfc9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#ac7912ec3bc858a226484463a0effcfc9">KerrSchild</a> (const <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;)=default</td></tr>
+<tr class="separator:ac7912ec3bc858a226484463a0effcfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d52fb58cc1fee1b9a55f0d1b49a20b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a8d52fb58cc1fee1b9a55f0d1b49a20b3">operator=</a> (const <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;)=default</td></tr>
+<tr class="separator:a8d52fb58cc1fee1b9a55f0d1b49a20b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9030c43ea883af37cc959f0cab4c1e58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a9030c43ea883af37cc959f0cab4c1e58">KerrSchild</a> (<a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a9030c43ea883af37cc959f0cab4c1e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b3b76bcdb2286d37198ccfd0bbaeac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a22b3b76bcdb2286d37198ccfd0bbaeac">operator=</a> (<a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a22b3b76bcdb2286d37198ccfd0bbaeac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2412fda8fd7e9b843eaa5828d0658779"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a2412fda8fd7e9b843eaa5828d0658779">~KerrSchild</a> ()=default</td></tr>
+<tr class="separator:a2412fda8fd7e9b843eaa5828d0658779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22dd784014052d105054a9bbdb5de132"><td class="memTemplParams" colspan="2">template&lt;typename DataType &gt; </td></tr>
+<tr class="memitem:a22dd784014052d105054a9bbdb5de132"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="group__UtilitiesGroup.html#ga9d33140d1e46af90392a957855ea2a83">tuples::TaggedTupleTypelist</a>&lt; <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a3853e587b12f80cc9429f010216af2eb">tags</a>&lt; DataType &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a22dd784014052d105054a9bbdb5de132">solution</a> (const <a class="el" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I</a>&lt; DataType, 3 &gt; &amp;x, double t) const noexcept</td></tr>
+<tr class="separator:a22dd784014052d105054a9bbdb5de132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae04a70c30ec93225ed0c300c1b6bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#acae04a70c30ec93225ed0c300c1b6bbd">pup</a> (PUP::er &amp;p) noexcept</td></tr>
+<tr class="separator:acae04a70c30ec93225ed0c300c1b6bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5277c58e100612ac47792790309a310d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a5277c58e100612ac47792790309a310d">mass</a> () const noexcept</td></tr>
+<tr class="separator:a5277c58e100612ac47792790309a310d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89c7b4b586993886c7c03b11b573b5e"><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; double, 3 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#aa89c7b4b586993886c7c03b11b573b5e">center</a> () const noexcept</td></tr>
+<tr class="separator:aa89c7b4b586993886c7c03b11b573b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad090f6a19066a1fa9084722f1379b5ba"><td class="memItemLeft" align="right" valign="top">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; double, 3 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#ad090f6a19066a1fa9084722f1379b5ba">spin</a> () const noexcept</td></tr>
+<tr class="separator:ad090f6a19066a1fa9084722f1379b5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a813803379cdfac84b76511c128bd60cb"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a813803379cdfac84b76511c128bd60cb">help</a> {&quot;Black hole in Kerr-Schild coordinates&quot;}</td></tr>
+<tr class="separator:a813803379cdfac84b76511c128bd60cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Kerr black hole in Kerr-Schild coordinates. </p>
+<h3>Details</h3>
+<p>The metric is \(g_{\mu\nu} = \eta_{\mu\nu} + 2 H l_\mu l_\nu\), where \(\eta_{\mu\nu}\) is the <a class="el" href="classEinsteinSolutions_1_1Minkowski.html" title="The Minkowski solution for flat space in Dim spatial dimensions. ">Minkowski</a> metric, \(H\) is a scalar function, and \(l_\mu\) is the outgoing null vector. \(H\) and \(l_\mu\) are known functions of the coordinates and of the mass and spin vector.</p>
+<p>The following are input file options that can be specified:</p><ul>
+<li><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Mass.html">Mass</a> (default: 1.)</li>
+<li><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Center.html">Center</a> (default: {0,0,0})</li>
+<li><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html">Spin</a> (default: {0,0,0})</li>
+</ul>
+<h2>Kerr-Schild Coordinates</h2>
+<p>A Kerr-Schild coordinate system is defined by </p><p class="formulaDsp">
+\begin{equation} g_{\mu\nu} \equiv \eta_{\mu\nu} + 2 H l_\mu l_\nu, \end{equation}
+</p>
+<p> where \(H\) is a scalar function of the coordinates, \(\eta_{\mu\nu}\) is the <a class="el" href="classEinsteinSolutions_1_1Minkowski.html" title="The Minkowski solution for flat space in Dim spatial dimensions. ">Minkowski</a> metric, and \(l^\mu\) is a null vector. Note that the form of the metric along with the nullness of \(l^\mu\) allows one to raise and lower indices of \(l^\mu\) using \(\eta_{\mu\nu}\), and that \(l^t l^t = l_t l_t = l^i l_i\). Note also that </p><p class="formulaDsp">
+\begin{equation} g^{\mu\nu} \equiv \eta^{\mu\nu} - 2 H l^\mu l^\nu, \end{equation}
+</p>
+<p> and that \(\sqrt{-g}=1\). Also, \(l_\mu\) is a geodesic with respect to both the physical metric and the <a class="el" href="classEinsteinSolutions_1_1Minkowski.html" title="The Minkowski solution for flat space in Dim spatial dimensions. ">Minkowski</a> metric: </p><p class="formulaDsp">
+\begin{equation} l^\mu \partial_\mu l_\nu = l^\mu\nabla_\mu l_\nu = 0. \end{equation}
+</p>
+<p>The corresponding 3+1 quantities are </p><p class="formulaDsp">
+\begin{eqnarray} g_{i j} &amp;=&amp; \delta_{i j} + 2 H l_i l_j,\\ g^{i j} &amp;=&amp; \delta^{i j} - {2 H l^i l^j \over 1+2H l^t l^t},\\ {\rm det} g_{i j}&amp;=&amp; 1+2H l^t l^t,\\ \beta^i &amp;=&amp; - {2 H l^t l^i \over 1+2H l^t l^t},\\ N &amp;=&amp; \left(1+2 H l^t l^t\right)^{-1/2},\quad\hbox{(lapse)}\\ \alpha &amp;=&amp; \left(1+2 H l^t l^t\right)^{-1}, \quad\hbox{(densitized lapse)}\\ K_{i j} &amp;=&amp; - \left(1+2 H l^t l^t\right)^{1/2} \left[l_i l_j \partial_{t} H + 2 H l_{(i} \partial_{t} l_{j)}\right] \nonumber \\ &amp;&amp;-2\left(1+2 H l^t l^t\right)^{-1/2} \left[H l^t \partial_{(i}l_{j)} + H l_{(i}\partial_{j)}l^t + l^t l_{(i}\partial_{j)} H + 2H^2 l^t l_{(i} l^k\partial_{k}l_{j)} + H l^t l_i l_j l^k \partial_{k} H\right],\\ \partial_{k}g_{i j}&amp;=&amp; 2 l_i l_j\partial_{k} H + 4 H l_{(i} \partial_{k}l_{j)},\\ \partial_{k}N &amp;=&amp; -\left(1+2 H l^t l^t\right)^{-3/2} \left(l^tl^t\partial_{k}H+2Hl^t\partial_{k}l^t\right),\\ \partial_{k}\beta^i &amp;=&amp; - 2\left(1+2H l^t l^t\right)^{-1} \left(l^tl^i\partial_{k}H+Hl^t\partial_{k}l^i+Hl^i\partial_{k}l^t\right) + 4 H l^t l^i \left(1+2H l^t l^t\right)^{-2} \left(l^tl^t\partial_{k}H+2Hl^t\partial_{k}l^t\right),\\ \Gamma^k{}_{i j}&amp;=&amp; -\delta^{k m}\left(l_i l_j \partial_{m}H + 2l_{(i} \partial_{m}l_{j)} \right) + 2 H l_{(i}\partial_{j)} l^k \nonumber \\ &amp;&amp;+\left(1+2 H l^t l^t\right)^{-1} \left[2 l^k l_{(i}\partial_{j)} H +2 H l_i l_j l^k l^m \partial_{m}H +2 H l^k \partial_{(i}l_{j)} +4 H^2 l^k l_{(i} (l^m \partial_{m}l_{j)} -\partial_{j)} l^t) \right]. \end{eqnarray}
+</p>
+<p> Note that \(l^i\) is <b>not</b> equal to \(g^{i j} l_j\); it is equal to \({}^{(4)}g^{i \mu} l_\mu\).</p>
+<h2>Kerr Spacetime</h2>
+<h3><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html">Spin</a> in the z direction</h3>
+<p>Assume Cartesian coordinates \((t,x,y,z)\). Then for stationary Kerr spacetime with mass \(M\) and angular momentum \(a M\) in the \(z\) direction, </p><p class="formulaDsp">
+\begin{eqnarray} H &amp;=&amp; {M r^3 \over r^4 + a^2 z^2},\\ l_\mu &amp;=&amp; \left(1,{rx+ay\over r^2+a^2},{ry-ax\over r^2+a^2},{z\over r}\right), \end{eqnarray}
+</p>
+<p> where \(r\) is defined by </p><p class="formulaDsp">
+\begin{equation} \label{eq:rdefinition1} {x^2+y^2\over a^2+r^2} + {z^2\over r^2} = 1, \end{equation}
+</p>
+<p> or equivalently, </p><p class="formulaDsp">
+\begin{equation} r^2 = {1\over 2}(x^2 + y^2 + z^2 - a^2) + \left({1\over 4}(x^2 + y^2 + z^2 - a^2)^2 + a^2 z^2\right)^{1/2}. \end{equation}
+</p>
+<p>Possibly useful formula: </p><p class="formulaDsp">
+\begin{equation} \partial_{i} r = {x_i + z \delta_{i z} \displaystyle {a^2\over r^2} \over 2 r\left(1 - \displaystyle {x^2 + y^2 + z^2 - a^2\over 2 r^2}\right)}. \end{equation}
+</p>
+<h3><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html">Spin</a> in an arbitrary direction</h3>
+<p>For arbitrary spin direction, let \(\vec{x}\equiv (x,y,z)\) and \(\vec{a}\) be a flat-space three-vector with magnitude-squared ( \(\delta_{ij}\) norm) equal to \(a^2\). Then the Kerr-Schild quantities for Kerr spacetime are: </p><p class="formulaDsp">
+\begin{eqnarray} H &amp;=&amp; {M r^3 \over r^4 + (\vec{a}\cdot\vec{x})^2},\\ \vec{l} &amp;=&amp; {r\vec{x}-\vec{a}\times\vec{x}+(\vec{a}\cdot\vec{x})\vec{a}/r \over r^2+a^2 },\\ l_t &amp;=&amp; 1,\\ \label{eq:rdefinition2} r^2 &amp;=&amp; {1\over 2}(\vec{x}\cdot\vec{x}-a^2) + \left({1\over 4}(\vec{x}\cdot\vec{x}-a^2)^2 + (\vec{a}\cdot\vec{x})^2\right)^{1/2}, \end{eqnarray}
+</p>
+<p> where \(\vec{l}\equiv (l_x,l_y,l_z)\), and all dot and cross products are evaluated as flat-space 3-vector operations.</p>
+<p>Possibly useful formulae: </p><p class="formulaDsp">
+\begin{equation} \partial_{i} r = {x_i + (\vec{a}\cdot\vec{x})a_i/r^2 \over 2 r\left(1 - \displaystyle {\vec{x}\cdot\vec{x}-a^2\over 2 r^2}\right)}, \end{equation}
+</p>
+ <p class="formulaDsp">
+\begin{equation} {\partial_{i} H \over H} = {3\partial_{i}r\over r} - {4 r^3 \partial_{i}r + 2(\vec{a}\cdot\vec{x})\vec{a} \over r^4 + (\vec{a}\cdot\vec{x})^2}, \end{equation}
+</p>
+ <p class="formulaDsp">
+\begin{equation} (r^2+a^2)\partial_{j} l_i = (x_i-2 r l_i-(\vec{a}\cdot\vec{x})a_i/r^2)\partial_{j}r + r\delta_{ij} + a_i a_j/r + \epsilon^{ijk} a_k. \end{equation}
+</p>
+<h2>Cartesian and Spherical Coordinates for Kerr</h2>
+<p>The Kerr-Schild coordinates are defined in terms of the Cartesian coordinates \((x,y,z)\). If one wishes to express Kerr-Schild coordinates in terms of the spherical polar coordinates \((\tilde{r},\theta,\phi)\) then one can make the obvious and usual transformation </p><p class="formulaDsp">
+\begin{equation} \label{eq:sphertocartsimple} x=\tilde{r}\sin\theta\cos\phi,\quad y=\tilde{r}\sin\theta\sin\phi,\quad z=\tilde{r}\cos\theta. \end{equation}
+</p>
+<p>This is simple, and has the advantage that in this coordinate system for \(M\to0\), Kerr spacetime becomes <a class="el" href="classEinsteinSolutions_1_1Minkowski.html" title="The Minkowski solution for flat space in Dim spatial dimensions. ">Minkowski</a> space in spherical coordinates \((\tilde{r},\theta,\phi)\). However, the disadvantage is that the horizon of a Kerr hole is <b>not</b> located at constant \(\tilde{r}\), but is located instead at constant \(r\), where \(r\) is the radial Boyer-Lindquist coordinate defined in ( \(\ref{eq:rdefinition2}\)).</p>
+<p>For spin in the \(z\) direction, one could use the transformation </p><p class="formulaDsp">
+\begin{equation} x=\sqrt{r^2+a^2}\sin\theta\cos\phi,\quad y=\sqrt{r^2+a^2}\sin\theta\sin\phi,\quad z=r\cos\theta. \end{equation}
+</p>
+<p> In this case, for \(M\to0\), Kerr spacetime becomes <a class="el" href="classEinsteinSolutions_1_1Minkowski.html" title="The Minkowski solution for flat space in Dim spatial dimensions. ">Minkowski</a> space in spheroidal coordinates, but now the horizon is on a constant-coordinate surface.</p>
+<p>Right now we use ( \(\ref{eq:sphertocartsimple}\)), but we may wish to use the other transformation in the future. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aaa078d3a037fccf9075eeba80a17d386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa078d3a037fccf9075eeba80a17d386">&#9670;&nbsp;</a></span>deriv_lapse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#aaa078d3a037fccf9075eeba80a17d386">EinsteinSolutions::KerrSchild::deriv_lapse</a> =  <a class="el" href="structTags_1_1deriv.html">Tags::deriv</a>&lt;<a class="el" href="structgr_1_1Tags_1_1Lapse.html">gr::Tags::Lapse</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, tmpl::size_t&lt;3&gt;, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89e07890da5a59231e6a43170d43966e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e07890da5a59231e6a43170d43966e">&#9670;&nbsp;</a></span>deriv_shift</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a89e07890da5a59231e6a43170d43966e">EinsteinSolutions::KerrSchild::deriv_shift</a> =  <a class="el" href="structTags_1_1deriv.html">Tags::deriv</a>&lt;<a class="el" href="structgr_1_1Tags_1_1Shift.html">gr::Tags::Shift</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, tmpl::size_t&lt;3&gt;, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd907a610653213942c43a03ec4aaa6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd907a610653213942c43a03ec4aaa6c">&#9670;&nbsp;</a></span>deriv_spatial_metric</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#abd907a610653213942c43a03ec4aaa6c">EinsteinSolutions::KerrSchild::deriv_spatial_metric</a> =  <a class="el" href="structTags_1_1deriv.html">Tags::deriv</a>&lt;<a class="el" href="structgr_1_1Tags_1_1SpatialMetric.html">gr::Tags::SpatialMetric</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, tmpl::size_t&lt;3&gt;, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b025e045bd99b10105831ed1f366149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b025e045bd99b10105831ed1f366149">&#9670;&nbsp;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a1b025e045bd99b10105831ed1f366149">EinsteinSolutions::KerrSchild::options</a> =  tmpl::list&lt;<a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Mass.html">Mass</a>, <a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html">Spin</a>, <a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Center.html">Center</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3853e587b12f80cc9429f010216af2eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3853e587b12f80cc9429f010216af2eb">&#9670;&nbsp;</a></span>tags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a3853e587b12f80cc9429f010216af2eb">EinsteinSolutions::KerrSchild::tags</a> =  tmpl::list&lt; <a class="el" href="structgr_1_1Tags_1_1Lapse.html">gr::Tags::Lapse</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, <a class="el" href="structgr_1_1Tags_1_1DtLapse.html">gr::Tags::DtLapse</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#aaa078d3a037fccf9075eeba80a17d386">deriv_lapse</a>&lt;DataType&gt;, <a class="el" href="structgr_1_1Tags_1_1Shift.html">gr::Tags::Shift</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, <a class="el" href="structgr_1_1Tags_1_1DtShift.html">gr::Tags::DtShift</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a89e07890da5a59231e6a43170d43966e">deriv_shift</a>&lt;DataType&gt;, <a class="el" href="structgr_1_1Tags_1_1SpatialMetric.html">gr::Tags::SpatialMetric</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, <a class="el" href="structgr_1_1Tags_1_1DtSpatialMetric.html">gr::Tags::DtSpatialMetric</a>&lt;3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a>, DataType&gt;, <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#abd907a610653213942c43a03ec4aaa6c">deriv_spatial_metric</a>&lt;DataType&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a792aca342271212670deb79e25283b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792aca342271212670deb79e25283b81">&#9670;&nbsp;</a></span>KerrSchild() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">EinsteinSolutions::KerrSchild::KerrSchild </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mass</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Spin.html#aa96e8b35e71723c51eb29aead84361ab">Spin::type</a>&#160;</td>
+          <td class="paramname"><em>spin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structEinsteinSolutions_1_1KerrSchild_1_1Center.html#a2f4d9e15bdec389129156dc329cd6098">Center::type</a>&#160;</td>
+          <td class="paramname"><em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structOptionContext.html">OptionContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__TensorGroup.html#gae96a7b3dea6b2f4cd335cbc3de827f49">magnitude()</a>, and <a class="el" href="group__OptionParsingGroup.html#ga2724ed7a660af53bf365f99878d79c82">PARSE_ERROR</a>.</p>
+
+</div>
+</div>
+<a id="aaf837c5c68627ead7cdee365b5e078df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf837c5c68627ead7cdee365b5e078df">&#9670;&nbsp;</a></span>KerrSchild() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EinsteinSolutions::KerrSchild::KerrSchild </td>
+          <td>(</td>
+          <td class="paramtype">CkMigrateMessage *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de769b88e3efe8e4df669c39e4a9d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de769b88e3efe8e4df669c39e4a9d1b">&#9670;&nbsp;</a></span>KerrSchild() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EinsteinSolutions::KerrSchild::KerrSchild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7912ec3bc858a226484463a0effcfc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7912ec3bc858a226484463a0effcfc9">&#9670;&nbsp;</a></span>KerrSchild() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EinsteinSolutions::KerrSchild::KerrSchild </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9030c43ea883af37cc959f0cab4c1e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9030c43ea883af37cc959f0cab4c1e58">&#9670;&nbsp;</a></span>KerrSchild() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EinsteinSolutions::KerrSchild::KerrSchild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2412fda8fd7e9b843eaa5828d0658779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2412fda8fd7e9b843eaa5828d0658779">&#9670;&nbsp;</a></span>~KerrSchild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EinsteinSolutions::KerrSchild::~KerrSchild </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa89c7b4b586993886c7c03b11b573b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89c7b4b586993886c7c03b11b573b5e">&#9670;&nbsp;</a></span>center()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt;double, 3&gt;&amp; EinsteinSolutions::KerrSchild::center </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5277c58e100612ac47792790309a310d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5277c58e100612ac47792790309a310d">&#9670;&nbsp;</a></span>mass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double EinsteinSolutions::KerrSchild::mass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d52fb58cc1fee1b9a55f0d1b49a20b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d52fb58cc1fee1b9a55f0d1b49a20b3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a>&amp; EinsteinSolutions::KerrSchild::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22b3b76bcdb2286d37198ccfd0bbaeac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22b3b76bcdb2286d37198ccfd0bbaeac">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a>&amp; EinsteinSolutions::KerrSchild::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classEinsteinSolutions_1_1KerrSchild.html">KerrSchild</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acae04a70c30ec93225ed0c300c1b6bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae04a70c30ec93225ed0c300c1b6bbd">&#9670;&nbsp;</a></span>pup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EinsteinSolutions::KerrSchild::pup </td>
+          <td>(</td>
+          <td class="paramtype">PUP::er &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22dd784014052d105054a9bbdb5de132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22dd784014052d105054a9bbdb5de132">&#9670;&nbsp;</a></span>solution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DataType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template <a class="el" href="group__UtilitiesGroup.html#ga9d33140d1e46af90392a957855ea2a83">tuples::TaggedTupleTypelist</a>&lt; <a class="el" href="classEinsteinSolutions_1_1KerrSchild.html#a3853e587b12f80cc9429f010216af2eb">EinsteinSolutions::KerrSchild::tags</a>&lt; double &gt; &gt; EinsteinSolutions::KerrSchild::solution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I</a>&lt; DataType, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#ga818f101f2f8bd824a3bc7c2c2361c560">gsl::at()</a>, <a class="el" href="group__ConstantExpressionsGroup.html#ga7e56b6f693d86c6a5d304db2db4c0d00">cube()</a>, <a class="el" href="group__DataStructuresGroup.html#ga9c899694105f30f16d54b1fcd5d183fb">make_with_value()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>.</p>
+
+</div>
+</div>
+<a id="ad090f6a19066a1fa9084722f1379b5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad090f6a19066a1fa9084722f1379b5ba">&#9670;&nbsp;</a></span>spin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt;double, 3&gt;&amp; EinsteinSolutions::KerrSchild::spin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a813803379cdfac84b76511c128bd60cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813803379cdfac84b76511c128bd60cb">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a> EinsteinSolutions::KerrSchild::help {&quot;Black hole in Kerr-Schild coordinates&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/PointwiseFunctions/AnalyticSolutions/EinsteinSolutions/<a class="el" href="KerrSchild_8hpp_source.html">KerrSchild.hpp</a></li>
+<li>src/PointwiseFunctions/AnalyticSolutions/EinsteinSolutions/<a class="el" href="KerrSchild_8cpp.html">KerrSchild.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

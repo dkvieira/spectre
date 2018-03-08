@@ -1,0 +1,650 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: CoordinateMaps::Equiangular Class Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceCoordinateMaps.html">CoordinateMaps</a></li><li class="navelem"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classCoordinateMaps_1_1Equiangular-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CoordinateMaps::Equiangular Class Reference<div class="ingroups"><a class="el" href="group__CoordinateMapsGroup.html">Coordinate Maps</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Non-linear map from \(\xi \in [A, B]\rightarrow x \in [a, b]\).  
+ <a href="classCoordinateMaps_1_1Equiangular.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Equiangular_8hpp_source.html">Equiangular.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a15010183fe8f5d7de4797a35e45d5486"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a15010183fe8f5d7de4797a35e45d5486">Equiangular</a> (double A, double B, double a, double b) noexcept</td></tr>
+<tr class="separator:a15010183fe8f5d7de4797a35e45d5486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e9989de07ef5beb43abdd5d4e7d677c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a7e9989de07ef5beb43abdd5d4e7d677c">Equiangular</a> ()=default</td></tr>
+<tr class="separator:a7e9989de07ef5beb43abdd5d4e7d677c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe1c6945e5fcf68568c8fcb48013db79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#abe1c6945e5fcf68568c8fcb48013db79">~Equiangular</a> ()=default</td></tr>
+<tr class="separator:abe1c6945e5fcf68568c8fcb48013db79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc11fa675841870a961930997915d08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#abbc11fa675841870a961930997915d08">Equiangular</a> (const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;)=default</td></tr>
+<tr class="separator:abbc11fa675841870a961930997915d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a432b10b673d1ba1659912cffe5a626b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a432b10b673d1ba1659912cffe5a626b7">Equiangular</a> (<a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a432b10b673d1ba1659912cffe5a626b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99044886f78b62f36ae35973836773a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a99044886f78b62f36ae35973836773a9">operator=</a> (const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;)=default</td></tr>
+<tr class="separator:a99044886f78b62f36ae35973836773a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a270509872b3979abf9ebee250394e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#ab1a270509872b3979abf9ebee250394e">operator=</a> (<a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ab1a270509872b3979abf9ebee250394e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc1cc2f2abbfea78449a0c07f2b80be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3dc1cc2f2abbfea78449a0c07f2b80be"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a3dc1cc2f2abbfea78449a0c07f2b80be">operator()</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a3dc1cc2f2abbfea78449a0c07f2b80be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61cabfca0b372dcc04862217cbad247b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a61cabfca0b372dcc04862217cbad247b"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a61cabfca0b372dcc04862217cbad247b">inverse</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;target_coords) const noexcept</td></tr>
+<tr class="separator:a61cabfca0b372dcc04862217cbad247b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a631095da611e8d7e1f736ab4262f2eef"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a631095da611e8d7e1f736ab4262f2eef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a631095da611e8d7e1f736ab4262f2eef">jacobian</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a631095da611e8d7e1f736ab4262f2eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481f7e7230f5bb42911e8541cbd01339"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a481f7e7230f5bb42911e8541cbd01339"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a481f7e7230f5bb42911e8541cbd01339">inv_jacobian</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a481f7e7230f5bb42911e8541cbd01339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad46af2d623b1f2ed2eebe8245f4c63ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#ad46af2d623b1f2ed2eebe8245f4c63ba">pup</a> (PUP::er &amp;p) noexcept</td></tr>
+<tr class="separator:ad46af2d623b1f2ed2eebe8245f4c63ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a0eb447626c98ec2a664d9ca92d3afd3e"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a0eb447626c98ec2a664d9ca92d3afd3e">dim</a> = 1</td></tr>
+<tr class="separator:a0eb447626c98ec2a664d9ca92d3afd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a241e13f387e8aacf7ea133cf25d0131a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Equiangular.html#a241e13f387e8aacf7ea133cf25d0131a">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a241e13f387e8aacf7ea133cf25d0131a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Non-linear map from \(\xi \in [A, B]\rightarrow x \in [a, b]\). </p>
+<p>The formula for the mapping is: </p><p class="formulaDsp">
+\begin{align} x &amp;= \frac{a}{2} \left(1-\mathrm{tan}\left( \frac{\pi(2\xi-B-A)}{4(B-A)}\right)\right) + \frac{b}{2} \left(1+\mathrm{tan}\left( \frac{\pi(2\xi-B-A)}{4(B-A)}\right)\right)\\ \xi &amp;= \frac{A}{2} \left(1-\frac{4}{\pi}\mathrm{arctan}\left( \frac{2x-a-b}{b-a}\right)\right)+ \frac{B}{2} \left(1+\frac{4}{\pi}\mathrm{arctan}\left( \frac{2x-a-b}{b-a}\right)\right) \end{align}
+</p>
+<dl class="section note"><dt>Note</dt><dd>The intermediate step in which a tangent map is applied can be more clearly understood if we define the coordinates: <p class="formulaDsp">
+\begin{align} \xi_{logical} &amp;:= \frac{2\xi-B-A}{B-A} \in [-1, 1]\\ \Xi &amp;:= \mathrm{tan}\left(\frac{\pi\xi_{logical}}{4}\right) \in [-1, 1] \end{align}
+</p>
+</dd></dl>
+<p>This map is intended to be used with <code><a class="el" href="classCoordinateMaps_1_1Wedge2D.html" title="Two dimensional map from the unit square to a wedge, which is constructed by interpolating between a ...">Wedge2D</a></code> and <code><a class="el" href="classCoordinateMaps_1_1Wedge3D.html" title="Three dimensional map from the cube to a wedge. ">Wedge3D</a></code> when equiangular coordinates are chosen for those maps. For more information on this choice of coordinates, see the documentation for <a class="el" href="classCoordinateMaps_1_1Wedge3D.html" title="Three dimensional map from the cube to a wedge. ">Wedge3D</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a15010183fe8f5d7de4797a35e45d5486"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15010183fe8f5d7de4797a35e45d5486">&#9670;&nbsp;</a></span>Equiangular() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Equiangular::Equiangular </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e9989de07ef5beb43abdd5d4e7d677c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9989de07ef5beb43abdd5d4e7d677c">&#9670;&nbsp;</a></span>Equiangular() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Equiangular::Equiangular </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe1c6945e5fcf68568c8fcb48013db79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe1c6945e5fcf68568c8fcb48013db79">&#9670;&nbsp;</a></span>~Equiangular()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Equiangular::~Equiangular </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbc11fa675841870a961930997915d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc11fa675841870a961930997915d08">&#9670;&nbsp;</a></span>Equiangular() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Equiangular::Equiangular </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a432b10b673d1ba1659912cffe5a626b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432b10b673d1ba1659912cffe5a626b7">&#9670;&nbsp;</a></span>Equiangular() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Equiangular::Equiangular </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a481f7e7230f5bb42911e8541cbd01339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481f7e7230f5bb42911e8541cbd01339">&#9670;&nbsp;</a></span>inv_jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt; CoordinateMaps::Equiangular::inv_jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gaccb7d5132ccd60f32c504c51f9d7fb3c">dereference_wrapper()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>.</p>
+
+</div>
+</div>
+<a id="a61cabfca0b372dcc04862217cbad247b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cabfca0b372dcc04862217cbad247b">&#9670;&nbsp;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1 &gt; CoordinateMaps::Equiangular::inverse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>target_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a631095da611e8d7e1f736ab4262f2eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a631095da611e8d7e1f736ab4262f2eef">&#9670;&nbsp;</a></span>jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt; CoordinateMaps::Equiangular::jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gaccb7d5132ccd60f32c504c51f9d7fb3c">dereference_wrapper()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>.</p>
+
+</div>
+</div>
+<a id="a3dc1cc2f2abbfea78449a0c07f2b80be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc1cc2f2abbfea78449a0c07f2b80be">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 1 &gt; CoordinateMaps::Equiangular::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99044886f78b62f36ae35973836773a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99044886f78b62f36ae35973836773a9">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a>&amp; CoordinateMaps::Equiangular::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1a270509872b3979abf9ebee250394e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a270509872b3979abf9ebee250394e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a>&amp; CoordinateMaps::Equiangular::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad46af2d623b1f2ed2eebe8245f4c63ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad46af2d623b1f2ed2eebe8245f4c63ba">&#9670;&nbsp;</a></span>pup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoordinateMaps::Equiangular::pup </td>
+          <td>(</td>
+          <td class="paramtype">PUP::er &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a241e13f387e8aacf7ea133cf25d0131a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241e13f387e8aacf7ea133cf25d0131a">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Equiangular.html">Equiangular</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a0eb447626c98ec2a664d9ca92d3afd3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb447626c98ec2a664d9ca92d3afd3e">&#9670;&nbsp;</a></span>dim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t CoordinateMaps::Equiangular::dim = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/Domain/CoordinateMaps/<a class="el" href="Equiangular_8hpp_source.html">Equiangular.hpp</a></li>
+<li>src/Domain/CoordinateMaps/<a class="el" href="Equiangular_8cpp.html">Equiangular.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: src/ApparentHorizons/FastFlow.cpp File Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22cd119e9135d55404da822cc2bf42d2.html">src</a></li><li class="navelem"><a class="el" href="dir_cc39583d3fa0fd8d363310ab7601923c.html">ApparentHorizons</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">FastFlow.cpp File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="FastFlow_8hpp_source.html">ApparentHorizons/FastFlow.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/header/algorithm.html">algorithm</a>&gt;</code><br />
+<code>#include &lt;<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/header/cmath.html">cmath</a>&gt;</code><br />
+<code>#include &lt;pup.h&gt;</code><br />
+<code>#include &lt;<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/header/utility.html">utility</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="SpherepackIterator_8hpp_source.html">ApparentHorizons/SpherepackIterator.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Strahlkorper_8hpp_source.html">ApparentHorizons/Strahlkorper.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="StrahlkorperDataBox_8hpp_source.html">ApparentHorizons/StrahlkorperDataBox.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="StrahlkorperGr_8hpp_source.html">ApparentHorizons/StrahlkorperGr.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="YlmSpherepack_8hpp_source.html">ApparentHorizons/YlmSpherepack.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DataBox_8hpp_source.html">DataStructures/DataBox/DataBox.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DataVector_8hpp_source.html">DataStructures/DataVector.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Magnitude_8hpp_source.html">DataStructures/Tensor/EagerMath/Magnitude.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Error_8hpp_source.html">ErrorHandling/Error.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ParseOptions_8hpp_source.html">Options/ParseOptions.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Abort_8hpp_source.html">Parallel/Abort.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IndexManipulation_8hpp_source.html">PointwiseFunctions/GeneralRelativity/IndexManipulation.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="EqualWithinRoundoff_8hpp_source.html">Utilities/EqualWithinRoundoff.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab55a8e264edaa2dfe6b561a914cc2360"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FastFlow_8cpp.html#ab55a8e264edaa2dfe6b561a914cc2360">operator&lt;&lt;</a> (<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;os, const <a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108e">FastFlow::FlowType</a> &amp;flow_type) noexcept</td></tr>
+<tr class="separator:ab55a8e264edaa2dfe6b561a914cc2360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123ca7e9cf51a8135a97e5df1f1c5cd3"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FastFlow_8cpp.html#a123ca7e9cf51a8135a97e5df1f1c5cd3">operator&lt;&lt;</a> (<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;os, const <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">FastFlow::Status</a> &amp;status) noexcept</td></tr>
+<tr class="separator:a123ca7e9cf51a8135a97e5df1f1c5cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0ad94669f03f6db909ad4ddb70d448"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FastFlow_8cpp.html#a0c0ad94669f03f6db909ad4ddb70d448">operator==</a> (const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;lhs, const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a0c0ad94669f03f6db909ad4ddb70d448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5abd1a9c727587628a4a16810e1187"><td class="memItemLeft" align="right" valign="top">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/pair.html">std::pair</a>&lt; <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">FastFlow::Status</a>, <a class="el" href="structFastFlow_1_1IterInfo.html">FastFlow::IterInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FastFlow_8cpp.html#afc5abd1a9c727587628a4a16810e1187">FastFlow::iterate_horizon_finder&lt; Frame::Inertial &gt;</a> (const <a class="el" href="classgsl_1_1not__null.html">gsl::not_null</a>&lt; <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; *&gt; current_strahlkorper, const <a class="el" href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; &amp;upper_spatial_metric, const <a class="el" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; &amp;extrinsic_curvature, const <a class="el" href="namespacetnsr.html#a2e3989aaff6cd8d0d85c7a6c2b594e25">tnsr::Ijj</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; &amp;christoffel_2nd_kind) noexcept</td></tr>
+<tr class="separator:afc5abd1a9c727587628a4a16810e1187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="afc5abd1a9c727587628a4a16810e1187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5abd1a9c727587628a4a16810e1187">&#9670;&nbsp;</a></span>FastFlow::iterate_horizon_finder< Frame::Inertial >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/pair.html">std::pair</a>&lt;<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">FastFlow::Status</a>, <a class="el" href="structFastFlow_1_1IterInfo.html">FastFlow::IterInfo</a>&gt; <a class="el" href="classFastFlow.html#a01f29d393496a33f4316c4b507eff65d">FastFlow::iterate_horizon_finder</a>&lt; <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgsl_1_1not__null.html">gsl::not_null</a>&lt; <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; *&gt;&#160;</td>
+          <td class="paramname"><em>current_strahlkorper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper_spatial_metric</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>extrinsic_curvature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#a2e3989aaff6cd8d0d85c7a6c2b594e25">tnsr::Ijj</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>christoffel_2nd_kind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab55a8e264edaa2dfe6b561a914cc2360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55a8e264edaa2dfe6b561a914cc2360">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108e">FastFlow::FlowType</a> &amp;&#160;</td>
+          <td class="paramname"><em>flow_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108ea8bdf3c167e619ac571b1208d0e8343cb">FastFlow::Curvature</a>, <a class="el" href="group__ErrorHandlingGroup.html#ga1d27028c1827976007fe9d29ad3a2f66">ERROR</a>, <a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108eae16b5b7f26f54214445cbe38d72c2828">FastFlow::Fast</a>, and <a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108ea2ba38a7b398cfd9360591c3a1a25ba39">FastFlow::Jacobi</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="FastFlow_8hpp.html#a893dbf06288093c1a9f882a280aed560">converged()</a>.</p>
+
+</div>
+</div>
+<a id="a123ca7e9cf51a8135a97e5df1f1c5cd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a123ca7e9cf51a8135a97e5df1f1c5cd3">&#9670;&nbsp;</a></span>operator<<() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a>&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::ostream</a> &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">FastFlow::Status</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4ad764deffe411aea520ca048f540bd12b">FastFlow::AbsTol</a>, <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4af18fe4185f9e2ce75a01b3028784239e">FastFlow::DivergenceError</a>, <a class="el" href="group__ErrorHandlingGroup.html#ga1d27028c1827976007fe9d29ad3a2f66">ERROR</a>, <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4a3111ed279ec7ecbbfa1fe61b5076f6c2">FastFlow::MaxIts</a>, <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4a6fca52428df95a26aa50249217fc4bb2">FastFlow::NegativeRadius</a>, <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4a5b095fbdc2df98373b4a00ba192838ce">FastFlow::SuccessfulIteration</a>, and <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4afa204aaebf4a3cb2a6eb7695a94f68fc">FastFlow::TruncationTol</a>.</p>
+
+</div>
+</div>
+<a id="a0c0ad94669f03f6db909ad4ddb70d448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0ad94669f03f6db909ad4ddb70d448">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="Index_8hpp.html#a147c4c0fecf8fa6c73a9febffced87c1">operator&lt;&lt;()</a>, and <a class="el" href="classFastFlow.html#ae74c8f3f6540623c05a7861bf89f8b6b">FastFlow::reset_for_next_find()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

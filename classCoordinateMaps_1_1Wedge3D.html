@@ -1,0 +1,738 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: CoordinateMaps::Wedge3D Class Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceCoordinateMaps.html">CoordinateMaps</a></li><li class="navelem"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classCoordinateMaps_1_1Wedge3D-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CoordinateMaps::Wedge3D Class Reference<div class="ingroups"><a class="el" href="group__CoordinateMapsGroup.html">Coordinate Maps</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Three dimensional map from the cube to a wedge.  
+ <a href="classCoordinateMaps_1_1Wedge3D.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Wedge3D_8hpp_source.html">Wedge3D.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9a16f78bffae0049a8b93510549f081b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a9a16f78bffae0049a8b93510549f081b">Wedge3D</a> (double radius_of_other_surface, double radius_of_spherical_surface, <a class="el" href="classDirection.html">Direction</a>&lt; 3 &gt; direction_of_wedge, double sphericity_of_other_surface, bool with_equiangular_map) noexcept</td></tr>
+<tr class="separator:a9a16f78bffae0049a8b93510549f081b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f35361423adb14433c2cd7b5229d6e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a2f35361423adb14433c2cd7b5229d6e5">Wedge3D</a> ()=default</td></tr>
+<tr class="separator:a2f35361423adb14433c2cd7b5229d6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33fee4a8ea4eb937e2210ba0f6d0ae2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#ad33fee4a8ea4eb937e2210ba0f6d0ae2">~Wedge3D</a> ()=default</td></tr>
+<tr class="separator:ad33fee4a8ea4eb937e2210ba0f6d0ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a07ca5485ee480e6a756da5048acd4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a2a07ca5485ee480e6a756da5048acd4d">Wedge3D</a> (<a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a2a07ca5485ee480e6a756da5048acd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd713ea2c01830c5418a0e51d2449ff3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#afd713ea2c01830c5418a0e51d2449ff3">Wedge3D</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;)=default</td></tr>
+<tr class="separator:afd713ea2c01830c5418a0e51d2449ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb5d7f8dc5dff7a9b43b7f445a47789"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a7eb5d7f8dc5dff7a9b43b7f445a47789">operator=</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;)=default</td></tr>
+<tr class="separator:a7eb5d7f8dc5dff7a9b43b7f445a47789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab291c3e4cabd665600472293ee7afffb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#ab291c3e4cabd665600472293ee7afffb">operator=</a> (<a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ab291c3e4cabd665600472293ee7afffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e08b2065ad90c1f05b0009ccc4de5a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a25e08b2065ad90c1f05b0009ccc4de5a"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a25e08b2065ad90c1f05b0009ccc4de5a">operator()</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a25e08b2065ad90c1f05b0009ccc4de5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d94ab248dc805bdc46c7f5b91d106c3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a1d94ab248dc805bdc46c7f5b91d106c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a1d94ab248dc805bdc46c7f5b91d106c3">inverse</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;target_coords) const noexcept</td></tr>
+<tr class="separator:a1d94ab248dc805bdc46c7f5b91d106c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196729b313ac030b74db29d08801bd13"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a196729b313ac030b74db29d08801bd13"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a196729b313ac030b74db29d08801bd13">jacobian</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a196729b313ac030b74db29d08801bd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48085609e746a05f72e9644811156277"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a48085609e746a05f72e9644811156277"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a48085609e746a05f72e9644811156277">inv_jacobian</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a48085609e746a05f72e9644811156277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c143d84e2c0e18c5a349f36f7eabbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a18c143d84e2c0e18c5a349f36f7eabbd">pup</a> (PUP::er &amp;p) noexcept</td></tr>
+<tr class="separator:a18c143d84e2c0e18c5a349f36f7eabbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aad98342dc7861bca18c0a59ef195c360"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#aad98342dc7861bca18c0a59ef195c360">dim</a> = 3</td></tr>
+<tr class="separator:aad98342dc7861bca18c0a59ef195c360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a0211e67b52bbc3985c5c41334e7cbbd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html#a0211e67b52bbc3985c5c41334e7cbbd1">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a0211e67b52bbc3985c5c41334e7cbbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Three dimensional map from the cube to a wedge. </p>
+<h3>Details</h3>
+<p>The mapping that goes from a reference cube to a three-dimensional wedge centered on a coordinate axis covering a volume between an inner surface and outer surface. One of the surfaces must be spherical, but the curvature of the other surface can be anything between flat (a sphericity of 0) and spherical (a sphericity of 1).</p>
+<p>The first two logical coordinates correspond to the two angular coordinates, and the third to the radial coordinate.</p>
+<p>The <a class="el" href="classCoordinateMaps_1_1Wedge3D.html" title="Three dimensional map from the cube to a wedge. ">Wedge3D</a> map is constructed by linearly interpolating between a bulged face of radius <code>radius_of_other_surface</code> to a spherical face of radius <code>radius_of_spherical_surface</code>, where the radius of the bulged face is defined to be the radius of the sphere circumscribing the bulge.</p>
+<p>We make a choice here as to whether we wish to use the logical coordinates parameterizing these surface as they are, in which case we have the equidistant choice of coordinates, or whether to apply a tangent map to them which leads us to the equiangular choice of coordinates. In terms of the logical coordinates, the equiangular coordinates are:</p>
+<p class="formulaDsp">
+\[\textrm{equiangular xi} : \Xi(\xi) = \textrm{tan}(\xi\pi/4)\]
+</p>
+<p class="formulaDsp">
+\[\textrm{equiangular eta} : \mathrm{H}(\eta) = \textrm{tan}(\eta\pi/4)\]
+</p>
+<p>With derivatives:</p>
+<p class="formulaDsp">
+\[\Xi&#39;(\xi) = \frac{\pi}{4}(1+\Xi^2)\]
+</p>
+<p class="formulaDsp">
+\[\mathrm{H}&#39;(\eta) = \frac{\pi}{4}(1+\mathrm{H}^2)\]
+</p>
+<p>The equidistant coordinates are:</p>
+<p class="formulaDsp">
+\[ \textrm{equidistant xi} : \Xi = \xi\]
+</p>
+<p class="formulaDsp">
+\[ \textrm{equidistant eta} : \mathrm{H} = \eta\]
+</p>
+<p>with derivatives:</p>
+<center> \(\Xi&#39;(\xi) = 1\), and \(\mathrm{H}&#39;(\eta) = 1\)</center><p>We also define the variable \(\rho\), given by:</p>
+<p class="formulaDsp">
+\[\textrm{rho} : \rho = \sqrt{1+\Xi^2+\mathrm{H}^2}\]
+</p>
+<h3>The Spherical Face Map</h3>
+<p>The surface map for the spherical face of radius \(R\) lying in the \(+z\) direction in either choice of coordinates is then given by:</p>
+<p class="formulaDsp">
+\[\sigma_{spherical}: \vec{\xi} \rightarrow \vec{x}(\vec{\xi})\]
+</p>
+<p> Where </p><p class="formulaDsp">
+\[ \vec{x}(\xi,\eta) = \begin{bmatrix} x(\xi,\eta)\\ y(\xi,\eta)\\ z(\xi,\eta)\\ \end{bmatrix} = R \begin{bmatrix} \Xi/\rho\\ \mathrm{H}/\rho\\ 1/\rho\\ \end{bmatrix}\]
+</p>
+<h3>The Bulged Face Map</h3>
+<p>The bulged surface is itself constructed by linearly interpolating between a cubical face and a spherical face. The surface map for the cubical face of side length \(2L\) lying in the \(+z\) direction is given by:</p>
+<p class="formulaDsp">
+\[\vec{\sigma}_{cubical}: \vec{\xi} \rightarrow \vec{x}(\vec{\xi})\]
+</p>
+<p> Where </p><p class="formulaDsp">
+\[ \vec{x}(\xi,\eta) = \begin{bmatrix} x(\xi,\eta)\\ y(\xi,\eta)\\ L\\ \end{bmatrix} = L \begin{bmatrix} \Xi\\ \mathrm{H}\\ 1\\ \end{bmatrix}\]
+</p>
+<p>To construct the bulged map we interpolate between this cubical face map and a spherical face map of radius <code>radius_of_other_surface</code>, with the interpolation parameter being \(s\), the <code>sphericity_of_other_surface</code>. The surface map for the bulged face lying in the \(+z\) direction is then given by:</p>
+<p class="formulaDsp">
+\[\vec{\sigma}_{other}(\xi,\eta) = {(1-s)L + \frac{sR_{other}}{\rho}} \begin{bmatrix} \Xi\\ \mathrm{H}\\ 1\\ \end{bmatrix}\]
+</p>
+<p>We constrain L by demanding that the spherical face circumscribe the cube. With this condition, we have \(L = R_{other}/\sqrt3\).</p>
+<h3>The Full Volume Map</h3>
+<p>The final map for the wedge which lies along the \(+z\) is obtained by interpolating between the spherical and bulged surfaces with the interpolation parameter being the logical coordinate \(\zeta\). This results in:</p>
+<p class="formulaDsp">
+\[\vec{x}(\xi,\eta,\zeta) = \frac{1}{2}\big\{(1-\zeta)(1-s)L + (1-\zeta)s\frac{R_{other}}{\rho} + (1+\zeta)\frac{R_{spherical}}{\rho}\big\}\begin{bmatrix} \Xi\\ \mathrm{H}\\ 1\\ \end{bmatrix}\]
+</p>
+<p>We will define the variables \(b_{f1}\) and \(b_{f2}\), the first and second <em>blending factors</em>:</p>
+<p class="formulaDsp">
+\[b_{f1} = \frac{1}{2}\big\{(1-\zeta)(1-s)L\big\}\]
+</p>
+<p class="formulaDsp">
+\[b_{f2} = \frac{1}{2}\big\{(1-\zeta)sR_{other} + (1+\zeta)R_{spherical} \big\}\]
+</p>
+<p>We also define their zeta-derivatives, the <em>blending rates</em>:</p>
+<p class="formulaDsp">
+\[b_{r1} = \frac{\mathrm{d}b_{f1}}{\mathrm{d}\zeta} = \frac{1}{2}(s-1)L\]
+</p>
+<p class="formulaDsp">
+\[b_{r2} = \frac{\mathrm{d}b_{f2}}{\mathrm{d}\zeta} = \frac{1}{2}\big\{-sR_{other} + R_{spherical}\big\}\]
+</p>
+<p>The Jacobian then is: </p><p class="formulaDsp">
+\[J = \begin{bmatrix} b_{f1}\Xi&#39; &amp; 0 &amp;b_{r1}\Xi\\ 0 &amp; b_{f1}\mathrm{H}&#39; &amp;b_{r1}\mathrm{H}\\ 0 &amp; 0 &amp;b_{r1}\\ \end{bmatrix} + \begin{bmatrix} b_{f2}\Xi&#39;(1+\mathrm{H}^2)/{\rho^3} &amp; -b_{f2}\mathrm{H}&#39;\Xi\mathrm{H}/\rho^3 &amp; b_{r2}\Xi/\rho\\ -b_{f2}\Xi&#39;\Xi\mathrm{H}/\rho^3 &amp; b_{f2}\mathrm{H}&#39;(1+\Xi^2)/\rho^3 &amp; b_{r2}\mathrm{H}/\rho\\ -b_{f2}\Xi&#39;\Xi/\rho^3 &amp; -b_{f2}\mathrm{H}&#39;\mathrm{H}/\rho^3 &amp; b_{r2}/\rho\\ \end{bmatrix} \]
+</p>
+<dl class="section note"><dt>Note</dt><dd>This differs from the choice in SpEC where it is demanded that the surfaces touch at the center, which leads to \(L = R_{other}\). </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9a16f78bffae0049a8b93510549f081b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a16f78bffae0049a8b93510549f081b">&#9670;&nbsp;</a></span>Wedge3D() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge3D::Wedge3D </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>radius_of_other_surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>radius_of_spherical_surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDirection.html">Direction</a>&lt; 3 &gt;&#160;</td>
+          <td class="paramname"><em>direction_of_wedge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>sphericity_of_other_surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>with_equiangular_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructs a 3D wedge. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius_of_spherical_surface</td><td>Radius of the spherical surface </td></tr>
+    <tr><td class="paramname">radius_of_other_surface</td><td>Distance from the origin to one of the corners which lie on the other surface, which may be anything between flat and spherical. </td></tr>
+    <tr><td class="paramname">direction_of_wedge</td><td>The axis on which the wedge is centred. </td></tr>
+    <tr><td class="paramname">sphericity_of_other_surface</td><td>Value between 0 and 1 which determines whether the other surface is flat (value of 0), spherical (value of 1) or somewhere in between </td></tr>
+    <tr><td class="paramname">with_equiangular_map</td><td>Determines whether to apply a tangent function mapping to the logical coordinates (for 'true') or not (for 'false'). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#gaf170f3984e3d0f809b2558dbd981ca35">ASSERT</a>.</p>
+
+</div>
+</div>
+<a id="a2f35361423adb14433c2cd7b5229d6e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f35361423adb14433c2cd7b5229d6e5">&#9670;&nbsp;</a></span>Wedge3D() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge3D::Wedge3D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad33fee4a8ea4eb937e2210ba0f6d0ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad33fee4a8ea4eb937e2210ba0f6d0ae2">&#9670;&nbsp;</a></span>~Wedge3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge3D::~Wedge3D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a07ca5485ee480e6a756da5048acd4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a07ca5485ee480e6a756da5048acd4d">&#9670;&nbsp;</a></span>Wedge3D() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge3D::Wedge3D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd713ea2c01830c5418a0e51d2449ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd713ea2c01830c5418a0e51d2449ff3">&#9670;&nbsp;</a></span>Wedge3D() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge3D::Wedge3D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a48085609e746a05f72e9644811156277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48085609e746a05f72e9644811156277">&#9670;&nbsp;</a></span>inv_jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt; CoordinateMaps::Wedge3D::inv_jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__TensorGroup.html#ga009450568b38ef50696b403fe763f3e7">determinant_and_inverse()</a>.</p>
+
+</div>
+</div>
+<a id="a1d94ab248dc805bdc46c7f5b91d106c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d94ab248dc805bdc46c7f5b91d106c3">&#9670;&nbsp;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3 &gt; CoordinateMaps::Wedge3D::inverse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>target_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#ga1d27028c1827976007fe9d29ad3a2f66">ERROR</a>, <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>, and <a class="el" href="group__ComputationalDomainGroup.html#gga8c0137d7160ad71b6ed265c53c99ed00a19de5b94f7b83900d4b296d9fa491aec">Upper</a>.</p>
+
+</div>
+</div>
+<a id="a196729b313ac030b74db29d08801bd13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196729b313ac030b74db29d08801bd13">&#9670;&nbsp;</a></span>jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt; CoordinateMaps::Wedge3D::jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gaccb7d5132ccd60f32c504c51f9d7fb3c">dereference_wrapper()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>.</p>
+
+</div>
+</div>
+<a id="a25e08b2065ad90c1f05b0009ccc4de5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e08b2065ad90c1f05b0009ccc4de5a">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 3 &gt; CoordinateMaps::Wedge3D::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#ga1d27028c1827976007fe9d29ad3a2f66">ERROR</a>, <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>, and <a class="el" href="group__ComputationalDomainGroup.html#gga8c0137d7160ad71b6ed265c53c99ed00a19de5b94f7b83900d4b296d9fa491aec">Upper</a>.</p>
+
+</div>
+</div>
+<a id="a7eb5d7f8dc5dff7a9b43b7f445a47789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb5d7f8dc5dff7a9b43b7f445a47789">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a>&amp; CoordinateMaps::Wedge3D::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab291c3e4cabd665600472293ee7afffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab291c3e4cabd665600472293ee7afffb">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a>&amp; CoordinateMaps::Wedge3D::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18c143d84e2c0e18c5a349f36f7eabbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c143d84e2c0e18c5a349f36f7eabbd">&#9670;&nbsp;</a></span>pup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoordinateMaps::Wedge3D::pup </td>
+          <td>(</td>
+          <td class="paramtype">PUP::er &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a0211e67b52bbc3985c5c41334e7cbbd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0211e67b52bbc3985c5c41334e7cbbd1">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge3D.html">Wedge3D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aad98342dc7861bca18c0a59ef195c360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad98342dc7861bca18c0a59ef195c360">&#9670;&nbsp;</a></span>dim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t CoordinateMaps::Wedge3D::dim = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/Domain/CoordinateMaps/<a class="el" href="Wedge3D_8hpp_source.html">Wedge3D.hpp</a></li>
+<li>src/Domain/CoordinateMaps/<a class="el" href="Wedge3D_8cpp.html">Wedge3D.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

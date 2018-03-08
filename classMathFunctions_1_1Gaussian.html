@@ -1,0 +1,825 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: MathFunctions::Gaussian Class Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceMathFunctions.html">MathFunctions</a></li><li class="navelem"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classMathFunctions_1_1Gaussian-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">MathFunctions::Gaussian Class Reference<div class="ingroups"><a class="el" href="group__MathFunctionsGroup.html">Math Functions</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classMathFunctions_1_1Gaussian.html" title="Gaussian . ">Gaussian</a> \(f = A \exp\left(-\frac{(x-x_0)^2}{w^2}\right)\).  
+ <a href="classMathFunctions_1_1Gaussian.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Gaussian_8hpp_source.html">Gaussian.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMathFunctions_1_1Gaussian_1_1Amplitude.html">Amplitude</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMathFunctions_1_1Gaussian_1_1Center.html">Center</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMathFunctions_1_1Gaussian_1_1Width.html">Width</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aa3497556008d02c0fc9f3f0d07346e4d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#aa3497556008d02c0fc9f3f0d07346e4d">options</a> = tmpl::list&lt; <a class="el" href="structMathFunctions_1_1Gaussian_1_1Amplitude.html">Amplitude</a>, <a class="el" href="structMathFunctions_1_1Gaussian_1_1Width.html">Width</a>, <a class="el" href="structMathFunctions_1_1Gaussian_1_1Center.html">Center</a> &gt;</td></tr>
+<tr class="separator:aa3497556008d02c0fc9f3f0d07346e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classMathFunction_3_011_01_4"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classMathFunction_3_011_01_4')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classMathFunction_3_011_01_4.html">MathFunction&lt; 1 &gt;</a></td></tr>
+<tr class="memitem:a7e9d11052774cbb172a7e75ea8f67ff2 inherit pub_types_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#a7e9d11052774cbb172a7e75ea8f67ff2">creatable_classes</a> = tmpl::list&lt; <a class="el" href="classMathFunctions_1_1Gaussian.html">MathFunctions::Gaussian</a>, <a class="el" href="classMathFunctions_1_1PowX.html">MathFunctions::PowX</a>, <a class="el" href="classMathFunctions_1_1Sinusoid.html">MathFunctions::Sinusoid</a> &gt;</td></tr>
+<tr class="separator:a7e9d11052774cbb172a7e75ea8f67ff2 inherit pub_types_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aed52fed21d2d162dede85aedc296f1a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#aed52fed21d2d162dede85aedc296f1a8">WRAPPED_PUPable_decl_template</a> (<a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a>)</td></tr>
+<tr class="separator:aed52fed21d2d162dede85aedc296f1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d3df9c28b9eadb70c44cebc36530831"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian</a> (CkMigrateMessage *) noexcept</td></tr>
+<tr class="separator:a7d3df9c28b9eadb70c44cebc36530831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a60096735b400b0b78f5efc422c94fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a5a60096735b400b0b78f5efc422c94fb">Gaussian</a> (double amplitude, double width, double center) noexcept</td></tr>
+<tr class="separator:a5a60096735b400b0b78f5efc422c94fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a502ccbdf68e1d121a7812a8b6d3cda71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a502ccbdf68e1d121a7812a8b6d3cda71">Gaussian</a> ()=default</td></tr>
+<tr class="separator:a502ccbdf68e1d121a7812a8b6d3cda71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adecda9fd3712615441fcb995df1d85bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#adecda9fd3712615441fcb995df1d85bb">~Gaussian</a> () override=default</td></tr>
+<tr class="separator:adecda9fd3712615441fcb995df1d85bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc6de32cb38e087324a0b7b5741f1ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a3fc6de32cb38e087324a0b7b5741f1ac">Gaussian</a> (const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;)=delete</td></tr>
+<tr class="separator:a3fc6de32cb38e087324a0b7b5741f1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b016e9eb0565a7fcb1fe2f6c58fccfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a4b016e9eb0565a7fcb1fe2f6c58fccfc">operator=</a> (const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;)=delete</td></tr>
+<tr class="separator:a4b016e9eb0565a7fcb1fe2f6c58fccfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ae59d4a72997ff8518ec4192e277ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#aa9ae59d4a72997ff8518ec4192e277ce">Gaussian</a> (<a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:aa9ae59d4a72997ff8518ec4192e277ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7337404aa0e0b5c922a8aef0553a5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#adf7337404aa0e0b5c922a8aef0553a5a">operator=</a> (<a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:adf7337404aa0e0b5c922a8aef0553a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cffe1fa8e4ffbc6e3ba8b067715528"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a77cffe1fa8e4ffbc6e3ba8b067715528">operator()</a> (const double &amp;x) const noexcept override</td></tr>
+<tr class="memdesc:a77cffe1fa8e4ffbc6e3ba8b067715528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function value at the coordinate 'x'.  <a href="#a77cffe1fa8e4ffbc6e3ba8b067715528">More...</a><br /></td></tr>
+<tr class="separator:a77cffe1fa8e4ffbc6e3ba8b067715528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b7503458ebe55e48f7ea8afe458f41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataVector.html">DataVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#af5b7503458ebe55e48f7ea8afe458f41">operator()</a> (const <a class="el" href="classDataVector.html">DataVector</a> &amp;x) const noexcept override</td></tr>
+<tr class="memdesc:af5b7503458ebe55e48f7ea8afe458f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the function value at the coordinate 'x'.  <a href="#af5b7503458ebe55e48f7ea8afe458f41">More...</a><br /></td></tr>
+<tr class="separator:af5b7503458ebe55e48f7ea8afe458f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ced5ad9493f896d12732fcb812a1854"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a4ced5ad9493f896d12732fcb812a1854">first_deriv</a> (const double &amp;x) const noexcept override</td></tr>
+<tr class="memdesc:a4ced5ad9493f896d12732fcb812a1854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first derivative at 'x'.  <a href="#a4ced5ad9493f896d12732fcb812a1854">More...</a><br /></td></tr>
+<tr class="separator:a4ced5ad9493f896d12732fcb812a1854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e4439daa964870c08a37d601c46e864"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataVector.html">DataVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a2e4439daa964870c08a37d601c46e864">first_deriv</a> (const <a class="el" href="classDataVector.html">DataVector</a> &amp;x) const noexcept override</td></tr>
+<tr class="memdesc:a2e4439daa964870c08a37d601c46e864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first derivative at 'x'.  <a href="#a2e4439daa964870c08a37d601c46e864">More...</a><br /></td></tr>
+<tr class="separator:a2e4439daa964870c08a37d601c46e864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba66a0e57d3efd08ba84cf30b8fdf9e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a2ba66a0e57d3efd08ba84cf30b8fdf9e">second_deriv</a> (const double &amp;x) const noexcept override</td></tr>
+<tr class="memdesc:a2ba66a0e57d3efd08ba84cf30b8fdf9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the second derivative at 'x'.  <a href="#a2ba66a0e57d3efd08ba84cf30b8fdf9e">More...</a><br /></td></tr>
+<tr class="separator:a2ba66a0e57d3efd08ba84cf30b8fdf9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83154283c58ba592f86b2737c4d9c08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDataVector.html">DataVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#aa83154283c58ba592f86b2737c4d9c08">second_deriv</a> (const <a class="el" href="classDataVector.html">DataVector</a> &amp;x) const noexcept override</td></tr>
+<tr class="memdesc:aa83154283c58ba592f86b2737c4d9c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the second derivative at 'x'.  <a href="#aa83154283c58ba592f86b2737c4d9c08">More...</a><br /></td></tr>
+<tr class="separator:aa83154283c58ba592f86b2737c4d9c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8ed20b3e3d3f1c30a794b974ff4a04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a0a8ed20b3e3d3f1c30a794b974ff4a04">pup</a> (PUP::er &amp;p) override</td></tr>
+<tr class="separator:a0a8ed20b3e3d3f1c30a794b974ff4a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classMathFunction_3_011_01_4"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classMathFunction_3_011_01_4')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classMathFunction_3_011_01_4.html">MathFunction&lt; 1 &gt;</a></td></tr>
+<tr class="memitem:a761371084c9a506b1562b62207249599 inherit pub_methods_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#a761371084c9a506b1562b62207249599">WRAPPED_PUPable_abstract</a> (<a class="el" href="classMathFunction.html">MathFunction</a>)</td></tr>
+<tr class="separator:a761371084c9a506b1562b62207249599 inherit pub_methods_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51195a41447f332f9fab44e7593a9eac inherit pub_methods_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#a51195a41447f332f9fab44e7593a9eac">MathFunction</a> ()=default</td></tr>
+<tr class="separator:a51195a41447f332f9fab44e7593a9eac inherit pub_methods_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad751845a8615381349c432971b331b70 inherit pub_methods_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#ad751845a8615381349c432971b331b70">MathFunction</a> (const <a class="el" href="classMathFunction.html">MathFunction</a> &amp;)=delete</td></tr>
+<tr class="separator:ad751845a8615381349c432971b331b70 inherit pub_methods_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5f5e017543882045907d1dc7c8a04b inherit pub_methods_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMathFunction.html">MathFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#a0f5f5e017543882045907d1dc7c8a04b">operator=</a> (const <a class="el" href="classMathFunction.html">MathFunction</a> &amp;)=delete</td></tr>
+<tr class="separator:a0f5f5e017543882045907d1dc7c8a04b inherit pub_methods_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af151748c07002999ca75ccdf85eff234 inherit pub_methods_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#af151748c07002999ca75ccdf85eff234">MathFunction</a> (<a class="el" href="classMathFunction.html">MathFunction</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:af151748c07002999ca75ccdf85eff234 inherit pub_methods_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d2cc78bd28979805a0e6f8f62efb9f inherit pub_methods_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMathFunction.html">MathFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#ab6d2cc78bd28979805a0e6f8f62efb9f">operator=</a> (<a class="el" href="classMathFunction.html">MathFunction</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:ab6d2cc78bd28979805a0e6f8f62efb9f inherit pub_methods_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bb5348f7bde8f716d3d0ce596435ae inherit pub_methods_classMathFunction_3_011_01_4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunction_3_011_01_4.html#a05bb5348f7bde8f716d3d0ce596435ae">~MathFunction</a> () override=default</td></tr>
+<tr class="separator:a05bb5348f7bde8f716d3d0ce596435ae inherit pub_methods_classMathFunction_3_011_01_4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a32b1bda78dfaae8dfaf5245f7d00e3ad"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a32b1bda78dfaae8dfaf5245f7d00e3ad">help</a></td></tr>
+<tr class="separator:a32b1bda78dfaae8dfaf5245f7d00e3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a862dd473f9fe733d3fc77c47342690fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMathFunctions_1_1Gaussian.html#a862dd473f9fe733d3fc77c47342690fc">operator==</a> (const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;lhs, const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:a862dd473f9fe733d3fc77c47342690fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classMathFunctions_1_1Gaussian.html" title="Gaussian . ">Gaussian</a> \(f = A \exp\left(-\frac{(x-x_0)^2}{w^2}\right)\). </p>
+<h3>Details</h3>
+<p>Input file options are: <a class="el" href="structMathFunctions_1_1Gaussian_1_1Amplitude.html">Amplitude</a>, <a class="el" href="structMathFunctions_1_1Gaussian_1_1Width.html">Width</a>, and <a class="el" href="structMathFunctions_1_1Gaussian_1_1Center.html">Center</a> </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="aa3497556008d02c0fc9f3f0d07346e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3497556008d02c0fc9f3f0d07346e4d">&#9670;&nbsp;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classMathFunctions_1_1Gaussian.html#aa3497556008d02c0fc9f3f0d07346e4d">MathFunctions::Gaussian::options</a> =  tmpl::list&lt;<a class="el" href="structMathFunctions_1_1Gaussian_1_1Amplitude.html">Amplitude</a>, <a class="el" href="structMathFunctions_1_1Gaussian_1_1Width.html">Width</a>, <a class="el" href="structMathFunctions_1_1Gaussian_1_1Center.html">Center</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a7d3df9c28b9eadb70c44cebc36530831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3df9c28b9eadb70c44cebc36530831">&#9670;&nbsp;</a></span>Gaussian() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MathFunctions::Gaussian::Gaussian </td>
+          <td>(</td>
+          <td class="paramtype">CkMigrateMessage *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="classMathFunctions_1_1Gaussian.html#a4ced5ad9493f896d12732fcb812a1854">first_deriv()</a>, <a class="el" href="classMathFunctions_1_1Gaussian.html#a502ccbdf68e1d121a7812a8b6d3cda71">Gaussian()</a>, <a class="el" href="namespaceMathFunctions.html#a0cecb4f79d30f2a04d4fc9c2e68b36d9">MathFunctions::operator!=()</a>, <a class="el" href="classMathFunctions_1_1Gaussian.html#a77cffe1fa8e4ffbc6e3ba8b067715528">operator()()</a>, <a class="el" href="classMathFunctions_1_1Gaussian.html#a4b016e9eb0565a7fcb1fe2f6c58fccfc">operator=()</a>, <a class="el" href="classMathFunctions_1_1Gaussian.html#a862dd473f9fe733d3fc77c47342690fc">operator==</a>, <a class="el" href="classMathFunctions_1_1Gaussian.html#a0a8ed20b3e3d3f1c30a794b974ff4a04">pup()</a>, <a class="el" href="classMathFunctions_1_1Gaussian.html#a2ba66a0e57d3efd08ba84cf30b8fdf9e">second_deriv()</a>, and <a class="el" href="classMathFunctions_1_1Gaussian.html#adecda9fd3712615441fcb995df1d85bb">~Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="a5a60096735b400b0b78f5efc422c94fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a60096735b400b0b78f5efc422c94fb">&#9670;&nbsp;</a></span>Gaussian() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MathFunctions::Gaussian::Gaussian </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>amplitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>center</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a502ccbdf68e1d121a7812a8b6d3cda71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502ccbdf68e1d121a7812a8b6d3cda71">&#9670;&nbsp;</a></span>Gaussian() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MathFunctions::Gaussian::Gaussian </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="adecda9fd3712615441fcb995df1d85bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adecda9fd3712615441fcb995df1d85bb">&#9670;&nbsp;</a></span>~Gaussian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MathFunctions::Gaussian::~Gaussian </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="a3fc6de32cb38e087324a0b7b5741f1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc6de32cb38e087324a0b7b5741f1ac">&#9670;&nbsp;</a></span>Gaussian() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MathFunctions::Gaussian::Gaussian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9ae59d4a72997ff8518ec4192e277ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ae59d4a72997ff8518ec4192e277ce">&#9670;&nbsp;</a></span>Gaussian() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">MathFunctions::Gaussian::Gaussian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4ced5ad9493f896d12732fcb812a1854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ced5ad9493f896d12732fcb812a1854">&#9670;&nbsp;</a></span>first_deriv() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MathFunctions::Gaussian::first_deriv </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the first derivative at 'x'. </p>
+
+<p>Implements <a class="el" href="classMathFunction_3_011_01_4.html#a10d8b61fcc52b759f7b96a65b395b74f">MathFunction&lt; 1 &gt;</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="a2e4439daa964870c08a37d601c46e864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e4439daa964870c08a37d601c46e864">&#9670;&nbsp;</a></span>first_deriv() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDataVector.html">DataVector</a> MathFunctions::Gaussian::first_deriv </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataVector.html">DataVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the first derivative at 'x'. </p>
+
+<p>Implements <a class="el" href="classMathFunction_3_011_01_4.html#a569a97f64b8dd59c1cd44f8d30b6cf81">MathFunction&lt; 1 &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a77cffe1fa8e4ffbc6e3ba8b067715528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cffe1fa8e4ffbc6e3ba8b067715528">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MathFunctions::Gaussian::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the function value at the coordinate 'x'. </p>
+
+<p>Implements <a class="el" href="classMathFunction_3_011_01_4.html#aadbe030b500f677c2e547976858305b8">MathFunction&lt; 1 &gt;</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="af5b7503458ebe55e48f7ea8afe458f41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b7503458ebe55e48f7ea8afe458f41">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDataVector.html">DataVector</a> MathFunctions::Gaussian::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataVector.html">DataVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the function value at the coordinate 'x'. </p>
+
+<p>Implements <a class="el" href="classMathFunction_3_011_01_4.html#a5a48735071db20a7c53fa0c9dd4b56d7">MathFunction&lt; 1 &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a4b016e9eb0565a7fcb1fe2f6c58fccfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b016e9eb0565a7fcb1fe2f6c58fccfc">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a>&amp; MathFunctions::Gaussian::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="adf7337404aa0e0b5c922a8aef0553a5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7337404aa0e0b5c922a8aef0553a5a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a>&amp; MathFunctions::Gaussian::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a8ed20b3e3d3f1c30a794b974ff4a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8ed20b3e3d3f1c30a794b974ff4a04">&#9670;&nbsp;</a></span>pup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MathFunctions::Gaussian::pup </td>
+          <td>(</td>
+          <td class="paramtype">PUP::er &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="a2ba66a0e57d3efd08ba84cf30b8fdf9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba66a0e57d3efd08ba84cf30b8fdf9e">&#9670;&nbsp;</a></span>second_deriv() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MathFunctions::Gaussian::second_deriv </td>
+          <td>(</td>
+          <td class="paramtype">const double &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the second derivative at 'x'. </p>
+
+<p>Implements <a class="el" href="classMathFunction_3_011_01_4.html#ac6a529b425ae1d01d9f5d8efad0ae603">MathFunction&lt; 1 &gt;</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<a id="aa83154283c58ba592f86b2737c4d9c08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83154283c58ba592f86b2737c4d9c08">&#9670;&nbsp;</a></span>second_deriv() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDataVector.html">DataVector</a> MathFunctions::Gaussian::second_deriv </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDataVector.html">DataVector</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the second derivative at 'x'. </p>
+
+<p>Implements <a class="el" href="classMathFunction_3_011_01_4.html#a41392fe31d93c7187fed15d06257e428">MathFunction&lt; 1 &gt;</a>.</p>
+
+<p class="reference">References <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>.</p>
+
+</div>
+</div>
+<a id="aed52fed21d2d162dede85aedc296f1a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed52fed21d2d162dede85aedc296f1a8">&#9670;&nbsp;</a></span>WRAPPED_PUPable_decl_template()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MathFunctions::Gaussian::WRAPPED_PUPable_decl_template </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a862dd473f9fe733d3fc77c47342690fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a862dd473f9fe733d3fc77c47342690fc">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classMathFunctions_1_1Gaussian.html">Gaussian</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classMathFunctions_1_1Gaussian.html#a7d3df9c28b9eadb70c44cebc36530831">Gaussian()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a32b1bda78dfaae8dfaf5245f7d00e3ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b1bda78dfaae8dfaf5245f7d00e3ad">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a> MathFunctions::Gaussian::help</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">      <span class="stringliteral">&quot;Applies a Gaussian function to the input value&quot;</span>}</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/PointwiseFunctions/MathFunctions/<a class="el" href="Gaussian_8hpp_source.html">Gaussian.hpp</a></li>
+<li>src/PointwiseFunctions/MathFunctions/<a class="el" href="Gaussian_8cpp.html">Gaussian.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

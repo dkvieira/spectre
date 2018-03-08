@@ -1,0 +1,390 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: src/Domain/InitialElementIds.cpp File Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22cd119e9135d55404da822cc2bf42d2.html">src</a></li><li class="navelem"><a class="el" href="dir_7afaef6ae7a94ddf3cc0ef59b99b3f6c.html">Domain</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">InitialElementIds.cpp File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="InitialElementIds_8hpp_source.html">Domain/InitialElementIds.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/header/iterator.html">iterator</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="ElementId_8hpp_source.html">Domain/ElementId.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SegmentId_8hpp_source.html">Domain/SegmentId.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ConstantExpressions_8hpp_source.html">Utilities/ConstantExpressions.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MakeArray_8hpp_source.html">Utilities/MakeArray.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aa18b6ff42588f694010980c792f0e07d"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:aa18b6ff42588f694010980c792f0e07d"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="el" href="classElementId.html">ElementId</a>&lt; 1 &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="InitialElementIds_8cpp.html#aa18b6ff42588f694010980c792f0e07d">initial_element_ids&lt; 1 &gt;</a> (const size_t block_id, const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 1 &gt; initial_ref_levs)</td></tr>
+<tr class="separator:aa18b6ff42588f694010980c792f0e07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e94ae71782e801aeff92a2cadd4c1f7"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a9e94ae71782e801aeff92a2cadd4c1f7"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="el" href="classElementId.html">ElementId</a>&lt; 2 &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="InitialElementIds_8cpp.html#a9e94ae71782e801aeff92a2cadd4c1f7">initial_element_ids&lt; 2 &gt;</a> (const size_t block_id, const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 2 &gt; initial_ref_levs)</td></tr>
+<tr class="separator:a9e94ae71782e801aeff92a2cadd4c1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ae3e1277dff7408fff924dfe4aba2b1"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a6ae3e1277dff7408fff924dfe4aba2b1"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="el" href="classElementId.html">ElementId</a>&lt; 3 &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="InitialElementIds_8cpp.html#a6ae3e1277dff7408fff924dfe4aba2b1">initial_element_ids&lt; 3 &gt;</a> (const size_t block_id, const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt; initial_ref_levs)</td></tr>
+<tr class="separator:a6ae3e1277dff7408fff924dfe4aba2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3dc8997f1019309f79ef4ba9cc7848a8"><td class="memTemplParams" colspan="2">template&lt;size_t VolumeDim&gt; </td></tr>
+<tr class="memitem:ga3dc8997f1019309f79ef4ba9cc7848a8"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="el" href="classElementId.html">ElementId</a>&lt; VolumeDim &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, VolumeDim &gt;&gt; &amp;initial_refinement_levels) noexcept</td></tr>
+<tr class="memdesc:ga3dc8997f1019309f79ef4ba9cc7848a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the <code><a class="el" href="classElementId.html" title="An ElementId uniquely labels an Element. It is constructed from the BlockId of the Block to which the...">ElementId</a></code>s of the initial computational domain.  <a href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">More...</a><br /></td></tr>
+<tr class="separator:ga3dc8997f1019309f79ef4ba9cc7848a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7198233d9d88e26448d46d03487e3850"><td class="memItemLeft" align="right" valign="top">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="el" href="classElementId.html">ElementId</a>&lt; 1 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="InitialElementIds_8cpp.html#a7198233d9d88e26448d46d03487e3850">initial_element_ids&lt; 1 &gt;</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 1 &gt;&gt; &amp;initial_refinement_levels) noexcept</td></tr>
+<tr class="separator:a7198233d9d88e26448d46d03487e3850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f29de7b2e8f81fcf8167d74198e0df9"><td class="memItemLeft" align="right" valign="top">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="el" href="classElementId.html">ElementId</a>&lt; 2 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="InitialElementIds_8cpp.html#a5f29de7b2e8f81fcf8167d74198e0df9">initial_element_ids&lt; 2 &gt;</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 2 &gt;&gt; &amp;initial_refinement_levels) noexcept</td></tr>
+<tr class="separator:a5f29de7b2e8f81fcf8167d74198e0df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63668655c8ce304db5ef9ad42358711"><td class="memItemLeft" align="right" valign="top">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="el" href="classElementId.html">ElementId</a>&lt; 3 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="InitialElementIds_8cpp.html#ac63668655c8ce304db5ef9ad42358711">initial_element_ids&lt; 3 &gt;</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt;&gt; &amp;initial_refinement_levels) noexcept</td></tr>
+<tr class="separator:ac63668655c8ce304db5ef9ad42358711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa18b6ff42588f694010980c792f0e07d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa18b6ff42588f694010980c792f0e07d">&#9670;&nbsp;</a></span>initial_element_ids< 1 >() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt;<a class="el" href="classElementId.html">ElementId</a>&lt;1&gt; &gt; <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids</a>&lt; 1 &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>block_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 1 &gt;&#160;</td>
+          <td class="paramname"><em>initial_ref_levs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids()</a>.</p>
+
+</div>
+</div>
+<a id="a7198233d9d88e26448d46d03487e3850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7198233d9d88e26448d46d03487e3850">&#9670;&nbsp;</a></span>initial_element_ids< 1 >() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt;<a class="el" href="classElementId.html">ElementId</a>&lt;1&gt; &gt; <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids</a>&lt; 1 &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 1 &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_refinement_levels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e94ae71782e801aeff92a2cadd4c1f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e94ae71782e801aeff92a2cadd4c1f7">&#9670;&nbsp;</a></span>initial_element_ids< 2 >() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt;<a class="el" href="classElementId.html">ElementId</a>&lt;2&gt; &gt; <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids</a>&lt; 2 &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>block_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 2 &gt;&#160;</td>
+          <td class="paramname"><em>initial_ref_levs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#ga08ed7eef85864542bf2c2e212f86a533">make_array()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids()</a>.</p>
+
+</div>
+</div>
+<a id="a5f29de7b2e8f81fcf8167d74198e0df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f29de7b2e8f81fcf8167d74198e0df9">&#9670;&nbsp;</a></span>initial_element_ids< 2 >() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt;<a class="el" href="classElementId.html">ElementId</a>&lt;2&gt; &gt; <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids</a>&lt; 2 &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 2 &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_refinement_levels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ae3e1277dff7408fff924dfe4aba2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ae3e1277dff7408fff924dfe4aba2b1">&#9670;&nbsp;</a></span>initial_element_ids< 3 >() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt;<a class="el" href="classElementId.html">ElementId</a>&lt;3&gt; &gt; <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids</a>&lt; 3 &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>block_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt;&#160;</td>
+          <td class="paramname"><em>initial_ref_levs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#ga08ed7eef85864542bf2c2e212f86a533">make_array()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga6c01ded3973bb4b9973e5381c32c0807">two_to_the()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids()</a>.</p>
+
+</div>
+</div>
+<a id="ac63668655c8ce304db5ef9ad42358711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac63668655c8ce304db5ef9ad42358711">&#9670;&nbsp;</a></span>initial_element_ids< 3 >() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt;<a class="el" href="classElementId.html">ElementId</a>&lt;3&gt; &gt; <a class="el" href="group__ComputationalDomainGroup.html#ga3dc8997f1019309f79ef4ba9cc7848a8">initial_element_ids</a>&lt; 3 &gt; </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>initial_refinement_levels</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

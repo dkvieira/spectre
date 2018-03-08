@@ -1,0 +1,626 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: DomainCreators::Brick&lt; TargetFrame &gt; Class Template Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceDomainCreators.html">DomainCreators</a></li><li class="navelem"><a class="el" href="classDomainCreators_1_1Brick.html">Brick</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="classDomainCreators_1_1Brick-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">DomainCreators::Brick&lt; TargetFrame &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__DomainCreatorsGroup.html">Domain Creators</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Create a 3D <a class="el" href="classDomain.html" title="A wrapper around a vector of Blocks that represent the computational domain. ">Domain</a> consisting of a single <a class="el" href="classBlock.html" title="A Block&lt;VolumeDim&gt; is a region of a VolumeDim-dimensional computational domain that defines the root ...">Block</a>.  
+ <a href="classDomainCreators_1_1Brick.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Brick_8hpp_source.html">Brick.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDomainCreators_1_1Brick_1_1InitialGridPoints.html">InitialGridPoints</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDomainCreators_1_1Brick_1_1InitialRefinement.html">InitialRefinement</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDomainCreators_1_1Brick_1_1IsPeriodicIn.html">IsPeriodicIn</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDomainCreators_1_1Brick_1_1LowerBound.html">LowerBound</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDomainCreators_1_1Brick_1_1UpperBound.html">UpperBound</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a03a13359e459645049c0da87f1c843e6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a03a13359e459645049c0da87f1c843e6">options</a> = tmpl::list&lt; <a class="el" href="structDomainCreators_1_1Brick_1_1LowerBound.html">LowerBound</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1UpperBound.html">UpperBound</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1IsPeriodicIn.html">IsPeriodicIn</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1InitialRefinement.html">InitialRefinement</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1InitialGridPoints.html">InitialGridPoints</a> &gt;</td></tr>
+<tr class="separator:a03a13359e459645049c0da87f1c843e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classDomainCreator"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classDomainCreator')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classDomainCreator.html">DomainCreator&lt; 3, TargetFrame &gt;</a></td></tr>
+<tr class="memitem:aac3a408794551d46c352ed3cff84f48d inherit pub_types_classDomainCreator"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreator.html#aac3a408794551d46c352ed3cff84f48d">creatable_classes</a> = typename DomainCreators_detail::domain_creators&lt; VolumeDim &gt;::template creators&lt; TargetFrame &gt;</td></tr>
+<tr class="separator:aac3a408794551d46c352ed3cff84f48d inherit pub_types_classDomainCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6778dbc78ea1587c01b49c65a9cb5470"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a6778dbc78ea1587c01b49c65a9cb5470">Brick</a> (typename <a class="el" href="structDomainCreators_1_1Brick_1_1LowerBound.html#a0449868f01a15de36663c3796df76f84">LowerBound::type</a> lower_xyz, typename <a class="el" href="structDomainCreators_1_1Brick_1_1UpperBound.html#ae49844ce4406ed763f675680d5aa9651">UpperBound::type</a> upper_xyz, typename <a class="el" href="structDomainCreators_1_1Brick_1_1IsPeriodicIn.html#ade48f15acd2ced6c99f0dfe0ee71abe9">IsPeriodicIn::type</a> is_periodic_in_xyz, typename <a class="el" href="structDomainCreators_1_1Brick_1_1InitialRefinement.html#a0669bf0b090ffe39a7b1cd82564260c2">InitialRefinement::type</a> initial_refinement_level_xyz, typename <a class="el" href="structDomainCreators_1_1Brick_1_1InitialGridPoints.html#a4ee09be5e2e64a706b5a56c29f1e5ebf">InitialGridPoints::type</a> initial_number_of_grid_points_in_xyz, const <a class="el" href="structOptionContext.html">OptionContext</a> &amp;context={}) noexcept</td></tr>
+<tr class="separator:a6778dbc78ea1587c01b49c65a9cb5470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17dc1ff95712c805a6365a912c9621a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a17dc1ff95712c805a6365a912c9621a1">Brick</a> ()=default</td></tr>
+<tr class="separator:a17dc1ff95712c805a6365a912c9621a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ba0d0efc9eada4067aada58882d4845"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a8ba0d0efc9eada4067aada58882d4845">Brick</a> (const <a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> &amp;)=delete</td></tr>
+<tr class="separator:a8ba0d0efc9eada4067aada58882d4845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72cc58551850067f018ea1ce851e44d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#ad72cc58551850067f018ea1ce851e44d">Brick</a> (<a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:ad72cc58551850067f018ea1ce851e44d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6cd805ebb1c032e39e64cb84f84e58b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#ae6cd805ebb1c032e39e64cb84f84e58b">operator=</a> (const <a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> &amp;)=delete</td></tr>
+<tr class="separator:ae6cd805ebb1c032e39e64cb84f84e58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812ad560c103be83a2afe2ed8fef10d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a812ad560c103be83a2afe2ed8fef10d3">operator=</a> (<a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a812ad560c103be83a2afe2ed8fef10d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f290ed5945c47fd428a1d08c50fed7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a34f290ed5945c47fd428a1d08c50fed7">~Brick</a> () noexcept override=default</td></tr>
+<tr class="separator:a34f290ed5945c47fd428a1d08c50fed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563702ceda7ef24613edb8cab9f1f69a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDomain.html">Domain</a>&lt; 3, TargetFrame &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a563702ceda7ef24613edb8cab9f1f69a">create_domain</a> () const noexcept override</td></tr>
+<tr class="separator:a563702ceda7ef24613edb8cab9f1f69a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb38c56d067d0c47d56923d9515854b7"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#abb38c56d067d0c47d56923d9515854b7">initial_extents</a> () const noexcept override</td></tr>
+<tr class="memdesc:abb38c56d067d0c47d56923d9515854b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the initial grid extents of the block with the given index.  <a href="#abb38c56d067d0c47d56923d9515854b7">More...</a><br /></td></tr>
+<tr class="separator:abb38c56d067d0c47d56923d9515854b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8631cd8b90c431069d5c054c61596a1e"><td class="memItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#a8631cd8b90c431069d5c054c61596a1e">initial_refinement_levels</a> () const noexcept override</td></tr>
+<tr class="memdesc:a8631cd8b90c431069d5c054c61596a1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the initial refinement levels of the blocks.  <a href="#a8631cd8b90c431069d5c054c61596a1e">More...</a><br /></td></tr>
+<tr class="separator:a8631cd8b90c431069d5c054c61596a1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classDomainCreator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDomainCreator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classDomainCreator.html">DomainCreator&lt; 3, TargetFrame &gt;</a></td></tr>
+<tr class="memitem:a13b53b576aec0efa83322727582b273a inherit pub_methods_classDomainCreator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreator.html#a13b53b576aec0efa83322727582b273a">DomainCreator</a> ()=default</td></tr>
+<tr class="separator:a13b53b576aec0efa83322727582b273a inherit pub_methods_classDomainCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7a33f8d9db7354336014c17c9003270 inherit pub_methods_classDomainCreator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreator.html#ae7a33f8d9db7354336014c17c9003270">DomainCreator</a> (const <a class="el" href="classDomainCreator.html">DomainCreator</a>&lt; VolumeDim, TargetFrame &gt; &amp;)=delete</td></tr>
+<tr class="separator:ae7a33f8d9db7354336014c17c9003270 inherit pub_methods_classDomainCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a810e17327119f20e9ead4d1555bf4 inherit pub_methods_classDomainCreator"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreator.html#a76a810e17327119f20e9ead4d1555bf4">DomainCreator</a> (<a class="el" href="classDomainCreator.html">DomainCreator</a>&lt; VolumeDim, TargetFrame &gt; &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a76a810e17327119f20e9ead4d1555bf4 inherit pub_methods_classDomainCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c810803f65f3af363ec21ac11bd9afd inherit pub_methods_classDomainCreator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDomainCreator.html">DomainCreator</a>&lt; VolumeDim, TargetFrame &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreator.html#a2c810803f65f3af363ec21ac11bd9afd">operator=</a> (const <a class="el" href="classDomainCreator.html">DomainCreator</a>&lt; VolumeDim, TargetFrame &gt; &amp;)=delete</td></tr>
+<tr class="separator:a2c810803f65f3af363ec21ac11bd9afd inherit pub_methods_classDomainCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bd4d9eb3172c78d49ccdb46fa703f58 inherit pub_methods_classDomainCreator"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDomainCreator.html">DomainCreator</a>&lt; VolumeDim, TargetFrame &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreator.html#a5bd4d9eb3172c78d49ccdb46fa703f58">operator=</a> (<a class="el" href="classDomainCreator.html">DomainCreator</a>&lt; VolumeDim, TargetFrame &gt; &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a5bd4d9eb3172c78d49ccdb46fa703f58 inherit pub_methods_classDomainCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6c047ff268c1f8390e0b5de0cb86e7 inherit pub_methods_classDomainCreator"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreator.html#a9c6c047ff268c1f8390e0b5de0cb86e7">~DomainCreator</a> ()=default</td></tr>
+<tr class="separator:a9c6c047ff268c1f8390e0b5de0cb86e7 inherit pub_methods_classDomainCreator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:afc22b19dae33d7b6bec3eaac4dc09bc8"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDomainCreators_1_1Brick.html#afc22b19dae33d7b6bec3eaac4dc09bc8">help</a> {&quot;Creates a 3D brick.&quot;}</td></tr>
+<tr class="separator:afc22b19dae33d7b6bec3eaac4dc09bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename TargetFrame&gt;<br />
+class DomainCreators::Brick&lt; TargetFrame &gt;</h3>
+
+<p>Create a 3D <a class="el" href="classDomain.html" title="A wrapper around a vector of Blocks that represent the computational domain. ">Domain</a> consisting of a single <a class="el" href="classBlock.html" title="A Block&lt;VolumeDim&gt; is a region of a VolumeDim-dimensional computational domain that defines the root ...">Block</a>. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a03a13359e459645049c0da87f1c843e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03a13359e459645049c0da87f1c843e6">&#9670;&nbsp;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::<a class="el" href="classDomainCreators_1_1Brick.html#a03a13359e459645049c0da87f1c843e6">options</a> =  tmpl::list&lt;<a class="el" href="structDomainCreators_1_1Brick_1_1LowerBound.html">LowerBound</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1UpperBound.html">UpperBound</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1IsPeriodicIn.html">IsPeriodicIn</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1InitialRefinement.html">InitialRefinement</a>, <a class="el" href="structDomainCreators_1_1Brick_1_1InitialGridPoints.html">InitialGridPoints</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6778dbc78ea1587c01b49c65a9cb5470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6778dbc78ea1587c01b49c65a9cb5470">&#9670;&nbsp;</a></span>Brick() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::<a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> </td>
+          <td>(</td>
+          <td class="paramtype">typename <a class="el" href="structDomainCreators_1_1Brick_1_1LowerBound.html#a0449868f01a15de36663c3796df76f84">LowerBound::type</a>&#160;</td>
+          <td class="paramname"><em>lower_xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="structDomainCreators_1_1Brick_1_1UpperBound.html#ae49844ce4406ed763f675680d5aa9651">UpperBound::type</a>&#160;</td>
+          <td class="paramname"><em>upper_xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="structDomainCreators_1_1Brick_1_1IsPeriodicIn.html#ade48f15acd2ced6c99f0dfe0ee71abe9">IsPeriodicIn::type</a>&#160;</td>
+          <td class="paramname"><em>is_periodic_in_xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="structDomainCreators_1_1Brick_1_1InitialRefinement.html#a0669bf0b090ffe39a7b1cd82564260c2">InitialRefinement::type</a>&#160;</td>
+          <td class="paramname"><em>initial_refinement_level_xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename <a class="el" href="structDomainCreators_1_1Brick_1_1InitialGridPoints.html#a4ee09be5e2e64a706b5a56c29f1e5ebf">InitialGridPoints::type</a>&#160;</td>
+          <td class="paramname"><em>initial_number_of_grid_points_in_xyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structOptionContext.html">OptionContext</a> &amp;&#160;</td>
+          <td class="paramname"><em>context</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17dc1ff95712c805a6365a912c9621a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17dc1ff95712c805a6365a912c9621a1">&#9670;&nbsp;</a></span>Brick() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::<a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ba0d0efc9eada4067aada58882d4845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ba0d0efc9eada4067aada58882d4845">&#9670;&nbsp;</a></span>Brick() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::<a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDomainCreators_1_1Brick.html">Brick</a>&lt; TargetFrame &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad72cc58551850067f018ea1ce851e44d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72cc58551850067f018ea1ce851e44d">&#9670;&nbsp;</a></span>Brick() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::<a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDomainCreators_1_1Brick.html">Brick</a>&lt; TargetFrame &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34f290ed5945c47fd428a1d08c50fed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f290ed5945c47fd428a1d08c50fed7">&#9670;&nbsp;</a></span>~Brick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::~<a class="el" href="classDomainCreators_1_1Brick.html">Brick</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a563702ceda7ef24613edb8cab9f1f69a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563702ceda7ef24613edb8cab9f1f69a">&#9670;&nbsp;</a></span>create_domain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomain.html">Domain</a>&lt; 3, TargetFrame &gt; <a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::create_domain </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classDomainCreator.html#ac7c932431af0ae7a448be93a02c5ffdc">DomainCreator&lt; 3, TargetFrame &gt;</a>.</p>
+
+</div>
+</div>
+<a id="abb38c56d067d0c47d56923d9515854b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb38c56d067d0c47d56923d9515854b7">&#9670;&nbsp;</a></span>initial_extents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt; &gt; <a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::initial_extents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain the initial grid extents of the block with the given index. </p>
+
+<p>Implements <a class="el" href="classDomainCreator.html#aecc59f0ba2f84078adc826539a44d50a">DomainCreator&lt; 3, TargetFrame &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a8631cd8b90c431069d5c054c61596a1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8631cd8b90c431069d5c054c61596a1e">&#9670;&nbsp;</a></span>initial_refinement_levels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a>&lt; <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; size_t, 3 &gt; &gt; <a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::initial_refinement_levels </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obtain the initial refinement levels of the blocks. </p>
+
+<p>Implements <a class="el" href="classDomainCreator.html#aabdf9c6be15e8dbbdcfeada431354fb6">DomainCreator&lt; 3, TargetFrame &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ae6cd805ebb1c032e39e64cb84f84e58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6cd805ebb1c032e39e64cb84f84e58b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomainCreators_1_1Brick.html">Brick</a>&amp; <a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classDomainCreators_1_1Brick.html">Brick</a>&lt; TargetFrame &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a812ad560c103be83a2afe2ed8fef10d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a812ad560c103be83a2afe2ed8fef10d3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDomainCreators_1_1Brick.html">Brick</a>&amp; <a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDomainCreators_1_1Brick.html">Brick</a>&lt; TargetFrame &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="afc22b19dae33d7b6bec3eaac4dc09bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc22b19dae33d7b6bec3eaac4dc09bc8">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a> <a class="el" href="classDomainCreators_1_1Brick.html">DomainCreators::Brick</a>&lt; TargetFrame &gt;::help {&quot;Creates a 3D brick.&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/Domain/DomainCreators/<a class="el" href="Brick_8hpp_source.html">Brick.hpp</a></li>
+<li>src/Domain/DomainCreators/<a class="el" href="Brick_8cpp.html">Brick.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

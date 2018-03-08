@@ -1,0 +1,335 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - 032fadb9ddd2ec83e570196d97055f3db6b8710b - Parallel/CharmMain.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">SpECTRE Unit Test Code Coverage Report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">Parallel</a> - CharmMain.cpp<span style="font-size: 80%;"> (source / <a href="CharmMain.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Commit:</td>
+             <td class="headerValue"><a target="_blank" href="https://github.com/sxs-collaboration/spectre/commit/032fadb9ddd2ec83e570196d97055f3db6b8710b">032fadb9ddd2ec83e570196d97055f3db6b8710b</a></td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry">60</td>
+            <td class="headerCovTableEntryHi">98.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2018-03-08 04:41:17</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">77</td>
+            <td class="headerCovTableEntry">77</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : // Distributed under the MIT License.</a>
+<span class="lineNum">       2 </span>            : // See LICENSE.txt for details.
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            : /// \file
+<span class="lineNum">       5 </span>            : /// Defines functions used by Charm++ to register classes/chares and entry
+<span class="lineNum">       6 </span>            : /// methods
+<span class="lineNum">       7 </span>            : 
+<span class="lineNum">       8 </span>            : #include &lt;algorithm&gt;
+<span class="lineNum">       9 </span>            : #include &lt;string&gt;
+<span class="lineNum">      10 </span>            : #include &lt;type_traits&gt;
+<span class="lineNum">      11 </span>            : #include &lt;vector&gt;
+<span class="lineNum">      12 </span>            : 
+<span class="lineNum">      13 </span>            : #include &quot;Parallel/ConstGlobalCache.hpp&quot;
+<span class="lineNum">      14 </span>            : #include &quot;Parallel/Main.hpp&quot;
+<span class="lineNum">      15 </span>            : #include &quot;Utilities/NoSuchType.hpp&quot;
+<span class="lineNum">      16 </span>            : 
+<span class="lineNum">      17 </span>            : namespace Parallel {
+<span class="lineNum">      18 </span>            : namespace charmxx {
+<span class="lineNum">      19 </span>            : template &lt;class...&gt;
+<span class="lineNum">      20 </span>            : using void_t = void;
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span>            : template &lt;class T&gt;
+<span class="lineNum">      23 </span>            : struct get_value_type;
+<span class="lineNum">      24 </span>            : 
+<span class="lineNum">      25 </span>            : template &lt;class Key, class Mapped, class Hash, class KeyEqual, class Allocator&gt;
+<span class="lineNum">      26 </span>            : struct get_value_type&lt;
+<span class="lineNum">      27 </span>            :     std::unordered_map&lt;Key, Mapped, Hash, KeyEqual, Allocator&gt;&gt; {
+<span class="lineNum">      28 </span>            :   // When sending data it is typical to use `std:make_pair(a, b)` which results
+<span class="lineNum">      29 </span>            :   // in a non-const Key type, which is different from what
+<span class="lineNum">      30 </span>            :   // `unordered_map::value_type` is. This difference leads to issues with
+<span class="lineNum">      31 </span>            :   // function registration with Charm++.
+<span class="lineNum">      32 </span>            :   using type = std::pair&lt;Key, Mapped&gt;;
+<span class="lineNum">      33 </span>            : };
+<span class="lineNum">      34 </span>            : 
+<span class="lineNum">      35 </span>            : template &lt;class Key, class Hash, class KeyEqual, class Allocator&gt;
+<span class="lineNum">      36 </span>            : struct get_value_type&lt;std::unordered_multiset&lt;Key, Hash, KeyEqual, Allocator&gt;&gt; {
+<span class="lineNum">      37 </span>            :   using type = Key;
+<span class="lineNum">      38 </span>            : };
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span>            : template &lt;class T&gt;
+<span class="lineNum">      41 </span>            : using get_value_type_t = typename get_value_type&lt;T&gt;::type;
+<span class="lineNum">      42 </span>            : 
+<span class="lineNum">      43 </span>            : template &lt;class T, class = void&gt;
+<span class="lineNum">      44 </span>            : struct has_single_actions : std::false_type {};
+<span class="lineNum">      45 </span>            : template &lt;class T&gt;
+<span class="lineNum">      46 </span>            : struct has_single_actions&lt;T, void_t&lt;typename T::explicit_single_actions_list&gt;&gt;
+<span class="lineNum">      47 </span>            :     : std::true_type {};
+<span class="lineNum">      48 </span>            : 
+<span class="lineNum">      49 </span>            : template &lt;class T, class = void&gt;
+<span class="lineNum">      50 </span>            : struct has_reduction_actions : std::false_type {};
+<span class="lineNum">      51 </span>            : template &lt;class T&gt;
+<span class="lineNum">      52 </span>            : struct has_reduction_actions&lt;T, void_t&lt;typename T::reduction_actions_list&gt;&gt;
+<span class="lineNum">      53 </span>            :     : std::true_type {};
+<a name="54"><span class="lineNum">      54 </span>            : </a>
+<span class="lineNum">      55 </span>            : template &lt;class... Ts&gt;
+<span class="lineNum">      56 </span><span class="lineCov">         64 : void swallow(Ts&amp;&amp;... /*ts*/) {}</span>
+<span class="lineNum">      57 </span>            : 
+<span class="lineNum">      58 </span>            : template &lt;class TemplateParameters, class ParallelComponent&gt;
+<span class="lineNum">      59 </span>            : struct charm_types_with_parameters;
+<span class="lineNum">      60 </span>            : 
+<span class="lineNum">      61 </span>            : template &lt;template &lt;class...&gt; class F, class... Args, class ParallelComponent&gt;
+<span class="lineNum">      62 </span>            : struct charm_types_with_parameters&lt;F&lt;Args...&gt;, ParallelComponent&gt; {
+<span class="lineNum">      63 </span>            :   using cproxy =
+<span class="lineNum">      64 </span>            :       typename ParallelComponent::chare_type::template cproxy&lt;ParallelComponent,
+<span class="lineNum">      65 </span>            :                                                               Args...&gt;;
+<span class="lineNum">      66 </span>            :   using cbase =
+<span class="lineNum">      67 </span>            :       typename ParallelComponent::chare_type::template cbase&lt;ParallelComponent,
+<span class="lineNum">      68 </span>            :                                                              Args...&gt;;
+<span class="lineNum">      69 </span>            :   using algorithm =
+<span class="lineNum">      70 </span>            :       typename ParallelComponent::chare_type::template algorithm_type&lt;
+<span class="lineNum">      71 </span>            :           ParallelComponent, Args...&gt;;
+<span class="lineNum">      72 </span>            :   using ckindex = typename ParallelComponent::chare_type::template ckindex&lt;
+<span class="lineNum">      73 </span>            :       ParallelComponent, Args...&gt;;
+<span class="lineNum">      74 </span>            : };
+<span class="lineNum">      75 </span>            : 
+<span class="lineNum">      76 </span>            : template &lt;class ParallelComponent&gt;
+<span class="lineNum">      77 </span>            : struct CharmRegisterFunctions {
+<span class="lineNum">      78 </span>            :   using chare_type = typename ParallelComponent::chare_type;
+<span class="lineNum">      79 </span>            :   using charm_type = charm_types_with_parameters&lt;
+<span class="lineNum">      80 </span>            :       tmpl::list&lt;
+<span class="lineNum">      81 </span>            :           typename ParallelComponent::metavariables,
+<span class="lineNum">      82 </span>            :           typename ParallelComponent::action_list,
+<span class="lineNum">      83 </span>            :           typename get_array_index&lt;chare_type&gt;::template f&lt;ParallelComponent&gt;,
+<span class="lineNum">      84 </span>            :           typename ParallelComponent::initial_databox&gt;,
+<span class="lineNum">      85 </span>            :       ParallelComponent&gt;;
+<span class="lineNum">      86 </span>            :   using cproxy = typename charm_type::cproxy;
+<span class="lineNum">      87 </span>            :   using ckindex = typename charm_type::ckindex;
+<a name="88"><span class="lineNum">      88 </span>            :   using algorithm = typename charm_type::algorithm;</a>
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span><span class="lineCov">         14 :   static void register_algorithm() {</span>
+<span class="lineNum">      91 </span><span class="lineCov">         14 :     ckindex::__register(get_template_parameters_as_string&lt;algorithm&gt;().c_str(),</span>
+<span class="lineNum">      92 </span>            :                         sizeof(algorithm));
+<span class="lineNum">      93 </span><span class="lineCov">         14 :   }</span>
+<span class="lineNum">      94 </span>            : 
+<span class="lineNum">      95 </span>            :   template &lt;class... ReceiveTags,
+<span class="lineNum">      96 </span>            :             typename std::enable_if&lt;
+<span class="lineNum">      97 </span>            :                 (sizeof...(ReceiveTags),
+<span class="lineNum">      98 </span>            :                  not Parallel::is_group_proxy&lt;cproxy&gt;::value and
+<a name="99"><span class="lineNum">      99 </span>            :                      not Parallel::is_node_group_proxy&lt;cproxy&gt;::value)&gt;::type* =</a>
+<span class="lineNum">     100 </span>            :                 nullptr&gt;
+<span class="lineNum">     101 </span><span class="lineCov">         11 :   static void register_receive_data(tmpl::list&lt;ReceiveTags...&gt; /*meta*/) {</span>
+<span class="lineNum">     102 </span><span class="lineCov">         11 :     swallow(((void)ckindex::template idx_receive_data&lt;ReceiveTags&gt;(</span>
+<span class="lineNum">     103 </span>            :                  static_cast&lt;void (algorithm::*)(
+<span class="lineNum">     104 </span>            :                      const typename ReceiveTags::temporal_id&amp;,
+<span class="lineNum">     105 </span>            :                      const get_value_type_t&lt;
+<span class="lineNum">     106 </span>            :                          typename ReceiveTags::type::mapped_type&gt;&amp;,
+<span class="lineNum">     107 </span>            :                      bool)&gt;(nullptr)),
+<span class="lineNum">     108 </span>            :              0)...);
+<span class="lineNum">     109 </span><span class="lineCov">         11 :   }</span>
+<span class="lineNum">     110 </span>            : 
+<span class="lineNum">     111 </span>            :   template &lt;class... ReceiveTags,
+<span class="lineNum">     112 </span>            :             typename std::enable_if&lt;(sizeof...(ReceiveTags),
+<span class="lineNum">     113 </span>            :                                      Parallel::is_group_proxy&lt;cproxy&gt;::value or
+<a name="114"><span class="lineNum">     114 </span>            :                                          Parallel::is_node_group_proxy&lt;</a>
+<span class="lineNum">     115 </span>            :                                              cproxy&gt;::value)&gt;::type* = nullptr&gt;
+<span class="lineNum">     116 </span><span class="lineCov">          3 :   static void register_receive_data(tmpl::list&lt;ReceiveTags...&gt; /*meta*/) {</span>
+<span class="lineNum">     117 </span><span class="lineCov">          3 :     swallow((</span>
+<span class="lineNum">     118 </span>            :         (void)ckindex::template idx_receive_data&lt;ReceiveTags&gt;(
+<span class="lineNum">     119 </span>            :             static_cast&lt;void (algorithm::*)(
+<span class="lineNum">     120 </span>            :                 const typename ReceiveTags::temporal_id&amp;,
+<span class="lineNum">     121 </span>            :                 const typename std::decay&lt;typename ReceiveTags::type::
+<span class="lineNum">     122 </span>            :                                               mapped_type::value_type&gt;::type&amp;)&gt;(
+<span class="lineNum">     123 </span>            :                 nullptr)),
+<span class="lineNum">     124 </span>            :         0)...);
+<span class="lineNum">     125 </span><span class="lineCov">          3 :   }</span>
+<a name="126"><span class="lineNum">     126 </span>            : </a>
+<span class="lineNum">     127 </span>            :   template &lt;class... Actions&gt;
+<span class="lineNum">     128 </span><span class="lineCov">          1 :   static void register_reduction_actions(tmpl::list&lt;Actions...&gt; /*meta*/) {</span>
+<span class="lineNum">     129 </span><span class="lineCov">          1 :     swallow(((void)ckindex::template idx_reduction_action&lt;</span>
+<span class="lineNum">     130 </span>            :                  Actions, typename Actions::reduction_type&gt;(
+<span class="lineNum">     131 </span>            :                  static_cast&lt;void (algorithm::*)(
+<span class="lineNum">     132 </span>            :                      const typename Actions::reduction_type&amp;)&gt;(nullptr)),
+<span class="lineNum">     133 </span>            :              (void)ckindex::template redn_wrapper_reduction_action&lt;
+<span class="lineNum">     134 </span>            :                  Actions, typename Actions::reduction_type&gt;(nullptr),
+<span class="lineNum">     135 </span>            :              0)...);
+<span class="lineNum">     136 </span><span class="lineCov">          1 :   }</span>
+<a name="137"><span class="lineNum">     137 </span>            : </a>
+<span class="lineNum">     138 </span>            :   template &lt;class Action&gt;
+<span class="lineNum">     139 </span><span class="lineCov">         10 :   static void register_explicit_single_action(tmpl::list&lt;&gt; /*meta*/) {</span>
+<span class="lineNum">     140 </span><span class="lineCov">         10 :     ckindex::template idx_explicit_single_action&lt;Action&gt;(</span>
+<span class="lineNum">     141 </span>            :         static_cast&lt;void (algorithm::*)()&gt;(nullptr));
+<span class="lineNum">     142 </span><span class="lineCov">         10 :   }</span>
+<a name="143"><span class="lineNum">     143 </span>            : </a>
+<span class="lineNum">     144 </span>            :   template &lt;class Action, class Arg0, class... Args&gt;
+<span class="lineNum">     145 </span><span class="lineCov">          7 :   static void register_explicit_single_action(</span>
+<span class="lineNum">     146 </span>            :       tmpl::list&lt;Arg0, Args...&gt; /*meta*/) {
+<span class="lineNum">     147 </span><span class="lineCov">          7 :     ckindex::template idx_explicit_single_action&lt;Action&gt;(</span>
+<span class="lineNum">     148 </span>            :         static_cast&lt;void (algorithm::*)(const std::tuple&lt;Arg0, Args...&gt;&amp;)&gt;(
+<span class="lineNum">     149 </span>            :             nullptr));
+<span class="lineNum">     150 </span><span class="lineCov">          7 :   }</span>
+<a name="151"><span class="lineNum">     151 </span>            : </a>
+<span class="lineNum">     152 </span>            :   template &lt;class... ExplicitActionsParameters&gt;
+<span class="lineNum">     153 </span><span class="lineCov">         13 :   static void register_explicit_single_actions(</span>
+<span class="lineNum">     154 </span>            :       tmpl::list&lt;ExplicitActionsParameters...&gt; /*meta*/) {
+<span class="lineNum">     155 </span><span class="lineCov">         13 :     swallow(((void)register_explicit_single_action&lt;ExplicitActionsParameters&gt;(</span>
+<span class="lineNum">     156 </span>            :                  typename ExplicitActionsParameters::apply_args{}),
+<span class="lineNum">     157 </span>            :              0)...);
+<span class="lineNum">     158 </span><span class="lineCov">         13 :   }</span>
+<span class="lineNum">     159 </span>            : };
+<a name="160"><span class="lineNum">     160 </span>            : </a>
+<span class="lineNum">     161 </span>            : template &lt;class ParallelComponent&gt;
+<span class="lineNum">     162 </span><span class="lineCov">         13 : void register_explicit_single_actions(std::true_type /*meta*/) {</span>
+<span class="lineNum">     163 </span><span class="lineCov">         13 :   CharmRegisterFunctions&lt;ParallelComponent&gt;::register_explicit_single_actions(</span>
+<span class="lineNum">     164 </span>            :       typename ParallelComponent::explicit_single_actions_list{});
+<span class="lineNum">     165 </span><span class="lineCov">         13 : }</span>
+<a name="166"><span class="lineNum">     166 </span>            : </a>
+<span class="lineNum">     167 </span>            : template &lt;class ParallelComponent&gt;
+<span class="lineNum">     168 </span><span class="lineCov">          1 : void register_explicit_single_actions(std::false_type /*meta*/) {}</span>
+<a name="169"><span class="lineNum">     169 </span>            : </a>
+<span class="lineNum">     170 </span>            : template &lt;class ParallelComponent&gt;
+<span class="lineNum">     171 </span><span class="lineCov">          1 : void register_reduction_actions(std::true_type /*meta*/) {</span>
+<span class="lineNum">     172 </span><span class="lineCov">          1 :   CharmRegisterFunctions&lt;ParallelComponent&gt;::register_reduction_actions(</span>
+<span class="lineNum">     173 </span>            :       typename ParallelComponent::reduction_actions_list{});
+<span class="lineNum">     174 </span><span class="lineCov">          1 : }</span>
+<a name="175"><span class="lineNum">     175 </span>            : </a>
+<span class="lineNum">     176 </span>            : template &lt;class ParallelComponent&gt;
+<span class="lineNum">     177 </span><span class="lineCov">         13 : void register_reduction_actions(std::false_type /*meta*/) {}</span>
+<a name="178"><span class="lineNum">     178 </span>            : </a>
+<span class="lineNum">     179 </span>            : template &lt;class... ParallelComponents&gt;
+<span class="lineNum">     180 </span><span class="lineCov">          9 : void register_parallel_components(tmpl::list&lt;ParallelComponents...&gt; /*meta*/) {</span>
+<span class="lineNum">     181 </span>            :   static bool done_registration{false};
+<span class="lineNum">     182 </span><span class="lineCov">          9 :   if (done_registration) {</span>
+<span class="lineNum">     183 </span>            :     return;  // LCOV_EXCL_LINE
+<span class="lineNum">     184 </span>            :   }
+<span class="lineNum">     185 </span><span class="lineCov">          9 :   done_registration = true;</span>
+<span class="lineNum">     186 </span>            : 
+<span class="lineNum">     187 </span><span class="lineCov">         14 :   swallow(</span>
+<span class="lineNum">     188 </span><span class="lineCov">         14 :       ((void)CharmRegisterFunctions&lt;ParallelComponents&gt;::register_algorithm(),</span>
+<span class="lineNum">     189 </span>            :        0)...);
+<span class="lineNum">     190 </span><span class="lineCov">         19 :   swallow((</span>
+<span class="lineNum">     191 </span><span class="lineCov">         28 :       (void)CharmRegisterFunctions&lt;ParallelComponents&gt;::register_receive_data(</span>
+<span class="lineNum">     192 </span>            :           Parallel::get_inbox_tags&lt;typename ParallelComponents::action_list&gt;{}),
+<span class="lineNum">     193 </span>            :       0)...);
+<span class="lineNum">     194 </span><span class="lineCov">          9 :   swallow(((void)register_explicit_single_actions&lt;ParallelComponents&gt;(</span>
+<span class="lineNum">     195 </span>            :                typename has_single_actions&lt;ParallelComponents&gt;::type{}),
+<span class="lineNum">     196 </span>            :            0)...);
+<span class="lineNum">     197 </span><span class="lineCov">          9 :   swallow(((void)register_reduction_actions&lt;ParallelComponents&gt;(</span>
+<span class="lineNum">     198 </span>            :                typename has_reduction_actions&lt;ParallelComponents&gt;::type{}),
+<span class="lineNum">     199 </span>            :            0)...);
+<a name="200"><span class="lineNum">     200 </span>            : }</a>
+<span class="lineNum">     201 </span>            : 
+<span class="lineNum">     202 </span><span class="lineCov">          9 : void register_init_node_and_proc() {</span>
+<span class="lineNum">     203 </span>            :   static bool done_registration{false};
+<span class="lineNum">     204 </span><span class="lineCov">          9 :   if (done_registration) {</span>
+<span class="lineNum">     205 </span>            :     return;  // LCOV_EXCL_LINE
+<span class="lineNum">     206 </span>            :   }
+<span class="lineNum">     207 </span><span class="lineCov">          9 :   done_registration = true;</span>
+<span class="lineNum">     208 </span><span class="lineCov">         37 :   for (auto&amp; init_node_func : charm_init_node_funcs) {</span>
+<span class="lineNum">     209 </span><span class="lineCov">         28 :     _registerInitCall(*init_node_func, 1);</span>
+<span class="lineNum">     210 </span>            :   }
+<span class="lineNum">     211 </span>            : 
+<span class="lineNum">     212 </span><span class="lineCov">         18 :   for (auto&amp; init_proc_func : charm_init_proc_funcs) {</span>
+<span class="lineNum">     213 </span><span class="lineCov">          9 :     _registerInitCall(*init_proc_func, 0);</span>
+<span class="lineNum">     214 </span>            :   }
+<span class="lineNum">     215 </span>            : }
+<a name="216"><span class="lineNum">     216 </span>            : </a>
+<span class="lineNum">     217 </span>            : template &lt;class Metavariables&gt;
+<span class="lineNum">     218 </span><span class="lineCov">          9 : void register_main_and_cache() {</span>
+<span class="lineNum">     219 </span>            :   static bool done_registration{false};
+<span class="lineNum">     220 </span><span class="lineCov">          9 :   if (done_registration) {</span>
+<span class="lineNum">     221 </span>            :     return;  // LCOV_EXCL_LINE
+<span class="lineNum">     222 </span>            :   }
+<span class="lineNum">     223 </span><span class="lineCov">          9 :   done_registration = true;</span>
+<span class="lineNum">     224 </span>            :   // Get the metavariables name, strip anonymous namespace references,
+<span class="lineNum">     225 </span>            :   // then register Main and ConstGlobalCache
+<span class="lineNum">     226 </span><span class="lineCov">         18 :   std::string metavariables_name =</span>
+<span class="lineNum">     227 </span>            :       Parallel::charmxx::get_template_parameters_as_string&lt;Metavariables&gt;();
+<span class="lineNum">     228 </span><span class="lineCov">          9 :   if (metavariables_name.find(std::string(&quot;(anonymousnamespace)::&quot;)) !=</span>
+<span class="lineNum">     229 </span>            :       std::string::npos) {
+<span class="lineNum">     230 </span><span class="lineNoCov">          0 :     metavariables_name =</span>
+<span class="lineNum">     231 </span>            :         metavariables_name.substr(std::string(&quot;(anonymousnamespace)::&quot;).size(),
+<span class="lineNum">     232 </span>            :                                   metavariables_name.size());
+<span class="lineNum">     233 </span>            :   }
+<span class="lineNum">     234 </span><span class="lineCov">          9 :   Parallel::CkIndex_Main&lt;Metavariables&gt;::__register(</span>
+<span class="lineNum">     235 </span>            :       std::string(&quot;Main&lt;&quot; + metavariables_name + std::string(&quot; &gt;&quot;)).c_str(),
+<span class="lineNum">     236 </span>            :       sizeof(Parallel::Main&lt;Metavariables&gt;));
+<span class="lineNum">     237 </span><span class="lineCov">          9 :   Parallel::CkIndex_ConstGlobalCache&lt;Metavariables&gt;::__register(</span>
+<span class="lineNum">     238 </span>            :       std::string(&quot;ConstGlobalCache&lt;&quot; + metavariables_name + std::string(&quot; &gt;&quot;))
+<span class="lineNum">     239 </span>            :           .c_str(),
+<span class="lineNum">     240 </span>            :       sizeof(Parallel::ConstGlobalCache&lt;Metavariables&gt;));
+<span class="lineNum">     241 </span>            : }
+<span class="lineNum">     242 </span>            : 
+<span class="lineNum">     243 </span>            : }  // namespace charmxx
+<a name="244"><span class="lineNum">     244 </span>            : }  // namespace Parallel</a>
+<span class="lineNum">     245 </span>            : 
+<span class="lineNum">     246 </span><span class="lineCov">          9 : extern &quot;C&quot; void CkRegisterMainModule() {</span>
+<span class="lineNum">     247 </span><span class="lineCov">          9 :   Parallel::charmxx::register_init_node_and_proc();</span>
+<span class="lineNum">     248 </span><span class="lineCov">          9 :   Parallel::charmxx::register_main_and_cache&lt;charm_metavariables&gt;();</span>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">          9 :   Parallel::charmxx::register_parallel_components(</span></a>
+<span class="lineNum">     250 </span><span class="lineCov">          9 :       typename charm_metavariables::component_list{});</span>
+<span class="lineNum">     251 </span><span class="lineCov">         36 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

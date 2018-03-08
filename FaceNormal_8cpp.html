@@ -1,0 +1,328 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: src/Domain/FaceNormal.cpp File Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22cd119e9135d55404da822cc2bf42d2.html">src</a></li><li class="navelem"><a class="el" href="dir_7afaef6ae7a94ddf3cc0ef59b99b3f6c.html">Domain</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">FaceNormal.cpp File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="FaceNormal_8hpp_source.html">Domain/FaceNormal.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DataVector_8hpp_source.html">DataStructures/DataVector.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Index_8hpp_source.html">DataStructures/Index.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Tensor_8hpp_source.html">DataStructures/Tensor/Tensor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CoordinateMap_8hpp_source.html">Domain/CoordinateMaps/CoordinateMap.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Direction_8hpp_source.html">Domain/Direction.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ElementMap_8hpp_source.html">Domain/ElementMap.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="LogicalCoordinates_8hpp_source.html">Domain/LogicalCoordinates.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GenerateInstantiations_8hpp_source.html">Utilities/GenerateInstantiations.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a6a83cea4275abbc9b72241167f5efef9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a>(data)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(0, data)</td></tr>
+<tr class="separator:a6a83cea4275abbc9b72241167f5efef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a96d69e3513d32660dab046931e4496"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FaceNormal_8cpp.html#a5a96d69e3513d32660dab046931e4496">GET_FRAME</a>(data)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(1, data)</td></tr>
+<tr class="separator:a5a96d69e3513d32660dab046931e4496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c205748a502a535e809832a5fe1535"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="FaceNormal_8cpp.html#ab8c205748a502a535e809832a5fe1535">INSTANTIATION</a>(_,  data)</td></tr>
+<tr class="separator:ab8c205748a502a535e809832a5fe1535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga4c13be5f08d5822e16d93829cc5dc909"><td class="memTemplParams" colspan="2">template&lt;size_t VolumeDim, typename TargetFrame &gt; </td></tr>
+<tr class="memitem:ga4c13be5f08d5822e16d93829cc5dc909"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, VolumeDim, TargetFrame &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__ComputationalDomainGroup.html#ga4c13be5f08d5822e16d93829cc5dc909">unnormalized_face_normal</a> (const <a class="el" href="classIndex.html">Index</a>&lt; VolumeDim - 1 &gt; &amp;interface_extents, const <a class="el" href="classElementMap.html">ElementMap</a>&lt; VolumeDim, TargetFrame &gt; &amp;map, const <a class="el" href="classDirection.html">Direction</a>&lt; VolumeDim &gt; &amp;direction) noexcept</td></tr>
+<tr class="memdesc:ga4c13be5f08d5822e16d93829cc5dc909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the outward grid normal on a face of an <a class="el" href="classElement.html" title="A spectral element with knowledge of its neighbors. ">Element</a>.  <a href="group__ComputationalDomainGroup.html#ga4c13be5f08d5822e16d93829cc5dc909">More...</a><br /></td></tr>
+<tr class="separator:ga4c13be5f08d5822e16d93829cc5dc909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64897c5d846ce319b7b8261bf419c4f4"><td class="memTemplParams" colspan="2">template&lt;size_t VolumeDim, typename TargetFrame &gt; </td></tr>
+<tr class="memitem:a64897c5d846ce319b7b8261bf419c4f4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, VolumeDim, TargetFrame &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="FaceNormal_8cpp.html#a64897c5d846ce319b7b8261bf419c4f4">unnormalized_face_normal</a> (const <a class="el" href="classIndex.html">Index</a>&lt; VolumeDim - 1 &gt; &amp;interface_extents, const <a class="el" href="classCoordinateMapBase.html">CoordinateMapBase</a>&lt; <a class="el" href="structFrame_1_1Logical.html">Frame::Logical</a>, TargetFrame, VolumeDim &gt; &amp;map, const <a class="el" href="classDirection.html">Direction</a>&lt; VolumeDim &gt; &amp;direction) noexcept</td></tr>
+<tr class="separator:a64897c5d846ce319b7b8261bf419c4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a6a83cea4275abbc9b72241167f5efef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a83cea4275abbc9b72241167f5efef9">&#9670;&nbsp;</a></span>GET_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_DIM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td>&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(0, data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a96d69e3513d32660dab046931e4496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a96d69e3513d32660dab046931e4496">&#9670;&nbsp;</a></span>GET_FRAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GET_FRAME</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td>&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(1, data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8c205748a502a535e809832a5fe1535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c205748a502a535e809832a5fe1535">&#9670;&nbsp;</a></span>INSTANTIATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTANTIATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> <a class="code" href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i&lt;DataVector, GET_DIM(data), GET_FRAME(data)&gt;</a>                 \</div><div class="line">  unnormalized_face_normal(                                                    \</div><div class="line">      <span class="keyword">const</span> <a class="code" href="classIndex.html">Index</a>&lt;<a class="code" href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a>(data) - 1&gt;&amp; interface_extents,                       \</div><div class="line">      <span class="keyword">const</span> <a class="code" href="classElementMap.html">ElementMap</a>&lt;<a class="code" href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a>(data), <a class="code" href="FaceNormal_8cpp.html#a5a96d69e3513d32660dab046931e4496">GET_FRAME</a>(data)&gt;&amp; map,                   \</div><div class="line">      <span class="keyword">const</span> <a class="code" href="classDirection.html">Direction</a>&lt;<a class="code" href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a>(data)&gt;&amp; direction) noexcept;                     \</div><div class="line">  template <a class="code" href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i&lt;DataVector, GET_DIM(data), GET_FRAME(data)&gt;</a>                 \</div><div class="line">  unnormalized_face_normal(                                                    \</div><div class="line">      <span class="keyword">const</span> <a class="code" href="classIndex.html">Index</a>&lt;<a class="code" href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a>(data) - 1&gt;&amp; interface_extents,                       \</div><div class="line">      <span class="keyword">const</span> <a class="code" href="classCoordinateMapBase.html">CoordinateMapBase</a>&lt;<a class="code" href="structFrame_1_1Logical.html">Frame::Logical</a>, <a class="code" href="FaceNormal_8cpp.html#a5a96d69e3513d32660dab046931e4496">GET_FRAME</a>(data), <a class="code" href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a>(data)&gt;&amp; \</div><div class="line">          map,                                                                 \</div><div class="line">      <span class="keyword">const</span> <a class="code" href="classDirection.html">Direction</a>&lt;<a class="code" href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a>(data)&gt;&amp; direction) noexcept;</div><div class="ttc" id="FaceNormal_8cpp_html_a5a96d69e3513d32660dab046931e4496"><div class="ttname"><a href="FaceNormal_8cpp.html#a5a96d69e3513d32660dab046931e4496">GET_FRAME</a></div><div class="ttdeci">#define GET_FRAME(data)</div><div class="ttdef"><b>Definition:</b> FaceNormal.cpp:58</div></div>
+<div class="ttc" id="classCoordinateMapBase_html"><div class="ttname"><a href="classCoordinateMapBase.html">CoordinateMapBase</a></div><div class="ttdoc">Abstract base class for CoordinateMap. </div><div class="ttdef"><b>Definition:</b> CoordinateMap.hpp:28</div></div>
+<div class="ttc" id="namespacetnsr_html_ac7a4fa718be18533f5e2727e09f10704"><div class="ttname"><a href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i</a></div><div class="ttdeci">Tensor&lt; DataType, tmpl::integral_list&lt; std::int32_t, 1 &gt;, index_list&lt; SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt; &gt;&gt; i</div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:45</div></div>
+<div class="ttc" id="classElementMap_html"><div class="ttname"><a href="classElementMap.html">ElementMap</a></div><div class="ttdoc">The CoordinateMap for the Element from the Logical frame to the TargetFrame </div><div class="ttdef"><b>Definition:</b> ElementMap.hpp:27</div></div>
+<div class="ttc" id="classDirection_html"><div class="ttname"><a href="classDirection.html">Direction</a></div><div class="ttdoc">A particular Side along a particular coordinate Axis. </div><div class="ttdef"><b>Definition:</b> Direction.hpp:19</div></div>
+<div class="ttc" id="structFrame_1_1Logical_html"><div class="ttname"><a href="structFrame_1_1Logical.html">Frame::Logical</a></div><div class="ttdef"><b>Definition:</b> IndexType.hpp:44</div></div>
+<div class="ttc" id="FaceNormal_8cpp_html_a6a83cea4275abbc9b72241167f5efef9"><div class="ttname"><a href="FaceNormal_8cpp.html#a6a83cea4275abbc9b72241167f5efef9">GET_DIM</a></div><div class="ttdeci">#define GET_DIM(data)</div><div class="ttdef"><b>Definition:</b> FaceNormal.cpp:57</div></div>
+<div class="ttc" id="classIndex_html"><div class="ttname"><a href="classIndex.html">Index</a></div><div class="ttdoc">An integer multi-index. </div><div class="ttdef"><b>Definition:</b> Index.hpp:28</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a64897c5d846ce319b7b8261bf419c4f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64897c5d846ce319b7b8261bf419c4f4">&#9670;&nbsp;</a></span>unnormalized_face_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t VolumeDim, typename TargetFrame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i</a>&lt;<a class="el" href="classDataVector.html">DataVector</a>, VolumeDim, TargetFrame&gt; unnormalized_face_normal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classIndex.html">Index</a>&lt; VolumeDim - 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>interface_extents</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMapBase.html">CoordinateMapBase</a>&lt; <a class="el" href="structFrame_1_1Logical.html">Frame::Logical</a>, TargetFrame, VolumeDim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classDirection.html">Direction</a>&lt; VolumeDim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>direction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

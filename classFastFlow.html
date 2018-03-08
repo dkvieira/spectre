@@ -1,0 +1,862 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: FastFlow Class Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classFastFlow-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">FastFlow Class Reference<div class="ingroups"><a class="el" href="group__SurfacesGroup.html">Surfaces</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fast flow method for finding apparent horizons.  
+ <a href="classFastFlow.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="FastFlow_8hpp_source.html">FastFlow.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1AbsTol.html">AbsTol</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1Alpha.html">Alpha</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1Beta.html">Beta</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1DivergenceIter.html">DivergenceIter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1DivergenceTol.html">DivergenceTol</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1Flow.html">Flow</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1IterInfo.html">IterInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds information about an iteration of the algorithm.  <a href="structFastFlow_1_1IterInfo.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1MaxIts.html">MaxIts</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFastFlow_1_1TruncationTol.html">TruncationTol</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a189b3d4603b6780631725c4cfd9f108e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108e">FlowType</a> { <a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108ea2ba38a7b398cfd9360591c3a1a25ba39">FlowType::Jacobi</a>, 
+<a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108ea8bdf3c167e619ac571b1208d0e8343cb">FlowType::Curvature</a>, 
+<a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108eae16b5b7f26f54214445cbe38d72c2828">FlowType::Fast</a>
+ }</td></tr>
+<tr class="separator:a189b3d4603b6780631725c4cfd9f108e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5258e3db6d615418611bd07beeb236f4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">Status</a> { <br />
+&#160;&#160;<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4a5b095fbdc2df98373b4a00ba192838ce">Status::SuccessfulIteration</a> = 0, 
+<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4ad764deffe411aea520ca048f540bd12b">Status::AbsTol</a> = 1, 
+<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4afa204aaebf4a3cb2a6eb7695a94f68fc">Status::TruncationTol</a> = 2, 
+<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4a3111ed279ec7ecbbfa1fe61b5076f6c2">Status::MaxIts</a> = -1, 
+<br />
+&#160;&#160;<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4a6fca52428df95a26aa50249217fc4bb2">Status::NegativeRadius</a> = -2, 
+<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4af18fe4185f9e2ce75a01b3028784239e">Status::DivergenceError</a> = -3
+<br />
+ }</td></tr>
+<tr class="separator:a5258e3db6d615418611bd07beeb236f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cbe026c2338f204f6626d973252860"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a90cbe026c2338f204f6626d973252860">options</a> = tmpl::list&lt; <a class="el" href="structFastFlow_1_1Flow.html">Flow</a>, <a class="el" href="structFastFlow_1_1Alpha.html">Alpha</a>, <a class="el" href="structFastFlow_1_1Beta.html">Beta</a>, <a class="el" href="structFastFlow_1_1AbsTol.html">AbsTol</a>, <a class="el" href="structFastFlow_1_1TruncationTol.html">TruncationTol</a>, <a class="el" href="structFastFlow_1_1DivergenceTol.html">DivergenceTol</a>, <a class="el" href="structFastFlow_1_1DivergenceIter.html">DivergenceIter</a>, <a class="el" href="structFastFlow_1_1MaxIts.html">MaxIts</a> &gt;</td></tr>
+<tr class="separator:a90cbe026c2338f204f6626d973252860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a72256413225ecb6a30f14123e8389a2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a72256413225ecb6a30f14123e8389a2c">FastFlow</a> (<a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108e">Flow::type</a> flow, <a class="el" href="structFastFlow_1_1Alpha.html#a0e7d9259867a914a66e4c57bea2f0a53">Alpha::type</a> alpha, <a class="el" href="structFastFlow_1_1Beta.html#ac73ca93d854d78bd7c4ea09a91fdda31">Beta::type</a> beta, <a class="el" href="structFastFlow_1_1AbsTol.html#a58da587bb37b4589828d78ebcbf152e7">AbsTol::type</a> abs_tol, <a class="el" href="structFastFlow_1_1TruncationTol.html#a83b470f7be43394f7aa2b8ccd19f1b16">TruncationTol::type</a> trunc_tol, <a class="el" href="structFastFlow_1_1DivergenceTol.html#ae74368871f123d3cb55c251df2f03b16">DivergenceTol::type</a> divergence_tol, <a class="el" href="structFastFlow_1_1DivergenceIter.html#a766e6cd4a1c6b41428de77e6ec4879da">DivergenceIter::type</a> divergence_iter, <a class="el" href="structFastFlow_1_1MaxIts.html#a4ec69910b4140342ac9f3a564140de90">MaxIts::type</a> max_its) noexcept</td></tr>
+<tr class="separator:a72256413225ecb6a30f14123e8389a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa40a8af4b42dcd8cadbff2a0bffb81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#aefa40a8af4b42dcd8cadbff2a0bffb81">FastFlow</a> () noexcept</td></tr>
+<tr class="separator:aefa40a8af4b42dcd8cadbff2a0bffb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5122fa71bea3dd651ba1c8cb9b4635d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a5122fa71bea3dd651ba1c8cb9b4635d6">FastFlow</a> (const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;)=default</td></tr>
+<tr class="separator:a5122fa71bea3dd651ba1c8cb9b4635d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961c7fc2b2dc66c6aa920d6f3333decf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a961c7fc2b2dc66c6aa920d6f3333decf">operator=</a> (const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;)=default</td></tr>
+<tr class="separator:a961c7fc2b2dc66c6aa920d6f3333decf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26827676ce5195945be70393324461a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a26827676ce5195945be70393324461a3">FastFlow</a> (<a class="el" href="classFastFlow.html">FastFlow</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a26827676ce5195945be70393324461a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f20c32813156b150fc31e10a9343538"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a1f20c32813156b150fc31e10a9343538">operator=</a> (<a class="el" href="classFastFlow.html">FastFlow</a> &amp;&amp;) noexcept=default</td></tr>
+<tr class="separator:a1f20c32813156b150fc31e10a9343538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af777a797f07a13ab4493d3aaa11fc3d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#af777a797f07a13ab4493d3aaa11fc3d5">~FastFlow</a> ()=default</td></tr>
+<tr class="separator:af777a797f07a13ab4493d3aaa11fc3d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad882a8369c671a7c56689be370b1d3eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#ad882a8369c671a7c56689be370b1d3eb">pup</a> (PUP::er &amp;p) noexcept</td></tr>
+<tr class="separator:ad882a8369c671a7c56689be370b1d3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f29d393496a33f4316c4b507eff65d"><td class="memTemplParams" colspan="2">template&lt;typename Frame &gt; </td></tr>
+<tr class="memitem:a01f29d393496a33f4316c4b507eff65d"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/pair.html">std::pair</a>&lt; <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">Status</a>, <a class="el" href="structFastFlow_1_1IterInfo.html">IterInfo</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a01f29d393496a33f4316c4b507eff65d">iterate_horizon_finder</a> (<a class="el" href="classgsl_1_1not__null.html">gsl::not_null</a>&lt; <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; Frame &gt; *&gt; current_strahlkorper, const <a class="el" href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;upper_spatial_metric, const <a class="el" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;extrinsic_curvature, const <a class="el" href="namespacetnsr.html#a2e3989aaff6cd8d0d85c7a6c2b594e25">tnsr::Ijj</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;christoffel_2nd_kind) noexcept</td></tr>
+<tr class="memdesc:a01f29d393496a33f4316c4b507eff65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate residuals and compute the next iteration. If Status==SuccessfulIteration, then <code>current_strahlkorper</code> is modified and <code><a class="el" href="classFastFlow.html#a0f325e9da89a3217381eedf3079dc75b">current_iteration()</a></code> is incremented. Otherwise, we end with success or failure, and neither <code>current_strahlkorper</code> nor <code><a class="el" href="classFastFlow.html#a0f325e9da89a3217381eedf3079dc75b">current_iteration()</a></code> is changed.  <a href="#a01f29d393496a33f4316c4b507eff65d">More...</a><br /></td></tr>
+<tr class="separator:a01f29d393496a33f4316c4b507eff65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f325e9da89a3217381eedf3079dc75b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a0f325e9da89a3217381eedf3079dc75b">current_iteration</a> () const noexcept</td></tr>
+<tr class="separator:a0f325e9da89a3217381eedf3079dc75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8e41668af2500d31d54786b640c9def"><td class="memTemplParams" colspan="2">template&lt;typename Frame &gt; </td></tr>
+<tr class="memitem:aa8e41668af2500d31d54786b640c9def"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFastFlow.html#aa8e41668af2500d31d54786b640c9def">current_l_mesh</a> (const <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; Frame &gt; &amp;strahlkorper) const noexcept</td></tr>
+<tr class="memdesc:aa8e41668af2500d31d54786b640c9def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a <a class="el" href="classStrahlkorper.html" title="A star-shaped surface expanded in spherical harmonics. ">Strahlkorper</a> defined up to some maximum Y_lm l called l_surface, returns a larger value of l, l_mesh, that is used for evaluating convergence.  <a href="#aa8e41668af2500d31d54786b640c9def">More...</a><br /></td></tr>
+<tr class="separator:aa8e41668af2500d31d54786b640c9def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74c8f3f6540623c05a7861bf89f8b6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#ae74c8f3f6540623c05a7861bf89f8b6b">reset_for_next_find</a> () noexcept</td></tr>
+<tr class="memdesc:ae74c8f3f6540623c05a7861bf89f8b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the finder.  <a href="#ae74c8f3f6540623c05a7861bf89f8b6b">More...</a><br /></td></tr>
+<tr class="separator:ae74c8f3f6540623c05a7861bf89f8b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace247048cc49cbb140b88d8e0791a944"><td class="memTemplParams" colspan="2">template&lt;typename Frame &gt; </td></tr>
+<tr class="memitem:ace247048cc49cbb140b88d8e0791a944"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/pair.html">std::pair</a>&lt; <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">FastFlow::Status</a>, <a class="el" href="structFastFlow_1_1IterInfo.html">FastFlow::IterInfo</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classFastFlow.html#ace247048cc49cbb140b88d8e0791a944">iterate_horizon_finder</a> (const <a class="el" href="classgsl_1_1not__null.html">gsl::not_null</a>&lt; <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; Frame &gt; *&gt; current_strahlkorper, const <a class="el" href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;upper_spatial_metric, const <a class="el" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;extrinsic_curvature, const <a class="el" href="namespacetnsr.html#a2e3989aaff6cd8d0d85c7a6c2b594e25">tnsr::Ijj</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;christoffel_2nd_kind) noexcept</td></tr>
+<tr class="separator:ace247048cc49cbb140b88d8e0791a944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2edc53433688cd997888ce4602b87a24"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a2edc53433688cd997888ce4602b87a24">help</a></td></tr>
+<tr class="separator:a2edc53433688cd997888ce4602b87a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a6629c74153aaf0179be09cdd04af9f86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFastFlow.html#a6629c74153aaf0179be09cdd04af9f86">operator==</a> (const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;, const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;) noexcept</td></tr>
+<tr class="separator:a6629c74153aaf0179be09cdd04af9f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Fast flow method for finding apparent horizons. </p>
+<h3>Details</h3>
+<p>Based on <a href="https://arxiv.org/abs/gr-qc/9707050">https://arxiv.org/abs/gr-qc/9707050</a> </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a90cbe026c2338f204f6626d973252860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90cbe026c2338f204f6626d973252860">&#9670;&nbsp;</a></span>options</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classFastFlow.html#a90cbe026c2338f204f6626d973252860">FastFlow::options</a> =  tmpl::list&lt;<a class="el" href="structFastFlow_1_1Flow.html">Flow</a>, <a class="el" href="structFastFlow_1_1Alpha.html">Alpha</a>, <a class="el" href="structFastFlow_1_1Beta.html">Beta</a>, <a class="el" href="structFastFlow_1_1AbsTol.html">AbsTol</a>, <a class="el" href="structFastFlow_1_1TruncationTol.html">TruncationTol</a>, <a class="el" href="structFastFlow_1_1DivergenceTol.html">DivergenceTol</a>, <a class="el" href="structFastFlow_1_1DivergenceIter.html">DivergenceIter</a>, <a class="el" href="structFastFlow_1_1MaxIts.html">MaxIts</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a189b3d4603b6780631725c4cfd9f108e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189b3d4603b6780631725c4cfd9f108e">&#9670;&nbsp;</a></span>FlowType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108e">FastFlow::FlowType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a189b3d4603b6780631725c4cfd9f108ea2ba38a7b398cfd9360591c3a1a25ba39"></a>Jacobi&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a189b3d4603b6780631725c4cfd9f108ea8bdf3c167e619ac571b1208d0e8343cb"></a>Curvature&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a189b3d4603b6780631725c4cfd9f108eae16b5b7f26f54214445cbe38d72c2828"></a>Fast&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5258e3db6d615418611bd07beeb236f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5258e3db6d615418611bd07beeb236f4">&#9670;&nbsp;</a></span>Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">FastFlow::Status</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5258e3db6d615418611bd07beeb236f4a5b095fbdc2df98373b4a00ba192838ce"></a>SuccessfulIteration&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5258e3db6d615418611bd07beeb236f4ad764deffe411aea520ca048f540bd12b"></a>AbsTol&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5258e3db6d615418611bd07beeb236f4afa204aaebf4a3cb2a6eb7695a94f68fc"></a>TruncationTol&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5258e3db6d615418611bd07beeb236f4a3111ed279ec7ecbbfa1fe61b5076f6c2"></a>MaxIts&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5258e3db6d615418611bd07beeb236f4a6fca52428df95a26aa50249217fc4bb2"></a>NegativeRadius&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5258e3db6d615418611bd07beeb236f4af18fe4185f9e2ce75a01b3028784239e"></a>DivergenceError&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a72256413225ecb6a30f14123e8389a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72256413225ecb6a30f14123e8389a2c">&#9670;&nbsp;</a></span>FastFlow() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FastFlow::FastFlow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFastFlow.html#a189b3d4603b6780631725c4cfd9f108e">Flow::type</a>&#160;</td>
+          <td class="paramname"><em>flow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structFastFlow_1_1Alpha.html#a0e7d9259867a914a66e4c57bea2f0a53">Alpha::type</a>&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structFastFlow_1_1Beta.html#ac73ca93d854d78bd7c4ea09a91fdda31">Beta::type</a>&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structFastFlow_1_1AbsTol.html#a58da587bb37b4589828d78ebcbf152e7">AbsTol::type</a>&#160;</td>
+          <td class="paramname"><em>abs_tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structFastFlow_1_1TruncationTol.html#a83b470f7be43394f7aa2b8ccd19f1b16">TruncationTol::type</a>&#160;</td>
+          <td class="paramname"><em>trunc_tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structFastFlow_1_1DivergenceTol.html#ae74368871f123d3cb55c251df2f03b16">DivergenceTol::type</a>&#160;</td>
+          <td class="paramname"><em>divergence_tol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structFastFlow_1_1DivergenceIter.html#a766e6cd4a1c6b41428de77e6ec4879da">DivergenceIter::type</a>&#160;</td>
+          <td class="paramname"><em>divergence_iter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structFastFlow_1_1MaxIts.html#a4ec69910b4140342ac9f3a564140de90">MaxIts::type</a>&#160;</td>
+          <td class="paramname"><em>max_its</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefa40a8af4b42dcd8cadbff2a0bffb81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa40a8af4b42dcd8cadbff2a0bffb81">&#9670;&nbsp;</a></span>FastFlow() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FastFlow::FastFlow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5122fa71bea3dd651ba1c8cb9b4635d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5122fa71bea3dd651ba1c8cb9b4635d6">&#9670;&nbsp;</a></span>FastFlow() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FastFlow::FastFlow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26827676ce5195945be70393324461a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26827676ce5195945be70393324461a3">&#9670;&nbsp;</a></span>FastFlow() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FastFlow::FastFlow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFastFlow.html">FastFlow</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af777a797f07a13ab4493d3aaa11fc3d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af777a797f07a13ab4493d3aaa11fc3d5">&#9670;&nbsp;</a></span>~FastFlow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FastFlow::~FastFlow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0f325e9da89a3217381eedf3079dc75b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f325e9da89a3217381eedf3079dc75b">&#9670;&nbsp;</a></span>current_iteration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t FastFlow::current_iteration </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8e41668af2500d31d54786b640c9def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8e41668af2500d31d54786b640c9def">&#9670;&nbsp;</a></span>current_l_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Frame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template size_t FastFlow::current_l_mesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; Frame &gt; &amp;&#160;</td>
+          <td class="paramname"><em>strahlkorper</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given a <a class="el" href="classStrahlkorper.html" title="A star-shaped surface expanded in spherical harmonics. ">Strahlkorper</a> defined up to some maximum Y_lm l called l_surface, returns a larger value of l, l_mesh, that is used for evaluating convergence. </p>
+
+<p class="reference">References <a class="el" href="group__SurfacesGroup.html#gaab4718f3fb57b0e3c5a7ba871d44aad2">StrahlkorperGr::inverse_surface_metric()</a>, and <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="structcreate__from__yaml_3_01FastFlow_1_1FlowType_01_4.html#ac14f13b238fd0b3269621e6d164f66f7">create_from_yaml&lt; FastFlow::FlowType &gt;::create()</a>.</p>
+
+</div>
+</div>
+<a id="ace247048cc49cbb140b88d8e0791a944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace247048cc49cbb140b88d8e0791a944">&#9670;&nbsp;</a></span>iterate_horizon_finder() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Frame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/pair.html">std::pair</a>&lt;<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">FastFlow::Status</a>, <a class="el" href="structFastFlow_1_1IterInfo.html">FastFlow::IterInfo</a>&gt; FastFlow::iterate_horizon_finder </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgsl_1_1not__null.html">gsl::not_null</a>&lt; <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; Frame &gt; *&gt;&#160;</td>
+          <td class="paramname"><em>current_strahlkorper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper_spatial_metric</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;&#160;</td>
+          <td class="paramname"><em>extrinsic_curvature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#a2e3989aaff6cd8d0d85c7a6c2b594e25">tnsr::Ijj</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;&#160;</td>
+          <td class="paramname"><em>christoffel_2nd_kind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__DataBoxGroup.html#ga190fd7a31cd2424701e03faea2d03247">db::create()</a>, and <a class="el" href="group__TensorGroup.html#gae96a7b3dea6b2f4cd335cbc3de827f49">magnitude()</a>.</p>
+
+</div>
+</div>
+<a id="a01f29d393496a33f4316c4b507eff65d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f29d393496a33f4316c4b507eff65d">&#9670;&nbsp;</a></span>iterate_horizon_finder() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Frame &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/utility/pair.html">std::pair</a>&lt;<a class="el" href="classFastFlow.html#a5258e3db6d615418611bd07beeb236f4">Status</a>, <a class="el" href="structFastFlow_1_1IterInfo.html">IterInfo</a>&gt; FastFlow::iterate_horizon_finder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgsl_1_1not__null.html">gsl::not_null</a>&lt; <a class="el" href="classStrahlkorper.html">Strahlkorper</a>&lt; Frame &gt; *&gt;&#160;</td>
+          <td class="paramname"><em>current_strahlkorper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper_spatial_metric</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;&#160;</td>
+          <td class="paramname"><em>extrinsic_curvature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacetnsr.html#a2e3989aaff6cd8d0d85c7a6c2b594e25">tnsr::Ijj</a>&lt; <a class="el" href="classDataVector.html">DataVector</a>, 3, Frame &gt; &amp;&#160;</td>
+          <td class="paramname"><em>christoffel_2nd_kind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluate residuals and compute the next iteration. If Status==SuccessfulIteration, then <code>current_strahlkorper</code> is modified and <code><a class="el" href="classFastFlow.html#a0f325e9da89a3217381eedf3079dc75b">current_iteration()</a></code> is incremented. Otherwise, we end with success or failure, and neither <code>current_strahlkorper</code> nor <code><a class="el" href="classFastFlow.html#a0f325e9da89a3217381eedf3079dc75b">current_iteration()</a></code> is changed. </p>
+
+</div>
+</div>
+<a id="a961c7fc2b2dc66c6aa920d6f3333decf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961c7fc2b2dc66c6aa920d6f3333decf">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFastFlow.html">FastFlow</a>&amp; FastFlow::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f20c32813156b150fc31e10a9343538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f20c32813156b150fc31e10a9343538">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFastFlow.html">FastFlow</a>&amp; FastFlow::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFastFlow.html">FastFlow</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad882a8369c671a7c56689be370b1d3eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad882a8369c671a7c56689be370b1d3eb">&#9670;&nbsp;</a></span>pup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FastFlow::pup </td>
+          <td>(</td>
+          <td class="paramtype">PUP::er &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae74c8f3f6540623c05a7861bf89f8b6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74c8f3f6540623c05a7861bf89f8b6b">&#9670;&nbsp;</a></span>reset_for_next_find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FastFlow::reset_for_next_find </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resets the finder. </p>
+
+<p class="reference">References <a class="el" href="FastFlow_8cpp.html#a0c0ad94669f03f6db909ad4ddb70d448">operator==()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a6629c74153aaf0179be09cdd04af9f86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6629c74153aaf0179be09cdd04af9f86">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classFastFlow.html">FastFlow</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2edc53433688cd997888ce4602b87a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2edc53433688cd997888ce4602b87a24">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a> FastFlow::help</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div><div class="line">      <span class="stringliteral">&quot;Find a Strahlkorper using a &#39;fast flow&#39; method.\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;Based on Gundlach, PRD 57, 863 (1998).\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;Expands the surface in terms of spherical harmonics Y_lm up to a given\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;l_surface, and varies the coefficients S_lm where 0&lt;=l&lt;=l_surface to\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;minimize the residual of the apparent horizon equation.  Also keeps\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;another representation of the surface that is expanded up to\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;l_mesh &gt; l_surface.  Let R_{Y_lm} be the residual computed using the\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;surface represented up to l_surface; this residual can in principle be\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;lowered to machine roundoff by enough iterations. Let R_{mesh} be the\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;residual computed using the surface represented up to l_mesh; this\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;residual represents the truncation error, since l_mesh&gt;l_surface and\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;since coefficients S_lm with l&gt;l_surface are not modified in the\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;iteration.\n\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;Convergence is achieved if R_{Y_lm}&lt; TruncationTol*R_{mesh}, or if\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;R_{Y_lm}&lt;AbsTol, where TruncationTol and AbsTol are input parameters.\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;If instead |R_{mesh}|_i &gt; DivergenceTol * min_{j}(|R_{mesh}|_j) where\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;i is the iteration index and j runs from 0 to i-DivergenceIter, then\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;FastFlow exits with Status::DivergenceError.  Here DivergenceIter and\n&quot;</span></div><div class="line">      <span class="stringliteral">&quot;DivergenceTol are input parameters.&quot;</span>}</div></div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/ApparentHorizons/<a class="el" href="FastFlow_8hpp_source.html">FastFlow.hpp</a></li>
+<li>src/ApparentHorizons/<a class="el" href="FastFlow_8cpp.html">FastFlow.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

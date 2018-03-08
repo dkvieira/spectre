@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - 032fadb9ddd2ec83e570196d97055f3db6b8710b - Domain/DomainHelpers.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title"> SpECTRE Documentation Coverage Report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">Domain</a> - DomainHelpers.cpp</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+             <td class="headerItem">Commit:</td>
+             <td class="headerValue"><a target="_blank" href="https://github.com/sxs-collaboration/spectre/commit/032fadb9ddd2ec83e570196d97055f3db6b8710b">032fadb9ddd2ec83e570196d97055f3db6b8710b</a></td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntryLo">25.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2018-03-08 04:42:39</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<span class="lineNum">       1 </span>            : // Distributed under the MIT License.
+<span class="lineNum">       2 </span>            : // See LICENSE.txt for details.
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            : #include &quot;Domain/DomainHelpers.hpp&quot;
+<span class="lineNum">       5 </span>            : 
+<span class="lineNum">       6 </span>            : #include &quot;Domain/Direction.hpp&quot;
+<span class="lineNum">       7 </span>            : #include &quot;Domain/OrientationMap.hpp&quot;
+<span class="lineNum">       8 </span>            : 
+<span class="lineNum">       9 </span>            : namespace {
+<span class="lineNum">      10 </span>            : 
+<span class="lineNum">      11 </span>            : // returns the common corners in the global corner numbering scheme.
+<span class="lineNum">      12 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">      13 </span>            : std::vector&lt;size_t&gt; get_common_global_corners(
+<span class="lineNum">      14 </span>            :     const std::array&lt;size_t, two_to_the(VolumeDim)&gt;&amp; block_1_global_corners,
+<span class="lineNum">      15 </span>            :     const std::array&lt;size_t, two_to_the(VolumeDim)&gt;&amp; block_2_global_corners) {
+<span class="lineNum">      16 </span>            :   std::vector&lt;size_t&gt; result;
+<span class="lineNum">      17 </span>            : 
+<span class="lineNum">      18 </span>            :   for (size_t id_i : block_1_global_corners) {
+<span class="lineNum">      19 </span>            :     if (std::find(block_2_global_corners.begin(), block_2_global_corners.end(),
+<span class="lineNum">      20 </span>            :                   id_i) != block_2_global_corners.end()) {
+<span class="lineNum">      21 </span>            :       result.push_back(id_i);
+<span class="lineNum">      22 </span>            :     }
+<span class="lineNum">      23 </span>            :   }
+<span class="lineNum">      24 </span>            : 
+<span class="lineNum">      25 </span>            :   return result;
+<span class="lineNum">      26 </span>            : }
+<span class="lineNum">      27 </span>            : 
+<span class="lineNum">      28 </span>            : // Given Directions in block1 and their corresponding Directions
+<span class="lineNum">      29 </span>            : // in block2, this function first repackages them into arrays and
+<span class="lineNum">      30 </span>            : // then makes a std::pair of the arrays.
+<span class="lineNum">      31 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">      32 </span>            : std::pair&lt;std::array&lt;Direction&lt;VolumeDim&gt;, VolumeDim&gt;,
+<span class="lineNum">      33 </span>            :           std::array&lt;Direction&lt;VolumeDim&gt;, VolumeDim&gt;&gt;
+<span class="lineNum">      34 </span>            : create_correspondence_between_blocks(
+<span class="lineNum">      35 </span>            :     const Direction&lt;VolumeDim&gt;&amp; direction_to_neighbor_in_self_frame,
+<span class="lineNum">      36 </span>            :     const Direction&lt;VolumeDim&gt;&amp; direction_to_self_in_neighbor_frame,
+<span class="lineNum">      37 </span>            :     const std::vector&lt;Direction&lt;VolumeDim&gt;&gt;&amp;
+<span class="lineNum">      38 </span>            :         alignment_of_shared_face_in_self_frame,
+<span class="lineNum">      39 </span>            :     const std::vector&lt;Direction&lt;VolumeDim&gt;&gt;&amp;
+<span class="lineNum">      40 </span>            :         alignment_of_shared_face_in_neighbor_frame) {
+<span class="lineNum">      41 </span>            :   std::array&lt;Direction&lt;VolumeDim&gt;, VolumeDim&gt; result1;
+<span class="lineNum">      42 </span>            :   result1[0] = direction_to_neighbor_in_self_frame;
+<span class="lineNum">      43 </span>            : 
+<span class="lineNum">      44 </span>            :   for (size_t i = 1; i &lt; VolumeDim; i++) {
+<span class="lineNum">      45 </span>            :     gsl::at(result1, i) = alignment_of_shared_face_in_self_frame[i - 1];
+<span class="lineNum">      46 </span>            :   }
+<span class="lineNum">      47 </span>            : 
+<span class="lineNum">      48 </span>            :   std::array&lt;Direction&lt;VolumeDim&gt;, VolumeDim&gt; result2;
+<span class="lineNum">      49 </span>            :   result2[0] = direction_to_self_in_neighbor_frame.opposite();
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span>            :   for (size_t i = 1; i &lt; VolumeDim; i++) {
+<span class="lineNum">      52 </span>            :     gsl::at(result2, i) = alignment_of_shared_face_in_neighbor_frame[i - 1];
+<span class="lineNum">      53 </span>            :   }
+<span class="lineNum">      54 </span>            :   return std::make_pair(result1, result2);
+<span class="lineNum">      55 </span>            : }
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span>            : // requires that the face is an external boundary of the domain.
+<span class="lineNum">      58 </span>            : // returns the id of the block with that face.
+<span class="lineNum">      59 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">      60 </span>            : size_t find_block_id_of_external_face(
+<span class="lineNum">      61 </span>            :     const std::vector&lt;size_t&gt;&amp; global_corners_external_face,
+<span class="lineNum">      62 </span>            :     const std::vector&lt;std::array&lt;size_t, two_to_the(VolumeDim)&gt;&gt;&amp;
+<span class="lineNum">      63 </span>            :         corners_of_all_blocks) {
+<span class="lineNum">      64 </span>            :   size_t number_of_blocks_found = 0;
+<span class="lineNum">      65 </span>            :   size_t id_of_found_block = std::numeric_limits&lt;size_t&gt;::max();
+<span class="lineNum">      66 </span>            :   for (size_t j = 0; j &lt; corners_of_all_blocks.size(); j++) {
+<span class="lineNum">      67 </span>            :     const auto&amp; corners_set = corners_of_all_blocks[j];
+<span class="lineNum">      68 </span>            :     auto is_in_corners_set = [&amp;corners_set](const auto element) {
+<span class="lineNum">      69 </span>            :       return std::find(corners_set.begin(), corners_set.end(), element) !=
+<span class="lineNum">      70 </span>            :              corners_set.end();
+<span class="lineNum">      71 </span>            :     };
+<span class="lineNum">      72 </span>            :     if (std::all_of(global_corners_external_face.begin(),
+<span class="lineNum">      73 </span>            :                     global_corners_external_face.end(), is_in_corners_set)) {
+<span class="lineNum">      74 </span>            :       number_of_blocks_found++;
+<span class="lineNum">      75 </span>            :       id_of_found_block = j;
+<span class="lineNum">      76 </span>            :     }
+<span class="lineNum">      77 </span>            :   }
+<span class="lineNum">      78 </span>            :   ASSERT(number_of_blocks_found &gt; 0, &quot;This face does not belong to a block.&quot;);
+<span class="lineNum">      79 </span>            :   ASSERT(number_of_blocks_found == 1, &quot;This face is not an external boundary.&quot;);
+<span class="lineNum">      80 </span>            :   return id_of_found_block;
+<span class="lineNum">      81 </span>            : }
+<span class="lineNum">      82 </span>            : 
+<span class="lineNum">      83 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">      84 </span>            : std::array&lt;size_t, two_to_the(VolumeDim - 1)&gt; get_common_local_corners(
+<span class="lineNum">      85 </span>            :     const std::array&lt;size_t, two_to_the(VolumeDim)&gt;&amp; block_global_corners,
+<span class="lineNum">      86 </span>            :     const std::vector&lt;size_t&gt; block_global_common_corners) {
+<span class="lineNum">      87 </span>            :   std::array&lt;size_t, two_to_the(VolumeDim - 1)&gt; result{{0}};
+<span class="lineNum">      88 </span>            :   size_t i = 0;
+<span class="lineNum">      89 </span>            :   for (const auto global_id : block_global_common_corners) {
+<span class="lineNum">      90 </span>            :     ASSERT(std::find(block_global_corners.begin(), block_global_corners.end(),
+<span class="lineNum">      91 </span>            :                      global_id) != block_global_corners.end(),
+<span class="lineNum">      92 </span>            :            &quot;Elements of block_global_common_corners must be in &quot;
+<span class="lineNum">      93 </span>            :            &quot;block_global_corners.&quot;);
+<span class="lineNum">      94 </span>            :     gsl::at(result, i) =
+<span class="lineNum">      95 </span>            :         static_cast&lt;size_t&gt;(std::find(block_global_corners.begin(),
+<span class="lineNum">      96 </span>            :                                       block_global_corners.end(), global_id) -
+<span class="lineNum">      97 </span>            :                             block_global_corners.begin());
+<span class="lineNum">      98 </span>            :     i++;
+<span class="lineNum">      99 </span>            :   }
+<span class="lineNum">     100 </span>            :   return result;
+<span class="lineNum">     101 </span>            : }
+<span class="lineNum">     102 </span>            : 
+<span class="lineNum">     103 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">     104 </span>            : std::array&lt;tnsr::I&lt;double, VolumeDim, Frame::Logical&gt;,
+<span class="lineNum">     105 </span>            :            two_to_the(VolumeDim - 1)&gt;
+<span class="lineNum">     106 </span>            : logical_coords_of_corners(
+<span class="lineNum">     107 </span>            :     const std::array&lt;size_t, two_to_the(VolumeDim - 1)&gt;&amp; local_ids) {
+<span class="lineNum">     108 </span>            :   std::array&lt;tnsr::I&lt;double, VolumeDim, Frame::Logical&gt;,
+<span class="lineNum">     109 </span>            :              two_to_the(VolumeDim - 1)&gt;
+<span class="lineNum">     110 </span>            :       result{};
+<span class="lineNum">     111 </span>            :   std::transform(local_ids.begin(), local_ids.end(), result.begin(),
+<span class="lineNum">     112 </span>            :                  [](const size_t id) {
+<span class="lineNum">     113 </span>            :                    tnsr::I&lt;double, VolumeDim, Frame::Logical&gt; point{};
+<span class="lineNum">     114 </span>            :                    for (size_t i = 0; i &lt; VolumeDim; i++) {
+<span class="lineNum">     115 </span>            :                      point[i] = 2.0 * get_nth_bit(id, i) - 1.0;
+<span class="lineNum">     116 </span>            :                    };
+<span class="lineNum">     117 </span>            :                    return point;
+<span class="lineNum">     118 </span>            :                  });
+<span class="lineNum">     119 </span>            :   return result;
+<span class="lineNum">     120 </span>            : }
+<span class="lineNum">     121 </span>            : 
+<span class="lineNum">     122 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">     123 </span>            : Direction&lt;VolumeDim&gt; get_direction_normal_to_face(
+<span class="lineNum">     124 </span>            :     const std::array&lt;tnsr::I&lt;double, VolumeDim, Frame::Logical&gt;,
+<span class="lineNum">     125 </span>            :                      two_to_the(VolumeDim - 1)&gt;&amp; face_pts) {
+<span class="lineNum">     126 </span>            :   const auto summed_point = std::accumulate(
+<span class="lineNum">     127 </span>            :       face_pts.begin(), face_pts.end(),
+<span class="lineNum">     128 </span>            :       tnsr::I&lt;double, VolumeDim, Frame::Logical&gt;(0.0),
+<span class="lineNum">     129 </span>            :       [](tnsr::I&lt;double, VolumeDim, Frame::Logical&gt;&amp; prior,
+<span class="lineNum">     130 </span>            :          const tnsr::I&lt;double, VolumeDim, Frame::Logical&gt;&amp; point) {
+<span class="lineNum">     131 </span>            :         for (size_t i = 0; i &lt; prior.size(); i++) {
+<span class="lineNum">     132 </span>            :           prior[i] += point[i];
+<span class="lineNum">     133 </span>            :         }
+<span class="lineNum">     134 </span>            :         return prior;
+<span class="lineNum">     135 </span>            :       });
+<span class="lineNum">     136 </span>            :   ASSERT(VolumeDim - 1 == static_cast&lt;size_t&gt;(std::count(
+<span class="lineNum">     137 </span>            :                               summed_point.begin(), summed_point.end(), 0.0)),
+<span class="lineNum">     138 </span>            :          &quot;The face_pts passed in do not correspond to a face.&quot;);
+<span class="lineNum">     139 </span>            :   const auto index =
+<span class="lineNum">     140 </span>            :       static_cast&lt;size_t&gt;(std::find_if(summed_point.begin(), summed_point.end(),
+<span class="lineNum">     141 </span>            :                                        [](const double x) { return x != 0; }) -
+<span class="lineNum">     142 </span>            :                           summed_point.begin());
+<span class="lineNum">     143 </span>            :   return Direction&lt;VolumeDim&gt;(
+<span class="lineNum">     144 </span>            :       index, summed_point[index] &gt; 0 ? Side::Upper : Side::Lower);
+<span class="lineNum">     145 </span>            : }
+<span class="lineNum">     146 </span>            : 
+<span class="lineNum">     147 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">     148 </span>            : std::vector&lt;Direction&lt;VolumeDim&gt;&gt; get_directions_along_face(
+<span class="lineNum">     149 </span>            :     const std::array&lt;size_t, two_to_the(VolumeDim - 1)&gt;&amp; face_local_corners) {
+<span class="lineNum">     150 </span>            :   std::vector&lt;Direction&lt;VolumeDim&gt;&gt; result;
+<span class="lineNum">     151 </span>            : 
+<span class="lineNum">     152 </span>            :   // Directions encoded as powers of 2. (xi:1, eta:2, zeta:4)
+<span class="lineNum">     153 </span>            :   std::vector&lt;int&gt; dir_pow2;
+<span class="lineNum">     154 </span>            :   for (size_t i = 0; i &lt; VolumeDim - 1; i++) {
+<span class="lineNum">     155 </span>            :     int direction_pow2 =
+<span class="lineNum">     156 </span>            :         static_cast&lt;int&gt;(gsl::at(face_local_corners, two_to_the(i))) -
+<span class="lineNum">     157 </span>            :         static_cast&lt;int&gt;(gsl::at(face_local_corners, 0));
+<span class="lineNum">     158 </span>            :     ASSERT(
+<span class="lineNum">     159 </span>            :         direction_pow2 ==
+<span class="lineNum">     160 </span>            :             static_cast&lt;int&gt;(
+<span class="lineNum">     161 </span>            :                 gsl::at(face_local_corners, face_local_corners.size() - 1)) -
+<span class="lineNum">     162 </span>            :                 static_cast&lt;int&gt;(
+<span class="lineNum">     163 </span>            :                     gsl::at(face_local_corners,
+<span class="lineNum">     164 </span>            :                             face_local_corners.size() - 1 - two_to_the(i))),
+<span class="lineNum">     165 </span>            :         &quot;The corners provided do not correspond to a possible face.&quot;
+<span class="lineNum">     166 </span>            :         &quot;Help: As the direction of a face can be determined from any pair of &quot;
+<span class="lineNum">     167 </span>            :         &quot;edges, all pairs of edges must agree on their directionality. &quot;
+<span class="lineNum">     168 </span>            :         &quot;Providing '0,1,3,2' as a pair of edges (in the canonical corner &quot;
+<span class="lineNum">     169 </span>            :         &quot;numbering scheme) will trigger this ASSERT as 1-0 != 2-3; they &quot;
+<span class="lineNum">     170 </span>            :         &quot;point in opposite directions. Additionally, 3-0 != 2-1. The proper &quot;
+<span class="lineNum">     171 </span>            :         &quot;numbering for this face is '0,1,2,3', or any other numbering that &quot;
+<span class="lineNum">     172 </span>            :         &quot;results from a rigid manipulation of this face, for example &quot;
+<span class="lineNum">     173 </span>            :         &quot;'1,3,0,2'.&quot;);
+<span class="lineNum">     174 </span>            : 
+<span class="lineNum">     175 </span>            :     ASSERT(abs(direction_pow2) == 1 or abs(direction_pow2) == 2 or
+<span class="lineNum">     176 </span>            :                abs(direction_pow2) == 4,
+<span class="lineNum">     177 </span>            :            &quot;The corners making up an edge always have a difference of either &quot;
+<span class="lineNum">     178 </span>            :            &quot;1, 2, or 4, under the local numbering scheme, depending on whether &quot;
+<span class="lineNum">     179 </span>            :            &quot;the edge is parallel to the xi, eta, or zeta axis, respectively. &quot;
+<span class="lineNum">     180 </span>            :            &quot;This ASSERT is triggered when the two corners passed do not make &quot;
+<span class="lineNum">     181 </span>            :            &quot;up an edge of the n-cube.&quot;);
+<span class="lineNum">     182 </span>            :     const size_t dimension = std::round(log2(abs(direction_pow2)));
+<span class="lineNum">     183 </span>            :     const Side side = direction_pow2 &gt; 0 ? Side::Upper : Side::Lower;
+<span class="lineNum">     184 </span>            :     result.push_back(Direction&lt;VolumeDim&gt;(dimension, side));
+<span class="lineNum">     185 </span>            :   }
+<span class="lineNum">     186 </span>            :   return result;
+<span class="lineNum">     187 </span>            : }
+<span class="lineNum">     188 </span>            : 
+<span class="lineNum">     189 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">     190 </span>            : Direction&lt;VolumeDim&gt; mapped(
+<span class="lineNum">     191 </span>            :     size_t block_id1, size_t block_id2,
+<span class="lineNum">     192 </span>            :     const Direction&lt;VolumeDim&gt;&amp; dir_in_block1,
+<span class="lineNum">     193 </span>            :     const std::vector&lt;std::array&lt;size_t, two_to_the(VolumeDim)&gt;&gt;&amp;
+<span class="lineNum">     194 </span>            :         corners_of_all_blocks) {
+<span class="lineNum">     195 </span>            :   const auto correspondence = obtain_correspondence_between_blocks(
+<span class="lineNum">     196 </span>            :       block_id1, block_id2, corners_of_all_blocks);
+<span class="lineNum">     197 </span>            :   for (size_t i = 0; i &lt; VolumeDim; i++) {
+<span class="lineNum">     198 </span>            :     if (dir_in_block1.dimension() == (correspondence.first)[i].dimension()) {
+<span class="lineNum">     199 </span>            :       return dir_in_block1.side() == (correspondence.first)[i].side()
+<span class="lineNum">     200 </span>            :                  ? (correspondence.second)[i]
+<span class="lineNum">     201 </span>            :                  : (correspondence.second)[i].opposite();
+<span class="lineNum">     202 </span>            :     }
+<span class="lineNum">     203 </span>            :   }
+<span class="lineNum">     204 </span>            :   ERROR(&quot;Improper Direction was passed to function.&quot;);
+<span class="lineNum">     205 </span>            : }
+<span class="lineNum">     206 </span>            : 
+<span class="lineNum">     207 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">     208 </span>            : std::pair&lt;std::array&lt;Direction&lt;VolumeDim&gt;, VolumeDim&gt;,
+<span class="lineNum">     209 </span>            :           std::array&lt;Direction&lt;VolumeDim&gt;, VolumeDim&gt;&gt;
+<span class="lineNum">     210 </span>            : obtain_correspondence_between_blocks(
+<span class="lineNum">     211 </span>            :     size_t block_id1, size_t block_id2,
+<span class="lineNum">     212 </span>            :     const std::vector&lt;std::array&lt;size_t, two_to_the(VolumeDim)&gt;&gt;&amp;
+<span class="lineNum">     213 </span>            :         corners_of_all_blocks) {
+<span class="lineNum">     214 </span>            :   const auto&amp; self = corners_of_all_blocks[block_id1];
+<span class="lineNum">     215 </span>            :   const auto&amp; nhbr = corners_of_all_blocks[block_id2];
+<span class="lineNum">     216 </span>            :   const auto common = get_common_global_corners&lt;VolumeDim&gt;(self, nhbr);
+<span class="lineNum">     217 </span>            :   const auto self_common = get_common_local_corners&lt;VolumeDim&gt;(self, common);
+<span class="lineNum">     218 </span>            :   const auto nhbr_common = get_common_local_corners&lt;VolumeDim&gt;(nhbr, common);
+<span class="lineNum">     219 </span>            :   const auto self_dir = get_direction_normal_to_face&lt;VolumeDim&gt;(
+<span class="lineNum">     220 </span>            :       logical_coords_of_corners&lt;VolumeDim&gt;(self_common));
+<span class="lineNum">     221 </span>            :   const auto nhbr_dir = get_direction_normal_to_face&lt;VolumeDim&gt;(
+<span class="lineNum">     222 </span>            :       logical_coords_of_corners&lt;VolumeDim&gt;(nhbr_common));
+<span class="lineNum">     223 </span>            :   const auto self_align = get_directions_along_face&lt;VolumeDim&gt;(self_common);
+<span class="lineNum">     224 </span>            :   const auto nhbr_align = get_directions_along_face&lt;VolumeDim&gt;(nhbr_common);
+<span class="lineNum">     225 </span>            : 
+<span class="lineNum">     226 </span>            :   return create_correspondence_between_blocks(self_dir, nhbr_dir, self_align,
+<span class="lineNum">     227 </span>            :                                               nhbr_align);
+<span class="lineNum">     228 </span>            : }
+<span class="lineNum">     229 </span>            : }  // namespace
+<span class="lineNum">     230 </span>            : 
+<span class="lineNum">     231 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">     232 </span><span class="lineCov">          1 : void set_internal_boundaries(</span>
+<span class="lineNum">     233 </span>            :     const std::vector&lt;std::array&lt;size_t, two_to_the(VolumeDim)&gt;&gt;&amp;
+<span class="lineNum">     234 </span>            :         corners_of_all_blocks,
+<span class="lineNum">     235 </span>            :     gsl::not_null&lt;std::vector&lt;
+<span class="lineNum">     236 </span>            :         std::unordered_map&lt;Direction&lt;VolumeDim&gt;, BlockNeighbor&lt;VolumeDim&gt;&gt;&gt;*&gt;
+<span class="lineNum">     237 </span>            :         neighbors_of_all_blocks) {
+<span class="lineNum">     238 </span>            :   for (size_t block1_index = 0; block1_index &lt; corners_of_all_blocks.size();
+<span class="lineNum">     239 </span>            :        block1_index++) {
+<span class="lineNum">     240 </span>            :     std::unordered_map&lt;Direction&lt;VolumeDim&gt;, BlockNeighbor&lt;VolumeDim&gt;&gt; neighbor;
+<span class="lineNum">     241 </span>            :     for (size_t block2_index = 0; block2_index &lt; corners_of_all_blocks.size();
+<span class="lineNum">     242 </span>            :          block2_index++) {
+<span class="lineNum">     243 </span>            :       if (block1_index != block2_index and
+<span class="lineNum">     244 </span>            :           get_common_global_corners&lt;VolumeDim&gt;(
+<span class="lineNum">     245 </span>            :               corners_of_all_blocks[block1_index],
+<span class="lineNum">     246 </span>            :               corners_of_all_blocks[block2_index])
+<span class="lineNum">     247 </span>            :                   .size() == two_to_the(VolumeDim - 1)) {
+<span class="lineNum">     248 </span>            :         const auto orientation_helper =
+<span class="lineNum">     249 </span>            :             obtain_correspondence_between_blocks&lt;VolumeDim&gt;(
+<span class="lineNum">     250 </span>            :                 block1_index, block2_index, corners_of_all_blocks);
+<span class="lineNum">     251 </span>            :         neighbor.emplace(std::move((orientation_helper.first)[0]),
+<span class="lineNum">     252 </span>            :                          BlockNeighbor&lt;VolumeDim&gt;(
+<span class="lineNum">     253 </span>            :                              block2_index, OrientationMap&lt;VolumeDim&gt;(
+<span class="lineNum">     254 </span>            :                                                orientation_helper.first,
+<span class="lineNum">     255 </span>            :                                                orientation_helper.second)));
+<span class="lineNum">     256 </span>            :       }
+<span class="lineNum">     257 </span>            :     }
+<span class="lineNum">     258 </span>            :     neighbors_of_all_blocks-&gt;push_back(neighbor);
+<span class="lineNum">     259 </span>            :   }
+<span class="lineNum">     260 </span>            : }
+<span class="lineNum">     261 </span>            : 
+<span class="lineNum">     262 </span>            : template &lt;size_t VolumeDim&gt;
+<span class="lineNum">     263 </span><span class="lineCov">          1 : void set_periodic_boundaries(</span>
+<span class="lineNum">     264 </span>            :     const std::vector&lt;PairOfFaces&gt;&amp; identifications,
+<span class="lineNum">     265 </span>            :     const std::vector&lt;std::array&lt;size_t, two_to_the(VolumeDim)&gt;&gt;&amp;
+<span class="lineNum">     266 </span>            :         corners_of_all_blocks,
+<span class="lineNum">     267 </span>            :     gsl::not_null&lt;std::vector&lt;
+<span class="lineNum">     268 </span>            :         std::unordered_map&lt;Direction&lt;VolumeDim&gt;, BlockNeighbor&lt;VolumeDim&gt;&gt;&gt;*&gt;
+<span class="lineNum">     269 </span>            :         neighbors_of_all_blocks) {
+<span class="lineNum">     270 </span>            :   for (const auto&amp; pair : identifications) {
+<span class="lineNum">     271 </span>            :     const auto&amp; face1 = pair.first;
+<span class="lineNum">     272 </span>            :     const auto&amp; face2 = pair.second;
+<span class="lineNum">     273 </span>            :     ASSERT(face1.size() == face2.size(),
+<span class="lineNum">     274 </span>            :            &quot;Each set must have the same number of corners.&quot;);
+<span class="lineNum">     275 </span>            :     size_t id1 = ::find_block_id_of_external_face&lt;VolumeDim&gt;(
+<span class="lineNum">     276 </span>            :         face1, corners_of_all_blocks);
+<span class="lineNum">     277 </span>            :     size_t id2 = ::find_block_id_of_external_face&lt;VolumeDim&gt;(
+<span class="lineNum">     278 </span>            :         face2, corners_of_all_blocks);
+<span class="lineNum">     279 </span>            :     const auto face1_canon =
+<span class="lineNum">     280 </span>            :         get_common_local_corners&lt;VolumeDim&gt;(corners_of_all_blocks[id1], face1);
+<span class="lineNum">     281 </span>            :     const auto face2_canon =
+<span class="lineNum">     282 </span>            :         get_common_local_corners&lt;VolumeDim&gt;(corners_of_all_blocks[id2], face2);
+<span class="lineNum">     283 </span>            :     const auto face1_normal_dir = get_direction_normal_to_face(
+<span class="lineNum">     284 </span>            :         logical_coords_of_corners&lt;VolumeDim&gt;(face1_canon));
+<span class="lineNum">     285 </span>            :     const auto face2_normal_dir = get_direction_normal_to_face(
+<span class="lineNum">     286 </span>            :         logical_coords_of_corners&lt;VolumeDim&gt;(face2_canon));
+<span class="lineNum">     287 </span>            :     const auto face1_align_dirs =
+<span class="lineNum">     288 </span>            :         get_directions_along_face&lt;VolumeDim&gt;(face1_canon);
+<span class="lineNum">     289 </span>            :     const auto face2_align_dirs =
+<span class="lineNum">     290 </span>            :         get_directions_along_face&lt;VolumeDim&gt;(face2_canon);
+<span class="lineNum">     291 </span>            :     const auto obtain_correspondence_between_blocks1 =
+<span class="lineNum">     292 </span>            :         create_correspondence_between_blocks&lt;VolumeDim&gt;(
+<span class="lineNum">     293 </span>            :             face1_normal_dir, face2_normal_dir, face1_align_dirs,
+<span class="lineNum">     294 </span>            :             face2_align_dirs);
+<span class="lineNum">     295 </span>            :     const auto obtain_correspondence_between_blocks2 =
+<span class="lineNum">     296 </span>            :         create_correspondence_between_blocks&lt;VolumeDim&gt;(
+<span class="lineNum">     297 </span>            :             face2_normal_dir, face1_normal_dir, face2_align_dirs,
+<span class="lineNum">     298 </span>            :             face1_align_dirs);
+<span class="lineNum">     299 </span>            :     const OrientationMap&lt;VolumeDim&gt; connect1(
+<span class="lineNum">     300 </span>            :         obtain_correspondence_between_blocks1.first,
+<span class="lineNum">     301 </span>            :         obtain_correspondence_between_blocks1.second);
+<span class="lineNum">     302 </span>            :     const OrientationMap&lt;VolumeDim&gt; connect2(
+<span class="lineNum">     303 </span>            :         obtain_correspondence_between_blocks2.first,
+<span class="lineNum">     304 </span>            :         obtain_correspondence_between_blocks2.second);
+<span class="lineNum">     305 </span>            :     (*neighbors_of_all_blocks)[id1].emplace(
+<span class="lineNum">     306 </span>            :         face1_normal_dir, BlockNeighbor&lt;VolumeDim&gt;(id2, connect1));
+<span class="lineNum">     307 </span>            :     (*neighbors_of_all_blocks)[id2].emplace(
+<span class="lineNum">     308 </span>            :         face2_normal_dir, BlockNeighbor&lt;VolumeDim&gt;(id1, connect2));
+<span class="lineNum">     309 </span>            :   }
+<span class="lineNum">     310 </span>            : }
+<span class="lineNum">     311 </span>            : 
+<span class="lineNum">     312 </span><span class="lineNoCov">          0 : template void set_internal_boundaries(</span>
+<span class="lineNum">     313 </span>            :     const std::vector&lt;std::array&lt;size_t, 2&gt;&gt;&amp; corners_of_all_blocks,
+<span class="lineNum">     314 </span>            :     gsl::not_null&lt;
+<span class="lineNum">     315 </span>            :         std::vector&lt;std::unordered_map&lt;Direction&lt;1&gt;, BlockNeighbor&lt;1&gt;&gt;&gt;*&gt;
+<span class="lineNum">     316 </span>            :         neighbors_of_all_blocks);
+<span class="lineNum">     317 </span><span class="lineNoCov">          0 : template void set_internal_boundaries(</span>
+<span class="lineNum">     318 </span>            :     const std::vector&lt;std::array&lt;size_t, 4&gt;&gt;&amp; corners_of_all_blocks,
+<span class="lineNum">     319 </span>            :     gsl::not_null&lt;
+<span class="lineNum">     320 </span>            :         std::vector&lt;std::unordered_map&lt;Direction&lt;2&gt;, BlockNeighbor&lt;2&gt;&gt;&gt;*&gt;
+<span class="lineNum">     321 </span>            :         neighbors_of_all_blocks);
+<span class="lineNum">     322 </span><span class="lineNoCov">          0 : template void set_internal_boundaries(</span>
+<span class="lineNum">     323 </span>            :     const std::vector&lt;std::array&lt;size_t, 8&gt;&gt;&amp; corners_of_all_blocks,
+<span class="lineNum">     324 </span>            :     gsl::not_null&lt;
+<span class="lineNum">     325 </span>            :         std::vector&lt;std::unordered_map&lt;Direction&lt;3&gt;, BlockNeighbor&lt;3&gt;&gt;&gt;*&gt;
+<span class="lineNum">     326 </span>            :         neighbors_of_all_blocks);
+<span class="lineNum">     327 </span>            : 
+<span class="lineNum">     328 </span><span class="lineNoCov">          0 : template void set_periodic_boundaries(</span>
+<span class="lineNum">     329 </span>            :     const std::vector&lt;PairOfFaces&gt;&amp; identifications,
+<span class="lineNum">     330 </span>            :     const std::vector&lt;std::array&lt;size_t, 2&gt;&gt;&amp; corners_of_all_blocks,
+<span class="lineNum">     331 </span>            :     gsl::not_null&lt;
+<span class="lineNum">     332 </span>            :         std::vector&lt;std::unordered_map&lt;Direction&lt;1&gt;, BlockNeighbor&lt;1&gt;&gt;&gt;*&gt;
+<span class="lineNum">     333 </span>            :         neighbors_of_all_blocks);
+<span class="lineNum">     334 </span><span class="lineNoCov">          0 : template void set_periodic_boundaries(</span>
+<span class="lineNum">     335 </span>            :     const std::vector&lt;PairOfFaces&gt;&amp; identifications,
+<span class="lineNum">     336 </span>            :     const std::vector&lt;std::array&lt;size_t, 4&gt;&gt;&amp; corners_of_all_blocks,
+<span class="lineNum">     337 </span>            :     gsl::not_null&lt;
+<span class="lineNum">     338 </span>            :         std::vector&lt;std::unordered_map&lt;Direction&lt;2&gt;, BlockNeighbor&lt;2&gt;&gt;&gt;*&gt;
+<span class="lineNum">     339 </span>            :         neighbors_of_all_blocks);
+<span class="lineNum">     340 </span><span class="lineNoCov">          0 : template void set_periodic_boundaries(</span>
+<span class="lineNum">     341 </span>            :     const std::vector&lt;PairOfFaces&gt;&amp; identifications,
+<span class="lineNum">     342 </span>            :     const std::vector&lt;std::array&lt;size_t, 8&gt;&gt;&amp; corners_of_all_blocks,
+<span class="lineNum">     343 </span>            :     gsl::not_null&lt;
+<span class="lineNum">     344 </span>            :         std::vector&lt;std::unordered_map&lt;Direction&lt;3&gt;, BlockNeighbor&lt;3&gt;&gt;&gt;*&gt;
+<span class="lineNum">     345 </span>            :         neighbors_of_all_blocks);
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.13</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: src/Evolution/Systems/CurvedScalarWave/Equations.cpp File Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22cd119e9135d55404da822cc2bf42d2.html">src</a></li><li class="navelem"><a class="el" href="dir_7d19b16c3461122ea63afe85d1697a3b.html">Evolution</a></li><li class="navelem"><a class="el" href="dir_2d69a5df0814271789b4515609f6faf2.html">Systems</a></li><li class="navelem"><a class="el" href="dir_4e2e9f237d2afa46c4b4f494a4912dff.html">CurvedScalarWave</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
+  <div class="headertitle">
+<div class="title">Equations.cpp File Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="CurvedScalarWave_2Equations_8hpp_source.html">Evolution/Systems/CurvedScalarWave/Equations.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Tensor_8hpp_source.html">DataStructures/Tensor/Tensor.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Variables_8hpp_source.html">DataStructures/Variables.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CurvedScalarWave_2System_8hpp_source.html">Evolution/Systems/CurvedScalarWave/System.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Evolution_2Systems_2CurvedScalarWave_2Tags_8hpp_source.html">Evolution/Systems/CurvedScalarWave/Tags.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GenerateInstantiations_8hpp_source.html">Utilities/GenerateInstantiations.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="TMPL_8hpp_source.html">Utilities/TMPL.hpp</a>&quot;</code><br />
+<code>#include &quot;NumericalAlgorithms/LinearOperators/PartialDerivatives.tpp&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceCurvedScalarWave"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceCurvedScalarWave.html">CurvedScalarWave</a></td></tr>
+<tr class="memdesc:namespaceCurvedScalarWave"><td class="mdescLeft">&#160;</td><td class="mdescRight">Items related to evolving a scalar wave on a curved background. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a88dbf7c7047f848e97199ae710ac11c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CurvedScalarWave_2Equations_8cpp.html#a88dbf7c7047f848e97199ae710ac11c0">DIM</a>(data)&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(0, data)</td></tr>
+<tr class="separator:a88dbf7c7047f848e97199ae710ac11c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c205748a502a535e809832a5fe1535"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CurvedScalarWave_2Equations_8cpp.html#ab8c205748a502a535e809832a5fe1535">INSTANTIATION</a>(_,  data)</td></tr>
+<tr class="separator:ab8c205748a502a535e809832a5fe1535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ac591ebdfeb4108061af7bee3c489da2e"><td class="memTemplParams" colspan="2">template&lt;size_t Dim&gt; </td></tr>
+<tr class="memitem:ac591ebdfeb4108061af7bee3c489da2e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="CurvedScalarWave_2Equations_8cpp.html#ac591ebdfeb4108061af7bee3c489da2e">derivative_tags</a> = typename <a class="el" href="structCurvedScalarWave_1_1System.html">CurvedScalarWave::System</a>&lt; Dim &gt;::gradients_tags</td></tr>
+<tr class="separator:ac591ebdfeb4108061af7bee3c489da2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a658afaaf511b4ac10b2d6ef8112bd66a"><td class="memTemplParams" colspan="2">template&lt;size_t Dim&gt; </td></tr>
+<tr class="memitem:a658afaaf511b4ac10b2d6ef8112bd66a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="CurvedScalarWave_2Equations_8cpp.html#a658afaaf511b4ac10b2d6ef8112bd66a">variables_tags</a> = typename <a class="el" href="structCurvedScalarWave_1_1System.html">CurvedScalarWave::System</a>&lt; Dim &gt;::variables_tag::tags_list</td></tr>
+<tr class="separator:a658afaaf511b4ac10b2d6ef8112bd66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73cb4f286a3b02a20c9ceb21d181262b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CurvedScalarWave_2Equations_8cpp.html#a73cb4f286a3b02a20c9ceb21d181262b">derivative_frame</a> = <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a></td></tr>
+<tr class="separator:a73cb4f286a3b02a20c9ceb21d181262b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a88dbf7c7047f848e97199ae710ac11c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88dbf7c7047f848e97199ae710ac11c0">&#9670;&nbsp;</a></span>DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data</td><td>)</td>
+          <td>&#160;&#160;&#160;BOOST_PP_TUPLE_ELEM(0, data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8c205748a502a535e809832a5fe1535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c205748a502a535e809832a5fe1535">&#9670;&nbsp;</a></span>INSTANTIATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INSTANTIATION</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">data&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> <span class="keyword">class </span><a class="code" href="structCurvedScalarWave_1_1ComputeDuDt.html">CurvedScalarWave::ComputeDuDt&lt;DIM(data)&gt;</a>;                   \</div><div class="line">  template <a class="code" href="classVariables.html">Variables</a>&lt;                                                        \</div><div class="line">      db::wrap_tags_in&lt;Tags::deriv, derivative_tags&lt;DIM(data)&gt;,              \</div><div class="line">                       tmpl::size_t&lt;DIM(data)&gt;, <a class="code" href="structFrame_1_1Inertial.html">derivative_frame</a>&gt;&gt;           \</div><div class="line">  partial_derivatives&lt;derivative_tags&lt;DIM(data)&gt;, <a class="code" href="CurvedScalarWave_2Equations_8cpp.html#a658afaaf511b4ac10b2d6ef8112bd66a">variables_tags&lt;DIM(data)&gt;</a>, \</div><div class="line">                      DIM(data), <a class="code" href="structFrame_1_1Inertial.html">derivative_frame</a>&gt;(                          \</div><div class="line">      const <a class="code" href="classVariables.html">Variables&lt;variables_tags&lt;DIM(data)&gt;</a>&gt;&amp; u,                         \</div><div class="line">      const <a class="code" href="classIndex.html">Index&lt;DIM(data)&gt;</a>&amp; extents,                                       \</div><div class="line">      const Tensor&lt;                                                          \</div><div class="line">          DataVector, tmpl::integral_list&lt;std::int32_t, 2, 1&gt;,               \</div><div class="line">          tmpl::list&lt;SpatialIndex&lt;DIM(data), UpLo::Up, Frame::Logical&gt;,      \</div><div class="line">                     SpatialIndex&lt;DIM(data), UpLo::Lo, derivative_frame&gt;&gt;&gt;&amp;  \</div><div class="line">          inverse_jacobian) noexcept;</div><div class="ttc" id="classVariables_html"><div class="ttname"><a href="classVariables.html">Variables</a></div><div class="ttdef"><b>Definition:</b> Equations.hpp:14</div></div>
+<div class="ttc" id="structCurvedScalarWave_1_1ComputeDuDt_html"><div class="ttname"><a href="structCurvedScalarWave_1_1ComputeDuDt.html">CurvedScalarWave::ComputeDuDt</a></div><div class="ttdoc">Compute the time derivative of the evolved variables of the first-order scalar wave system on a curve...</div><div class="ttdef"><b>Definition:</b> Equations.hpp:71</div></div>
+<div class="ttc" id="classIndex_html"><div class="ttname"><a href="classIndex.html">Index</a></div><div class="ttdoc">An integer multi-index. </div><div class="ttdef"><b>Definition:</b> Index.hpp:28</div></div>
+<div class="ttc" id="CurvedScalarWave_2Equations_8cpp_html_a658afaaf511b4ac10b2d6ef8112bd66a"><div class="ttname"><a href="CurvedScalarWave_2Equations_8cpp.html#a658afaaf511b4ac10b2d6ef8112bd66a">variables_tags</a></div><div class="ttdeci">typename CurvedScalarWave::System&lt; Dim &gt;::variables_tag::tags_list variables_tags</div><div class="ttdef"><b>Definition:</b> Equations.cpp:76</div></div>
+<div class="ttc" id="structFrame_1_1Inertial_html"><div class="ttname"><a href="structFrame_1_1Inertial.html">Frame::Inertial</a></div><div class="ttdef"><b>Definition:</b> IndexType.hpp:46</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a73cb4f286a3b02a20c9ceb21d181262b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73cb4f286a3b02a20c9ceb21d181262b">&#9670;&nbsp;</a></span>derivative_frame</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="CurvedScalarWave_2Equations_8cpp.html#a73cb4f286a3b02a20c9ceb21d181262b">derivative_frame</a> =  <a class="el" href="structFrame_1_1Inertial.html">Frame::Inertial</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac591ebdfeb4108061af7bee3c489da2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac591ebdfeb4108061af7bee3c489da2e">&#9670;&nbsp;</a></span>derivative_tags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="CurvedScalarWave_2Equations_8cpp.html#ac591ebdfeb4108061af7bee3c489da2e">derivative_tags</a> =  typename <a class="el" href="structCurvedScalarWave_1_1System.html">CurvedScalarWave::System</a>&lt;Dim&gt;::gradients_tags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a658afaaf511b4ac10b2d6ef8112bd66a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a658afaaf511b4ac10b2d6ef8112bd66a">&#9670;&nbsp;</a></span>variables_tags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t Dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="CurvedScalarWave_2Equations_8cpp.html#a658afaaf511b4ac10b2d6ef8112bd66a">variables_tags</a> =  typename <a class="el" href="structCurvedScalarWave_1_1System.html">CurvedScalarWave::System</a>&lt;Dim&gt;::variables_tag::tags_list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

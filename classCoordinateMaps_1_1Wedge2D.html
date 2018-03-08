@@ -1,0 +1,640 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: CoordinateMaps::Wedge2D Class Reference</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceCoordinateMaps.html">CoordinateMaps</a></li><li class="navelem"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
+<a href="classCoordinateMaps_1_1Wedge2D-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CoordinateMaps::Wedge2D Class Reference<div class="ingroups"><a class="el" href="group__CoordinateMapsGroup.html">Coordinate Maps</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Two dimensional map from the unit square to a wedge, which is constructed by interpolating between a circular arc of radius <code>radius_of_circle</code> and a flat face which is circumscribed by a circular arc of radius <code>radius_of_other</code>. These arcs extend \(\pi/2\) in angle, and can be oriented along the +/- x or y axis. The choice of using either equiangular or equidistant coordinates along the arcs is specifiable with <code>with_equiangular_map</code>. For a more detailed discussion, see the documentation for <a class="el" href="classCoordinateMaps_1_1Wedge3D.html" title="Three dimensional map from the cube to a wedge. ">Wedge3D</a>.  
+ <a href="classCoordinateMaps_1_1Wedge2D.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Wedge2D_8hpp_source.html">Wedge2D.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a869506527e68fbe2a50655ec5bda9bff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a869506527e68fbe2a50655ec5bda9bff">Wedge2D</a> (double radius_of_other, double radius_of_circle, <a class="el" href="classDirection.html">Direction</a>&lt; 2 &gt; direction_of_wedge, bool with_equiangular_map) noexcept</td></tr>
+<tr class="separator:a869506527e68fbe2a50655ec5bda9bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ed093ff504702ee2b98eec0d74538b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a55ed093ff504702ee2b98eec0d74538b">Wedge2D</a> ()=default</td></tr>
+<tr class="separator:a55ed093ff504702ee2b98eec0d74538b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132f9aa55edfc7082be10dd548d9c3d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a132f9aa55edfc7082be10dd548d9c3d6">~Wedge2D</a> ()=default</td></tr>
+<tr class="separator:a132f9aa55edfc7082be10dd548d9c3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2043a2e3138b3dc22edf99328b0ea2c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a2043a2e3138b3dc22edf99328b0ea2c0">Wedge2D</a> (<a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a2043a2e3138b3dc22edf99328b0ea2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7be585cc19927d3356938b1e78886c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#aeb7be585cc19927d3356938b1e78886c">operator=</a> (<a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:aeb7be585cc19927d3356938b1e78886c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5051b916028b67344c180b15853e7429"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a5051b916028b67344c180b15853e7429">Wedge2D</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;)=default</td></tr>
+<tr class="separator:a5051b916028b67344c180b15853e7429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688a7da6094c78b91e64724a17df66ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a688a7da6094c78b91e64724a17df66ff">operator=</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;)=default</td></tr>
+<tr class="separator:a688a7da6094c78b91e64724a17df66ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae082c06730004d62fb061b9f6e0f3e98"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ae082c06730004d62fb061b9f6e0f3e98"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#ae082c06730004d62fb061b9f6e0f3e98">operator()</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:ae082c06730004d62fb061b9f6e0f3e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a889594a4bd1f05314922708d44322cb5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a889594a4bd1f05314922708d44322cb5"><td class="memTemplItemLeft" align="right" valign="top"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a889594a4bd1f05314922708d44322cb5">inverse</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;target_coords) const noexcept</td></tr>
+<tr class="separator:a889594a4bd1f05314922708d44322cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9765ae20471dc136114996f90e0e1772"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9765ae20471dc136114996f90e0e1772"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a9765ae20471dc136114996f90e0e1772">jacobian</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a9765ae20471dc136114996f90e0e1772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ce49db6249d7d68b1ffebeef25308c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a50ce49db6249d7d68b1ffebeef25308c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#a50ce49db6249d7d68b1ffebeef25308c">inv_jacobian</a> (const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;source_coords) const noexcept</td></tr>
+<tr class="separator:a50ce49db6249d7d68b1ffebeef25308c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8421fd035dbba1e31b60d66b512bde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#afb8421fd035dbba1e31b60d66b512bde">pup</a> (PUP::er &amp;p)</td></tr>
+<tr class="separator:afb8421fd035dbba1e31b60d66b512bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ae2483c4bedc94b957e7fefae71152e32"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#ae2483c4bedc94b957e7fefae71152e32">dim</a> = 2</td></tr>
+<tr class="separator:ae2483c4bedc94b957e7fefae71152e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:af639561fbde171f119bcfd72265cd5fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html#af639561fbde171f119bcfd72265cd5fa">operator==</a> (const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;lhs, const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;rhs) noexcept</td></tr>
+<tr class="separator:af639561fbde171f119bcfd72265cd5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Two dimensional map from the unit square to a wedge, which is constructed by interpolating between a circular arc of radius <code>radius_of_circle</code> and a flat face which is circumscribed by a circular arc of radius <code>radius_of_other</code>. These arcs extend \(\pi/2\) in angle, and can be oriented along the +/- x or y axis. The choice of using either equiangular or equidistant coordinates along the arcs is specifiable with <code>with_equiangular_map</code>. For a more detailed discussion, see the documentation for <a class="el" href="classCoordinateMaps_1_1Wedge3D.html" title="Three dimensional map from the cube to a wedge. ">Wedge3D</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a869506527e68fbe2a50655ec5bda9bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a869506527e68fbe2a50655ec5bda9bff">&#9670;&nbsp;</a></span>Wedge2D() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge2D::Wedge2D </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>radius_of_other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>radius_of_circle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classDirection.html">Direction</a>&lt; 2 &gt;&#160;</td>
+          <td class="paramname"><em>direction_of_wedge</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>with_equiangular_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#gaf170f3984e3d0f809b2558dbd981ca35">ASSERT</a>.</p>
+
+</div>
+</div>
+<a id="a55ed093ff504702ee2b98eec0d74538b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ed093ff504702ee2b98eec0d74538b">&#9670;&nbsp;</a></span>Wedge2D() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge2D::Wedge2D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a132f9aa55edfc7082be10dd548d9c3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132f9aa55edfc7082be10dd548d9c3d6">&#9670;&nbsp;</a></span>~Wedge2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge2D::~Wedge2D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2043a2e3138b3dc22edf99328b0ea2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2043a2e3138b3dc22edf99328b0ea2c0">&#9670;&nbsp;</a></span>Wedge2D() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge2D::Wedge2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5051b916028b67344c180b15853e7429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5051b916028b67344c180b15853e7429">&#9670;&nbsp;</a></span>Wedge2D() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CoordinateMaps::Wedge2D::Wedge2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a50ce49db6249d7d68b1ffebeef25308c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ce49db6249d7d68b1ffebeef25308c">&#9670;&nbsp;</a></span>inv_jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt; CoordinateMaps::Wedge2D::inv_jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__TensorGroup.html#ga009450568b38ef50696b403fe763f3e7">determinant_and_inverse()</a>.</p>
+
+</div>
+</div>
+<a id="a889594a4bd1f05314922708d44322cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a889594a4bd1f05314922708d44322cb5">&#9670;&nbsp;</a></span>inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2 &gt; CoordinateMaps::Wedge2D::inverse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>target_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ErrorHandlingGroup.html#ga1d27028c1827976007fe9d29ad3a2f66">ERROR</a>, <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>, and <a class="el" href="group__ComputationalDomainGroup.html#gga8c0137d7160ad71b6ed265c53c99ed00a19de5b94f7b83900d4b296d9fa491aec">Upper</a>.</p>
+
+</div>
+</div>
+<a id="a9765ae20471dc136114996f90e0e1772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9765ae20471dc136114996f90e0e1772">&#9670;&nbsp;</a></span>jacobian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacetnsr.html#aaf16fdaaec0f8c11b8705a0c20f0f1ab">tnsr::Ij</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2, <a class="el" href="structFrame_1_1NoFrame.html">Frame::NoFrame</a> &gt; CoordinateMaps::Wedge2D::jacobian </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>.</p>
+
+</div>
+</div>
+<a id="ae082c06730004d62fb061b9f6e0f3e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae082c06730004d62fb061b9f6e0f3e98">&#9670;&nbsp;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; <a class="el" href="namespacett.html#a2a71357c9bac3ca0670d1a7087c9ac3c">tt::remove_cvref_wrap_t</a>&lt; T &gt;, 2 &gt; CoordinateMaps::Wedge2D::operator() </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="elRef" doxygen="/work/spectre/docs/config/cppreference-doxygen-web.tag.xml:http://en.cppreference.com/w/" href="http://en.cppreference.com/w/cpp/container/array.html">std::array</a>&lt; T, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_coords</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">References <a class="el" href="group__UtilitiesGroup.html#gaccb7d5132ccd60f32c504c51f9d7fb3c">dereference_wrapper()</a>, <a class="el" href="group__ConstantExpressionsGroup.html#ga877f4f7c296ef66e0ae6560353b3570c">square()</a>, and <a class="el" href="group__ComputationalDomainGroup.html#gga8c0137d7160ad71b6ed265c53c99ed00a19de5b94f7b83900d4b296d9fa491aec">Upper</a>.</p>
+
+</div>
+</div>
+<a id="aeb7be585cc19927d3356938b1e78886c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7be585cc19927d3356938b1e78886c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a>&amp; CoordinateMaps::Wedge2D::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a688a7da6094c78b91e64724a17df66ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688a7da6094c78b91e64724a17df66ff">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a>&amp; CoordinateMaps::Wedge2D::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb8421fd035dbba1e31b60d66b512bde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb8421fd035dbba1e31b60d66b512bde">&#9670;&nbsp;</a></span>pup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CoordinateMaps::Wedge2D::pup </td>
+          <td>(</td>
+          <td class="paramtype">PUP::er &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="af639561fbde171f119bcfd72265cd5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af639561fbde171f119bcfd72265cd5fa">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCoordinateMaps_1_1Wedge2D.html">Wedge2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae2483c4bedc94b957e7fefae71152e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2483c4bedc94b957e7fefae71152e32">&#9670;&nbsp;</a></span>dim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t CoordinateMaps::Wedge2D::dim = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>src/Domain/CoordinateMaps/<a class="el" href="Wedge2D_8hpp_source.html">Wedge2D.hpp</a></li>
+<li>src/Domain/CoordinateMaps/<a class="el" href="Wedge2D_8cpp.html">Wedge2D.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!-- HTML header for doxygen 1.8.10-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="SXS Collaboration">
+    <meta name="generator" content="Doxygen 1.8.13"/>
+    <style>
+        /*!
+         * IE10 viewport hack for Surface/desktop Windows 8 bug
+         * Copyright 2014-2015 Twitter, Inc.
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        @-webkit-viewport { width: device-width; }
+        @-moz-viewport    { width: device-width; }
+        @-ms-viewport     { width: device-width; }
+        @-o-viewport      { width: device-width; }
+        @viewport         { width: device-width; }
+      </style>
+  <title>SpECTRE: src/PointwiseFunctions/AnalyticSolutions/EinsteinSolutions/Minkowski.hpp Source File</title>
+  <link href="tabs.css" rel="stylesheet" type="text/css"/>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="dynsections.js"></script>
+  <link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js", "color.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+MathJax.Hub.Config({
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['^^','^^'], ['\\(', '\\)']]}
+});
+</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js"></script>
+  <link href="octicons.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="doxygen.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.min.js"></script>
+  <script type="text/javascript" src="spectre.js"></script>
+  </head>
+  <body>
+  <div id="top" class="navbar-fixed-top"><!-- do not remove this div, it is closed by doxygen! -->
+  <!-- BEGIN TITLEAREA -->
+  <div id="titlearea">
+  <script type="text/javascript">
+  var searchBox = new SearchBox("searchBox", "search",false,'Search');
+  </script>
+  <div id="main-nav">
+    <ul class="sm sm-dox" id="main-menu">
+      <li>
+      <a href="https://github.com/sxs-collaboration/spectre" target="_blank">
+      SpECTRE &#160;
+        <span id="projectnumber">v0.0.0</span>
+      </a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-book"></i><span>Documentation</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 135px;">
+            <a href="index.html">
+            <i class="octicon octicon-book"></i><span>Documentation</span></a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="tutorials.html">
+              <i class="octicon octicon-mortar-board"></i><span>Tutorials</span>
+            </a>
+          </li>
+          <li style="min-width: 135px;">
+            <a href="dev_guide.html">
+              <i class="octicon octicon-gist-secret"></i><span>Dev Guide</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown" style="min-width: 150px;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="selected">
+          <span id="selected">
+            <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+          </span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li style="min-width: 130px;">
+            <a href="modules.html">
+              <i class="octicon octicon-code"></i>
+              <span>Reference</span>
+            </a>
+          </li>
+          <li style="min-width: 130px;">
+            <a href="namespaces.html">
+              <i class="octicon octicon-gist"></i>
+              <span>Namespaces</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="files.html">
+          <i class="octicon octicon-file-directory"></i><span>Files</span>
+        </a>
+      </li>
+      <!--The Search <li> is added by doxygen later-->
+    </ul>
+  </div><!-- main-nav -->
+  </div><!-- titlearea -->
+  <!-- window showing the filter options -->
+  <div id="MSearchSelectWindow"  style="position: fixed;"
+       onmouseover="return searchBox.OnSearchSelectShow()"
+       onmouseout="return searchBox.OnSearchSelectHide()"
+       onkeydown="return searchBox.OnSearchSelectKey(event)">
+  </div>
+  <!-- iframe showing the search results (closed by default) -->
+  <div id="MSearchResultsWindow"  style="position: fixed;">
+  <iframe src="javascript:void(0)" frameborder="0"
+          name="MSearchResults" id="MSearchResults">
+  </iframe>
+  </div><!-- Generated by Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_22cd119e9135d55404da822cc2bf42d2.html">src</a></li><li class="navelem"><a class="el" href="dir_1f62f5dcd8403e59943c8cd1cd04afdd.html">PointwiseFunctions</a></li><li class="navelem"><a class="el" href="dir_14c8d44fc937086256ba33b551c00a57.html">AnalyticSolutions</a></li><li class="navelem"><a class="el" href="dir_e70406d2287cdd04aaf9448e3c37abb8.html">EinsteinSolutions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Minkowski.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Minkowski_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Distributed under the MIT License.</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// See LICENSE.txt for details.</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Tensor_8hpp.html">DataStructures/Tensor/Tensor.hpp</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Options_8hpp.html">Options/Options.hpp</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MakeWithValue_8hpp.html">Utilities/MakeWithValue.hpp</a>&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceEinsteinSolutions.html">EinsteinSolutions</a> {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">/*!</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * \ingroup EinsteinSolutionsGroup</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * \brief The Minkowski solution for flat space in Dim spatial dimensions.</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * \details The solution has lapse \f$N(x,t)= 1 \f$, shift \f$N^i(x,t) = 0 \f$</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * and the identity as the spatial metric: \f$g_{ii} = 1 \f$</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> Dim&gt;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classEinsteinSolutions_1_1Minkowski.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski</a> {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classEinsteinSolutions_1_1Minkowski.html#a0686824417febeffbe251c2d22e955d0">   22</a></span>&#160;  <span class="keyword">using</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a0686824417febeffbe251c2d22e955d0">options</a> = tmpl::list&lt;&gt;;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classEinsteinSolutions_1_1Minkowski.html#a5b43157d35e4dc1787fc2c820ed73d01">   23</a></span>&#160;  <span class="keyword">static</span> constexpr <a class="code" href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a5b43157d35e4dc1787fc2c820ed73d01">help</a>{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="stringliteral">&quot;Minkowski solution to Einstein&#39;s Equations&quot;</span>};</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a4951b54263efd3e75ec596ad9bb6200e">Minkowski</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a4951b54263efd3e75ec596ad9bb6200e">Minkowski</a>(<span class="keyword">const</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski</a>&amp; <span class="comment">/*rhs*/</span>) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski</a>&amp; <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#ab34655a2d319871ec882fb726b18512b">operator=</a>(<span class="keyword">const</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski</a>&amp; <span class="comment">/*rhs*/</span>) = <span class="keyword">delete</span>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a4951b54263efd3e75ec596ad9bb6200e">Minkowski</a>(<a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski</a>&amp;&amp; <span class="comment">/*rhs*/</span>) noexcept = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski</a>&amp; <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#ab34655a2d319871ec882fb726b18512b">operator=</a>(<a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski</a>&amp;&amp; <span class="comment">/*rhs*/</span>) noexcept = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a5110ada1f7250fc20ed70075e30a7432">~Minkowski</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="group__TensorGroup.html#ga06ebcb38a1f13c246e53378b9e8959ce">Scalar&lt;T&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#aeb9cb974165a9303f4271c0f5b8d9d72">lapse</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span> noexcept;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="group__TensorGroup.html#ga06ebcb38a1f13c246e53378b9e8959ce">Scalar&lt;T&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a1143b36679402dccf5d46f01119cbd86">dt_lapse</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span> noexcept;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a4d778308f247d8ab606983a933f1c3df">deriv_lapse</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      noexcept;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="group__TensorGroup.html#ga06ebcb38a1f13c246e53378b9e8959ce">Scalar&lt;T&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a956007b462dc6aa4d5b2234658100408">sqrt_determinant_of_spatial_metric</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x,</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                               <span class="keywordtype">double</span> t) <span class="keyword">const</span> noexcept;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="group__TensorGroup.html#ga06ebcb38a1f13c246e53378b9e8959ce">Scalar&lt;T&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#aeeb9e469c4c2ced00524768bf5c85904">dt_sqrt_determinant_of_spatial_metric</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x,</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                  <span class="keywordtype">double</span> t) <span class="keyword">const</span> noexcept;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#afe1686d9a4b2fda7a65ce328d5cc549e">shift</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span> noexcept;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="namespacetnsr.html#a5304325b8385187259fe88fa703f7d1f">tnsr::iJ&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#ad2ff387f87907f0616b6228d9ccdea84">deriv_shift</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      noexcept;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a77fb6deb7034b826227b6c6519f69b62">spatial_metric</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      noexcept;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a431a672a4dc99c93c4c0e89e236bc11c">dt_spatial_metric</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      noexcept;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="namespacetnsr.html#a22e3bc1a1e75cb75b2acd611615bc3a4">tnsr::ijj&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a95b21f7b509b6e842c7097a7bf0b578f">deriv_spatial_metric</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x,</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                         <span class="keywordtype">double</span> t) <span class="keyword">const</span> noexcept;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <a class="code" href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#aaeaf9413749d267740560285d7e0ae67">inverse_spatial_metric</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x,</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                          <span class="keywordtype">double</span> t) <span class="keyword">const</span> noexcept;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii&lt;T, Dim&gt;</a> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#aad5576119ee938b85834e5a2e75ebf69">extrinsic_curvature</a>(<span class="keyword">const</span> <a class="code" href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I&lt;T, Dim&gt;</a>&amp; x, <span class="keywordtype">double</span> t) <span class="keyword">const</span></div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      noexcept;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">// clang-tidy: google-runtime-references</span></div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classEinsteinSolutions_1_1Minkowski.html#a61bbcb459b570c17c4c9fe9b2e6a508d">   79</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html#a61bbcb459b570c17c4c9fe9b2e6a508d">pup</a>(PUP::er&amp; <span class="comment">/*p*/</span>) noexcept {}  <span class="comment">// NOLINT</span></div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> Dim&gt;</div><div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="namespaceEinsteinSolutions.html#a8cbad27f899e1b15f07d3135c00eafb1">   83</a></span>&#160;<span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="namespaceEinsteinSolutions.html#ade2722bf1c2947ea24be2f242c78da29">operator==</a>(<span class="keyword">const</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski&lt;Dim&gt;</a>&amp; <span class="comment">/*lhs*/</span>,</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski&lt;Dim&gt;</a>&amp; <span class="comment">/*rhs*/</span>) noexcept {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> Dim&gt;</div><div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespaceEinsteinSolutions.html#a1dbea039199843451cd8e2450b8a15a8">   89</a></span>&#160;<span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="namespaceEinsteinSolutions.html#af8f4de7c86b9e912a953f4e01c2edd5d">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski&lt;Dim&gt;</a>&amp; <span class="comment">/*lhs*/</span>,</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                 <span class="keyword">const</span> <a class="code" href="classEinsteinSolutions_1_1Minkowski.html">Minkowski&lt;Dim&gt;</a>&amp; <span class="comment">/*rhs*/</span>) noexcept {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}  <span class="comment">// namespace EinsteinSolutions</span></div><div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a77fb6deb7034b826227b6c6519f69b62"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a77fb6deb7034b826227b6c6519f69b62">EinsteinSolutions::Minkowski::spatial_metric</a></div><div class="ttdeci">tnsr::ii&lt; T, Dim &gt; spatial_metric(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:61</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_aeb9cb974165a9303f4271c0f5b8d9d72"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#aeb9cb974165a9303f4271c0f5b8d9d72">EinsteinSolutions::Minkowski::lapse</a></div><div class="ttdeci">Scalar&lt; T &gt; lapse(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:11</div></div>
+<div class="ttc" id="namespacetnsr_html_ae4ca53da15772fdb98d33933d2670a3a"><div class="ttname"><a href="namespacetnsr.html#ae4ca53da15772fdb98d33933d2670a3a">tnsr::I</a></div><div class="ttdeci">Tensor&lt; DataType, tmpl::integral_list&lt; std::int32_t, 1 &gt;, index_list&lt; SpatialIndex&lt; SpatialDim, UpLo::Up, Fr &gt; &gt;&gt; I</div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:48</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a1143b36679402dccf5d46f01119cbd86"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a1143b36679402dccf5d46f01119cbd86">EinsteinSolutions::Minkowski::dt_lapse</a></div><div class="ttdeci">Scalar&lt; T &gt; dt_lapse(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:18</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_ad2ff387f87907f0616b6228d9ccdea84"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#ad2ff387f87907f0616b6228d9ccdea84">EinsteinSolutions::Minkowski::deriv_shift</a></div><div class="ttdeci">tnsr::iJ&lt; T, Dim &gt; deriv_shift(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:53</div></div>
+<div class="ttc" id="Options_8hpp_html"><div class="ttname"><a href="Options_8hpp.html">Options.hpp</a></div><div class="ttdoc">Defines classes and functions for making classes creatable from input files. </div></div>
+<div class="ttc" id="namespacetnsr_html_a6cd78edbb4ec47d200b007581969c87f"><div class="ttname"><a href="namespacetnsr.html#a6cd78edbb4ec47d200b007581969c87f">tnsr::ii</a></div><div class="ttdeci">Tensor&lt; DataType, tmpl::integral_list&lt; std::int32_t, 1, 1 &gt;, index_list&lt; SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt;, SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt; &gt;&gt; ii</div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:117</div></div>
+<div class="ttc" id="namespacetnsr_html_ae6c15a6a7786d49e43385a9947924ede"><div class="ttname"><a href="namespacetnsr.html#ae6c15a6a7786d49e43385a9947924ede">tnsr::II</a></div><div class="ttdeci">Tensor&lt; DataType, tmpl::integral_list&lt; std::int32_t, 1, 1 &gt;, index_list&lt; SpatialIndex&lt; SpatialDim, UpLo::Up, Fr &gt;, SpatialIndex&lt; SpatialDim, UpLo::Up, Fr &gt; &gt;&gt; II</div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:121</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a0686824417febeffbe251c2d22e955d0"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a0686824417febeffbe251c2d22e955d0">EinsteinSolutions::Minkowski::options</a></div><div class="ttdeci">tmpl::list&lt;&gt; options</div><div class="ttdef"><b>Definition:</b> Minkowski.hpp:22</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a5b43157d35e4dc1787fc2c820ed73d01"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a5b43157d35e4dc1787fc2c820ed73d01">EinsteinSolutions::Minkowski::help</a></div><div class="ttdeci">static constexpr OptionString help</div><div class="ttdef"><b>Definition:</b> Minkowski.hpp:23</div></div>
+<div class="ttc" id="namespacetnsr_html_ac7a4fa718be18533f5e2727e09f10704"><div class="ttname"><a href="namespacetnsr.html#ac7a4fa718be18533f5e2727e09f10704">tnsr::i</a></div><div class="ttdeci">Tensor&lt; DataType, tmpl::integral_list&lt; std::int32_t, 1 &gt;, index_list&lt; SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt; &gt;&gt; i</div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:45</div></div>
+<div class="ttc" id="namespacetnsr_html_a5304325b8385187259fe88fa703f7d1f"><div class="ttname"><a href="namespacetnsr.html#a5304325b8385187259fe88fa703f7d1f">tnsr::iJ</a></div><div class="ttdeci">Tensor&lt; DataType, tmpl::integral_list&lt; std::int32_t, 2, 1 &gt;, index_list&lt; SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt;, SpatialIndex&lt; SpatialDim, UpLo::Up, Fr &gt; &gt;&gt; iJ</div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:86</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html">EinsteinSolutions::Minkowski</a></div><div class="ttdoc">The Minkowski solution for flat space in Dim spatial dimensions. </div><div class="ttdef"><b>Definition:</b> Minkowski.hpp:20</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a5110ada1f7250fc20ed70075e30a7432"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a5110ada1f7250fc20ed70075e30a7432">EinsteinSolutions::Minkowski::~Minkowski</a></div><div class="ttdeci">~Minkowski()=default</div></div>
+<div class="ttc" id="Options_8hpp_html_ac6df7d1b74fbddedd85b06a0087d93f6"><div class="ttname"><a href="Options_8hpp.html#ac6df7d1b74fbddedd85b06a0087d93f6">OptionString</a></div><div class="ttdeci">const char *const OptionString</div><div class="ttdoc">The string used in option structs. </div><div class="ttdef"><b>Definition:</b> Options.hpp:26</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a4951b54263efd3e75ec596ad9bb6200e"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a4951b54263efd3e75ec596ad9bb6200e">EinsteinSolutions::Minkowski::Minkowski</a></div><div class="ttdeci">Minkowski()=default</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a4d778308f247d8ab606983a933f1c3df"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a4d778308f247d8ab606983a933f1c3df">EinsteinSolutions::Minkowski::deriv_lapse</a></div><div class="ttdeci">tnsr::i&lt; T, Dim &gt; deriv_lapse(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:25</div></div>
+<div class="ttc" id="namespaceEinsteinSolutions_html"><div class="ttname"><a href="namespaceEinsteinSolutions.html">EinsteinSolutions</a></div><div class="ttdef"><b>Definition:</b> KerrSchild.cpp:18</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a61bbcb459b570c17c4c9fe9b2e6a508d"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a61bbcb459b570c17c4c9fe9b2e6a508d">EinsteinSolutions::Minkowski::pup</a></div><div class="ttdeci">void pup(PUP::er &amp;) noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.hpp:79</div></div>
+<div class="ttc" id="Tensor_8hpp_html"><div class="ttname"><a href="Tensor_8hpp.html">Tensor.hpp</a></div><div class="ttdoc">Defines classes for Tensor. </div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_aeeb9e469c4c2ced00524768bf5c85904"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#aeeb9e469c4c2ced00524768bf5c85904">EinsteinSolutions::Minkowski::dt_sqrt_determinant_of_spatial_metric</a></div><div class="ttdeci">Scalar&lt; T &gt; dt_sqrt_determinant_of_spatial_metric(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:39</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a95b21f7b509b6e842c7097a7bf0b578f"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a95b21f7b509b6e842c7097a7bf0b578f">EinsteinSolutions::Minkowski::deriv_spatial_metric</a></div><div class="ttdeci">tnsr::ijj&lt; T, Dim &gt; deriv_spatial_metric(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:81</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a956007b462dc6aa4d5b2234658100408"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a956007b462dc6aa4d5b2234658100408">EinsteinSolutions::Minkowski::sqrt_determinant_of_spatial_metric</a></div><div class="ttdeci">Scalar&lt; T &gt; sqrt_determinant_of_spatial_metric(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:32</div></div>
+<div class="ttc" id="namespaceEinsteinSolutions_html_ade2722bf1c2947ea24be2f242c78da29"><div class="ttname"><a href="namespaceEinsteinSolutions.html#ade2722bf1c2947ea24be2f242c78da29">EinsteinSolutions::operator==</a></div><div class="ttdeci">bool operator==(const KerrSchild &amp;lhs, const KerrSchild &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> KerrSchild.hpp:276</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_ab34655a2d319871ec882fb726b18512b"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#ab34655a2d319871ec882fb726b18512b">EinsteinSolutions::Minkowski::operator=</a></div><div class="ttdeci">Minkowski &amp; operator=(const Minkowski &amp;)=delete</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_aaeaf9413749d267740560285d7e0ae67"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#aaeaf9413749d267740560285d7e0ae67">EinsteinSolutions::Minkowski::inverse_spatial_metric</a></div><div class="ttdeci">tnsr::II&lt; T, Dim &gt; inverse_spatial_metric(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:89</div></div>
+<div class="ttc" id="namespacetnsr_html_a22e3bc1a1e75cb75b2acd611615bc3a4"><div class="ttname"><a href="namespacetnsr.html#a22e3bc1a1e75cb75b2acd611615bc3a4">tnsr::ijj</a></div><div class="ttdeci">Tensor&lt; DataType, tmpl::integral_list&lt; std::int32_t, 2, 1, 1 &gt;, index_list&lt; SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt;, SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt;, SpatialIndex&lt; SpatialDim, UpLo::Lo, Fr &gt; &gt;&gt; ijj</div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:271</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_a431a672a4dc99c93c4c0e89e236bc11c"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#a431a672a4dc99c93c4c0e89e236bc11c">EinsteinSolutions::Minkowski::dt_spatial_metric</a></div><div class="ttdeci">tnsr::ii&lt; T, Dim &gt; dt_spatial_metric(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:73</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_afe1686d9a4b2fda7a65ce328d5cc549e"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#afe1686d9a4b2fda7a65ce328d5cc549e">EinsteinSolutions::Minkowski::shift</a></div><div class="ttdeci">tnsr::I&lt; T, Dim &gt; shift(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:46</div></div>
+<div class="ttc" id="classEinsteinSolutions_1_1Minkowski_html_aad5576119ee938b85834e5a2e75ebf69"><div class="ttname"><a href="classEinsteinSolutions_1_1Minkowski.html#aad5576119ee938b85834e5a2e75ebf69">EinsteinSolutions::Minkowski::extrinsic_curvature</a></div><div class="ttdeci">tnsr::ii&lt; T, Dim &gt; extrinsic_curvature(const tnsr::I&lt; T, Dim &gt; &amp;x, double t) const noexcept</div><div class="ttdef"><b>Definition:</b> Minkowski.cpp:101</div></div>
+<div class="ttc" id="group__TensorGroup_html_ga06ebcb38a1f13c246e53378b9e8959ce"><div class="ttname"><a href="group__TensorGroup.html#ga06ebcb38a1f13c246e53378b9e8959ce">Scalar</a></div><div class="ttdeci">Tensor&lt; T, Symmetry&lt;&gt;, index_list&lt;&gt; &gt; Scalar</div><div class="ttdoc">Scalar type. </div><div class="ttdef"><b>Definition:</b> TypeAliases.hpp:21</div></div>
+<div class="ttc" id="namespaceEinsteinSolutions_html_af8f4de7c86b9e912a953f4e01c2edd5d"><div class="ttname"><a href="namespaceEinsteinSolutions.html#af8f4de7c86b9e912a953f4e01c2edd5d">EinsteinSolutions::operator!=</a></div><div class="ttdeci">bool operator!=(const KerrSchild &amp;lhs, const KerrSchild &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> KerrSchild.hpp:282</div></div>
+<div class="ttc" id="MakeWithValue_8hpp_html"><div class="ttname"><a href="MakeWithValue_8hpp.html">MakeWithValue.hpp</a></div><div class="ttdoc">Defines make_with_value. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.10-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+&copy; Copyright 2017
+<a href="https://black-holes.org">SXS Collaboration</a>,
+<a href="LICENSE.txt" target="_blank">
+<span class="hidden-xs">Distributed under the</span>
+MIT License</a>
+</small></address>
+</body>
+</html>
